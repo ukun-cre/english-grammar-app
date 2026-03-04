@@ -1,0 +1,7002 @@
+[
+  {
+    "id": "w01_001",
+    "level": 1,
+    "english": "be",
+    "japanese": "〜である",
+    "type": "verb"
+  },
+  {
+    "id": "w01_002",
+    "level": 1,
+    "english": "have",
+    "japanese": "持つ",
+    "type": "verb"
+  },
+  {
+    "id": "w01_003",
+    "level": 1,
+    "english": "do",
+    "japanese": "する",
+    "type": "verb"
+  },
+  {
+    "id": "w01_004",
+    "level": 1,
+    "english": "say",
+    "japanese": "言う",
+    "type": "verb"
+  },
+  {
+    "id": "w01_005",
+    "level": 1,
+    "english": "go",
+    "japanese": "行く",
+    "type": "verb"
+  },
+  {
+    "id": "w01_006",
+    "level": 1,
+    "english": "get",
+    "japanese": "得る",
+    "type": "verb"
+  },
+  {
+    "id": "w01_007",
+    "level": 1,
+    "english": "make",
+    "japanese": "作る",
+    "type": "verb"
+  },
+  {
+    "id": "w01_008",
+    "level": 1,
+    "english": "know",
+    "japanese": "知っている",
+    "type": "verb"
+  },
+  {
+    "id": "w01_009",
+    "level": 1,
+    "english": "think",
+    "japanese": "考える",
+    "type": "verb"
+  },
+  {
+    "id": "w01_010",
+    "level": 1,
+    "english": "take",
+    "japanese": "取る",
+    "type": "verb"
+  },
+  {
+    "id": "w01_011",
+    "level": 1,
+    "english": "see",
+    "japanese": "見る",
+    "type": "verb"
+  },
+  {
+    "id": "w01_012",
+    "level": 1,
+    "english": "come",
+    "japanese": "来る",
+    "type": "verb"
+  },
+  {
+    "id": "w01_013",
+    "level": 1,
+    "english": "want",
+    "japanese": "欲しい",
+    "type": "verb"
+  },
+  {
+    "id": "w01_014",
+    "level": 1,
+    "english": "use",
+    "japanese": "使う",
+    "type": "verb"
+  },
+  {
+    "id": "w01_015",
+    "level": 1,
+    "english": "find",
+    "japanese": "見つける",
+    "type": "verb"
+  },
+  {
+    "id": "w01_016",
+    "level": 1,
+    "english": "give",
+    "japanese": "与える",
+    "type": "verb"
+  },
+  {
+    "id": "w01_017",
+    "level": 1,
+    "english": "tell",
+    "japanese": "話す",
+    "type": "verb"
+  },
+  {
+    "id": "w01_018",
+    "level": 1,
+    "english": "work",
+    "japanese": "働く",
+    "type": "verb"
+  },
+  {
+    "id": "w01_019",
+    "level": 1,
+    "english": "call",
+    "japanese": "呼ぶ",
+    "type": "verb"
+  },
+  {
+    "id": "w01_020",
+    "level": 1,
+    "english": "try",
+    "japanese": "試す",
+    "type": "verb"
+  },
+  {
+    "id": "w01_021",
+    "level": 1,
+    "english": "ask",
+    "japanese": "尋ねる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_022",
+    "level": 1,
+    "english": "need",
+    "japanese": "必要とする",
+    "type": "verb"
+  },
+  {
+    "id": "w01_023",
+    "level": 1,
+    "english": "feel",
+    "japanese": "感じる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_024",
+    "level": 1,
+    "english": "become",
+    "japanese": "〜になる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_025",
+    "level": 1,
+    "english": "leave",
+    "japanese": "去る",
+    "type": "verb"
+  },
+  {
+    "id": "w01_026",
+    "level": 1,
+    "english": "put",
+    "japanese": "置く",
+    "type": "verb"
+  },
+  {
+    "id": "w01_027",
+    "level": 1,
+    "english": "mean",
+    "japanese": "意味する",
+    "type": "verb"
+  },
+  {
+    "id": "w01_028",
+    "level": 1,
+    "english": "keep",
+    "japanese": "保つ",
+    "type": "verb"
+  },
+  {
+    "id": "w01_029",
+    "level": 1,
+    "english": "let",
+    "japanese": "させる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_030",
+    "level": 1,
+    "english": "begin",
+    "japanese": "始める",
+    "type": "verb"
+  },
+  {
+    "id": "w01_031",
+    "level": 1,
+    "english": "seem",
+    "japanese": "〜のように見える",
+    "type": "verb"
+  },
+  {
+    "id": "w01_032",
+    "level": 1,
+    "english": "help",
+    "japanese": "手伝う",
+    "type": "verb"
+  },
+  {
+    "id": "w01_033",
+    "level": 1,
+    "english": "show",
+    "japanese": "見せる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_034",
+    "level": 1,
+    "english": "hear",
+    "japanese": "聞こえる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_035",
+    "level": 1,
+    "english": "play",
+    "japanese": "遊ぶ",
+    "type": "verb"
+  },
+  {
+    "id": "w01_036",
+    "level": 1,
+    "english": "run",
+    "japanese": "走る",
+    "type": "verb"
+  },
+  {
+    "id": "w01_037",
+    "level": 1,
+    "english": "move",
+    "japanese": "動く",
+    "type": "verb"
+  },
+  {
+    "id": "w01_038",
+    "level": 1,
+    "english": "live",
+    "japanese": "住む",
+    "type": "verb"
+  },
+  {
+    "id": "w01_039",
+    "level": 1,
+    "english": "believe",
+    "japanese": "信じる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_040",
+    "level": 1,
+    "english": "bring",
+    "japanese": "持ってくる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_041",
+    "level": 1,
+    "english": "happen",
+    "japanese": "起こる",
+    "type": "verb"
+  },
+  {
+    "id": "w01_042",
+    "level": 1,
+    "english": "write",
+    "japanese": "書く",
+    "type": "verb"
+  },
+  {
+    "id": "w01_043",
+    "level": 1,
+    "english": "sit",
+    "japanese": "座る",
+    "type": "verb"
+  },
+  {
+    "id": "w01_044",
+    "level": 1,
+    "english": "stand",
+    "japanese": "立つ",
+    "type": "verb"
+  },
+  {
+    "id": "w01_045",
+    "level": 1,
+    "english": "lose",
+    "japanese": "失う",
+    "type": "verb"
+  },
+  {
+    "id": "w01_046",
+    "level": 1,
+    "english": "pay",
+    "japanese": "支払う",
+    "type": "verb"
+  },
+  {
+    "id": "w01_047",
+    "level": 1,
+    "english": "meet",
+    "japanese": "会う",
+    "type": "verb"
+  },
+  {
+    "id": "w01_048",
+    "level": 1,
+    "english": "include",
+    "japanese": "含む",
+    "type": "verb"
+  },
+  {
+    "id": "w01_049",
+    "level": 1,
+    "english": "continue",
+    "japanese": "続ける",
+    "type": "verb"
+  },
+  {
+    "id": "w01_050",
+    "level": 1,
+    "english": "set",
+    "japanese": "置く",
+    "type": "verb"
+  },
+  {
+    "id": "w02_001",
+    "level": 2,
+    "english": "learn",
+    "japanese": "学ぶ",
+    "type": "verb"
+  },
+  {
+    "id": "w02_002",
+    "level": 2,
+    "english": "change",
+    "japanese": "変える",
+    "type": "verb"
+  },
+  {
+    "id": "w02_003",
+    "level": 2,
+    "english": "lead",
+    "japanese": "導く",
+    "type": "verb"
+  },
+  {
+    "id": "w02_004",
+    "level": 2,
+    "english": "understand",
+    "japanese": "理解する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_005",
+    "level": 2,
+    "english": "watch",
+    "japanese": "見る",
+    "type": "verb"
+  },
+  {
+    "id": "w02_006",
+    "level": 2,
+    "english": "follow",
+    "japanese": "ついていく",
+    "type": "verb"
+  },
+  {
+    "id": "w02_007",
+    "level": 2,
+    "english": "stop",
+    "japanese": "止まる",
+    "type": "verb"
+  },
+  {
+    "id": "w02_008",
+    "level": 2,
+    "english": "create",
+    "japanese": "創造する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_009",
+    "level": 2,
+    "english": "speak",
+    "japanese": "話す",
+    "type": "verb"
+  },
+  {
+    "id": "w02_010",
+    "level": 2,
+    "english": "read",
+    "japanese": "読む",
+    "type": "verb"
+  },
+  {
+    "id": "w02_011",
+    "level": 2,
+    "english": "allow",
+    "japanese": "許可する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_012",
+    "level": 2,
+    "english": "add",
+    "japanese": "加える",
+    "type": "verb"
+  },
+  {
+    "id": "w02_013",
+    "level": 2,
+    "english": "spend",
+    "japanese": "費やす",
+    "type": "verb"
+  },
+  {
+    "id": "w02_014",
+    "level": 2,
+    "english": "grow",
+    "japanese": "成長する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_015",
+    "level": 2,
+    "english": "open",
+    "japanese": "開く",
+    "type": "verb"
+  },
+  {
+    "id": "w02_016",
+    "level": 2,
+    "english": "walk",
+    "japanese": "歩く",
+    "type": "verb"
+  },
+  {
+    "id": "w02_017",
+    "level": 2,
+    "english": "win",
+    "japanese": "勝つ",
+    "type": "verb"
+  },
+  {
+    "id": "w02_018",
+    "level": 2,
+    "english": "offer",
+    "japanese": "提供する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_019",
+    "level": 2,
+    "english": "remember",
+    "japanese": "覚えている",
+    "type": "verb"
+  },
+  {
+    "id": "w02_020",
+    "level": 2,
+    "english": "love",
+    "japanese": "愛する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_021",
+    "level": 2,
+    "english": "consider",
+    "japanese": "考慮する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_022",
+    "level": 2,
+    "english": "appear",
+    "japanese": "現れる",
+    "type": "verb"
+  },
+  {
+    "id": "w02_023",
+    "level": 2,
+    "english": "buy",
+    "japanese": "買う",
+    "type": "verb"
+  },
+  {
+    "id": "w02_024",
+    "level": 2,
+    "english": "wait",
+    "japanese": "待つ",
+    "type": "verb"
+  },
+  {
+    "id": "w02_025",
+    "level": 2,
+    "english": "serve",
+    "japanese": "仕える",
+    "type": "verb"
+  },
+  {
+    "id": "w02_026",
+    "level": 2,
+    "english": "die",
+    "japanese": "死ぬ",
+    "type": "verb"
+  },
+  {
+    "id": "w02_027",
+    "level": 2,
+    "english": "send",
+    "japanese": "送る",
+    "type": "verb"
+  },
+  {
+    "id": "w02_028",
+    "level": 2,
+    "english": "expect",
+    "japanese": "予期する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_029",
+    "level": 2,
+    "english": "build",
+    "japanese": "建てる",
+    "type": "verb"
+  },
+  {
+    "id": "w02_030",
+    "level": 2,
+    "english": "stay",
+    "japanese": "滞在する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_031",
+    "level": 2,
+    "english": "fall",
+    "japanese": "落ちる",
+    "type": "verb"
+  },
+  {
+    "id": "w02_032",
+    "level": 2,
+    "english": "cut",
+    "japanese": "切る",
+    "type": "verb"
+  },
+  {
+    "id": "w02_033",
+    "level": 2,
+    "english": "reach",
+    "japanese": "到達する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_034",
+    "level": 2,
+    "english": "kill",
+    "japanese": "殺す",
+    "type": "verb"
+  },
+  {
+    "id": "w02_035",
+    "level": 2,
+    "english": "remain",
+    "japanese": "残る",
+    "type": "verb"
+  },
+  {
+    "id": "w02_036",
+    "level": 2,
+    "english": "suggest",
+    "japanese": "提案する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_037",
+    "level": 2,
+    "english": "raise",
+    "japanese": "上げる",
+    "type": "verb"
+  },
+  {
+    "id": "w02_038",
+    "level": 2,
+    "english": "pass",
+    "japanese": "通り過ぎる",
+    "type": "verb"
+  },
+  {
+    "id": "w02_039",
+    "level": 2,
+    "english": "sell",
+    "japanese": "売る",
+    "type": "verb"
+  },
+  {
+    "id": "w02_040",
+    "level": 2,
+    "english": "require",
+    "japanese": "要求する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_041",
+    "level": 2,
+    "english": "report",
+    "japanese": "報告する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_042",
+    "level": 2,
+    "english": "decide",
+    "japanese": "決定する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_043",
+    "level": 2,
+    "english": "pull",
+    "japanese": "引く",
+    "type": "verb"
+  },
+  {
+    "id": "w02_044",
+    "level": 2,
+    "english": "return",
+    "japanese": "戻る",
+    "type": "verb"
+  },
+  {
+    "id": "w02_045",
+    "level": 2,
+    "english": "explain",
+    "japanese": "説明する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_046",
+    "level": 2,
+    "english": "hope",
+    "japanese": "希望する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_047",
+    "level": 2,
+    "english": "develop",
+    "japanese": "発達する",
+    "type": "verb"
+  },
+  {
+    "id": "w02_048",
+    "level": 2,
+    "english": "carry",
+    "japanese": "運ぶ",
+    "type": "verb"
+  },
+  {
+    "id": "w02_049",
+    "level": 2,
+    "english": "break",
+    "japanese": "壊す",
+    "type": "verb"
+  },
+  {
+    "id": "w02_050",
+    "level": 2,
+    "english": "receive",
+    "japanese": "受け取る",
+    "type": "verb"
+  },
+  {
+    "id": "w03_001",
+    "level": 3,
+    "english": "time",
+    "japanese": "時間",
+    "type": "noun"
+  },
+  {
+    "id": "w03_002",
+    "level": 3,
+    "english": "person",
+    "japanese": "人",
+    "type": "noun"
+  },
+  {
+    "id": "w03_003",
+    "level": 3,
+    "english": "year",
+    "japanese": "年",
+    "type": "noun"
+  },
+  {
+    "id": "w03_004",
+    "level": 3,
+    "english": "way",
+    "japanese": "道・方法",
+    "type": "noun"
+  },
+  {
+    "id": "w03_005",
+    "level": 3,
+    "english": "day",
+    "japanese": "日",
+    "type": "noun"
+  },
+  {
+    "id": "w03_006",
+    "level": 3,
+    "english": "thing",
+    "japanese": "もの",
+    "type": "noun"
+  },
+  {
+    "id": "w03_007",
+    "level": 3,
+    "english": "man",
+    "japanese": "男",
+    "type": "noun"
+  },
+  {
+    "id": "w03_008",
+    "level": 3,
+    "english": "world",
+    "japanese": "世界",
+    "type": "noun"
+  },
+  {
+    "id": "w03_009",
+    "level": 3,
+    "english": "life",
+    "japanese": "命・生活",
+    "type": "noun"
+  },
+  {
+    "id": "w03_010",
+    "level": 3,
+    "english": "hand",
+    "japanese": "手",
+    "type": "noun"
+  },
+  {
+    "id": "w03_011",
+    "level": 3,
+    "english": "part",
+    "japanese": "部分",
+    "type": "noun"
+  },
+  {
+    "id": "w03_012",
+    "level": 3,
+    "english": "child",
+    "japanese": "子供",
+    "type": "noun"
+  },
+  {
+    "id": "w03_013",
+    "level": 3,
+    "english": "eye",
+    "japanese": "目",
+    "type": "noun"
+  },
+  {
+    "id": "w03_014",
+    "level": 3,
+    "english": "woman",
+    "japanese": "女",
+    "type": "noun"
+  },
+  {
+    "id": "w03_015",
+    "level": 3,
+    "english": "place",
+    "japanese": "場所",
+    "type": "noun"
+  },
+  {
+    "id": "w03_016",
+    "level": 3,
+    "english": "week",
+    "japanese": "週",
+    "type": "noun"
+  },
+  {
+    "id": "w03_017",
+    "level": 3,
+    "english": "case",
+    "japanese": "場合",
+    "type": "noun"
+  },
+  {
+    "id": "w03_018",
+    "level": 3,
+    "english": "point",
+    "japanese": "点",
+    "type": "noun"
+  },
+  {
+    "id": "w03_019",
+    "level": 3,
+    "english": "government",
+    "japanese": "政府",
+    "type": "noun"
+  },
+  {
+    "id": "w03_020",
+    "level": 3,
+    "english": "company",
+    "japanese": "会社",
+    "type": "noun"
+  },
+  {
+    "id": "w03_021",
+    "level": 3,
+    "english": "number",
+    "japanese": "数",
+    "type": "noun"
+  },
+  {
+    "id": "w03_022",
+    "level": 3,
+    "english": "group",
+    "japanese": "グループ",
+    "type": "noun"
+  },
+  {
+    "id": "w03_023",
+    "level": 3,
+    "english": "problem",
+    "japanese": "問題",
+    "type": "noun"
+  },
+  {
+    "id": "w03_024",
+    "level": 3,
+    "english": "fact",
+    "japanese": "事実",
+    "type": "noun"
+  },
+  {
+    "id": "w03_025",
+    "level": 3,
+    "english": "book",
+    "japanese": "本",
+    "type": "noun"
+  },
+  {
+    "id": "w03_026",
+    "level": 3,
+    "english": "water",
+    "japanese": "水",
+    "type": "noun"
+  },
+  {
+    "id": "w03_027",
+    "level": 3,
+    "english": "friend",
+    "japanese": "友達",
+    "type": "noun"
+  },
+  {
+    "id": "w03_028",
+    "level": 3,
+    "english": "family",
+    "japanese": "家族",
+    "type": "noun"
+  },
+  {
+    "id": "w03_029",
+    "level": 3,
+    "english": "school",
+    "japanese": "学校",
+    "type": "noun"
+  },
+  {
+    "id": "w03_030",
+    "level": 3,
+    "english": "word",
+    "japanese": "言葉",
+    "type": "noun"
+  },
+  {
+    "id": "w03_031",
+    "level": 3,
+    "english": "money",
+    "japanese": "お金",
+    "type": "noun"
+  },
+  {
+    "id": "w03_032",
+    "level": 3,
+    "english": "story",
+    "japanese": "物語",
+    "type": "noun"
+  },
+  {
+    "id": "w03_033",
+    "level": 3,
+    "english": "month",
+    "japanese": "月",
+    "type": "noun"
+  },
+  {
+    "id": "w03_034",
+    "level": 3,
+    "english": "lot",
+    "japanese": "たくさん",
+    "type": "noun"
+  },
+  {
+    "id": "w03_035",
+    "level": 3,
+    "english": "right",
+    "japanese": "権利",
+    "type": "noun"
+  },
+  {
+    "id": "w03_036",
+    "level": 3,
+    "english": "study",
+    "japanese": "勉強",
+    "type": "noun"
+  },
+  {
+    "id": "w03_037",
+    "level": 3,
+    "english": "job",
+    "japanese": "職業",
+    "type": "noun"
+  },
+  {
+    "id": "w03_038",
+    "level": 3,
+    "english": "house",
+    "japanese": "家",
+    "type": "noun"
+  },
+  {
+    "id": "w03_039",
+    "level": 3,
+    "english": "business",
+    "japanese": "ビジネス",
+    "type": "noun"
+  },
+  {
+    "id": "w03_040",
+    "level": 3,
+    "english": "issue",
+    "japanese": "問題",
+    "type": "noun"
+  },
+  {
+    "id": "w03_041",
+    "level": 3,
+    "english": "side",
+    "japanese": "側",
+    "type": "noun"
+  },
+  {
+    "id": "w03_042",
+    "level": 3,
+    "english": "kind",
+    "japanese": "種類",
+    "type": "noun"
+  },
+  {
+    "id": "w03_043",
+    "level": 3,
+    "english": "head",
+    "japanese": "頭",
+    "type": "noun"
+  },
+  {
+    "id": "w03_044",
+    "level": 3,
+    "english": "car",
+    "japanese": "車",
+    "type": "noun"
+  },
+  {
+    "id": "w03_045",
+    "level": 3,
+    "english": "country",
+    "japanese": "国",
+    "type": "noun"
+  },
+  {
+    "id": "w03_046",
+    "level": 3,
+    "english": "student",
+    "japanese": "学生",
+    "type": "noun"
+  },
+  {
+    "id": "w03_047",
+    "level": 3,
+    "english": "city",
+    "japanese": "都市",
+    "type": "noun"
+  },
+  {
+    "id": "w03_048",
+    "level": 3,
+    "english": "state",
+    "japanese": "状態",
+    "type": "noun"
+  },
+  {
+    "id": "w03_049",
+    "level": 3,
+    "english": "line",
+    "japanese": "線",
+    "type": "noun"
+  },
+  {
+    "id": "w03_050",
+    "level": 3,
+    "english": "member",
+    "japanese": "メンバー",
+    "type": "noun"
+  },
+  {
+    "id": "w04_001",
+    "level": 4,
+    "english": "law",
+    "japanese": "法律",
+    "type": "noun"
+  },
+  {
+    "id": "w04_002",
+    "level": 4,
+    "english": "community",
+    "japanese": "地域社会",
+    "type": "noun"
+  },
+  {
+    "id": "w04_003",
+    "level": 4,
+    "english": "name",
+    "japanese": "名前",
+    "type": "noun"
+  },
+  {
+    "id": "w04_004",
+    "level": 4,
+    "english": "president",
+    "japanese": "大統領",
+    "type": "noun"
+  },
+  {
+    "id": "w04_005",
+    "level": 4,
+    "english": "team",
+    "japanese": "チーム",
+    "type": "noun"
+  },
+  {
+    "id": "w04_006",
+    "level": 4,
+    "english": "minute",
+    "japanese": "分",
+    "type": "noun"
+  },
+  {
+    "id": "w04_007",
+    "level": 4,
+    "english": "idea",
+    "japanese": "考え",
+    "type": "noun"
+  },
+  {
+    "id": "w04_008",
+    "level": 4,
+    "english": "kid",
+    "japanese": "子供",
+    "type": "noun"
+  },
+  {
+    "id": "w04_009",
+    "level": 4,
+    "english": "body",
+    "japanese": "体",
+    "type": "noun"
+  },
+  {
+    "id": "w04_010",
+    "level": 4,
+    "english": "information",
+    "japanese": "情報",
+    "type": "noun"
+  },
+  {
+    "id": "w04_011",
+    "level": 4,
+    "english": "back",
+    "japanese": "後ろ",
+    "type": "noun"
+  },
+  {
+    "id": "w04_012",
+    "level": 4,
+    "english": "parent",
+    "japanese": "親",
+    "type": "noun"
+  },
+  {
+    "id": "w04_013",
+    "level": 4,
+    "english": "face",
+    "japanese": "顔",
+    "type": "noun"
+  },
+  {
+    "id": "w04_014",
+    "level": 4,
+    "english": "others",
+    "japanese": "他人",
+    "type": "noun"
+  },
+  {
+    "id": "w04_015",
+    "level": 4,
+    "english": "level",
+    "japanese": "レベル",
+    "type": "noun"
+  },
+  {
+    "id": "w04_016",
+    "level": 4,
+    "english": "office",
+    "japanese": "オフィス",
+    "type": "noun"
+  },
+  {
+    "id": "w04_017",
+    "level": 4,
+    "english": "door",
+    "japanese": "ドア",
+    "type": "noun"
+  },
+  {
+    "id": "w04_018",
+    "level": 4,
+    "english": "health",
+    "japanese": "健康",
+    "type": "noun"
+  },
+  {
+    "id": "w04_019",
+    "level": 4,
+    "english": "art",
+    "japanese": "芸術",
+    "type": "noun"
+  },
+  {
+    "id": "w04_020",
+    "level": 4,
+    "english": "war",
+    "japanese": "戦争",
+    "type": "noun"
+  },
+  {
+    "id": "w04_021",
+    "level": 4,
+    "english": "history",
+    "japanese": "歴史",
+    "type": "noun"
+  },
+  {
+    "id": "w04_022",
+    "level": 4,
+    "english": "party",
+    "japanese": "パーティー",
+    "type": "noun"
+  },
+  {
+    "id": "w04_023",
+    "level": 4,
+    "english": "result",
+    "japanese": "結果",
+    "type": "noun"
+  },
+  {
+    "id": "w04_024",
+    "level": 4,
+    "english": "morning",
+    "japanese": "朝",
+    "type": "noun"
+  },
+  {
+    "id": "w04_025",
+    "level": 4,
+    "english": "reason",
+    "japanese": "理由",
+    "type": "noun"
+  },
+  {
+    "id": "w04_026",
+    "level": 4,
+    "english": "research",
+    "japanese": "研究",
+    "type": "noun"
+  },
+  {
+    "id": "w04_027",
+    "level": 4,
+    "english": "girl",
+    "japanese": "少女",
+    "type": "noun"
+  },
+  {
+    "id": "w04_028",
+    "level": 4,
+    "english": "guy",
+    "japanese": "男",
+    "type": "noun"
+  },
+  {
+    "id": "w04_029",
+    "level": 4,
+    "english": "moment",
+    "japanese": "瞬間",
+    "type": "noun"
+  },
+  {
+    "id": "w04_030",
+    "level": 4,
+    "english": "air",
+    "japanese": "空気",
+    "type": "noun"
+  },
+  {
+    "id": "w04_031",
+    "level": 4,
+    "english": "teacher",
+    "japanese": "先生",
+    "type": "noun"
+  },
+  {
+    "id": "w04_032",
+    "level": 4,
+    "english": "force",
+    "japanese": "力",
+    "type": "noun"
+  },
+  {
+    "id": "w04_033",
+    "level": 4,
+    "english": "education",
+    "japanese": "教育",
+    "type": "noun"
+  },
+  {
+    "id": "w04_034",
+    "level": 4,
+    "english": "foot",
+    "japanese": "足",
+    "type": "noun"
+  },
+  {
+    "id": "w04_035",
+    "level": 4,
+    "english": "boy",
+    "japanese": "少年",
+    "type": "noun"
+  },
+  {
+    "id": "w04_036",
+    "level": 4,
+    "english": "age",
+    "japanese": "年齢",
+    "type": "noun"
+  },
+  {
+    "id": "w04_037",
+    "level": 4,
+    "english": "policy",
+    "japanese": "政策",
+    "type": "noun"
+  },
+  {
+    "id": "w04_038",
+    "level": 4,
+    "english": "process",
+    "japanese": "過程",
+    "type": "noun"
+  },
+  {
+    "id": "w04_039",
+    "level": 4,
+    "english": "music",
+    "japanese": "音楽",
+    "type": "noun"
+  },
+  {
+    "id": "w04_040",
+    "level": 4,
+    "english": "market",
+    "japanese": "市場",
+    "type": "noun"
+  },
+  {
+    "id": "w04_041",
+    "level": 4,
+    "english": "sense",
+    "japanese": "感覚",
+    "type": "noun"
+  },
+  {
+    "id": "w04_042",
+    "level": 4,
+    "english": "nation",
+    "japanese": "国家",
+    "type": "noun"
+  },
+  {
+    "id": "w04_043",
+    "level": 4,
+    "english": "plan",
+    "japanese": "計画",
+    "type": "noun"
+  },
+  {
+    "id": "w04_044",
+    "level": 4,
+    "english": "college",
+    "japanese": "大学",
+    "type": "noun"
+  },
+  {
+    "id": "w04_045",
+    "level": 4,
+    "english": "interest",
+    "japanese": "興味",
+    "type": "noun"
+  },
+  {
+    "id": "w04_046",
+    "level": 4,
+    "english": "death",
+    "japanese": "死",
+    "type": "noun"
+  },
+  {
+    "id": "w04_047",
+    "level": 4,
+    "english": "experience",
+    "japanese": "経験",
+    "type": "noun"
+  },
+  {
+    "id": "w04_048",
+    "level": 4,
+    "english": "effect",
+    "japanese": "影響",
+    "type": "noun"
+  },
+  {
+    "id": "w04_049",
+    "level": 4,
+    "english": "class",
+    "japanese": "クラス",
+    "type": "noun"
+  },
+  {
+    "id": "w04_050",
+    "level": 4,
+    "english": "control",
+    "japanese": "支配",
+    "type": "noun"
+  },
+  {
+    "id": "w05_001",
+    "level": 5,
+    "english": "care",
+    "japanese": "世話",
+    "type": "noun"
+  },
+  {
+    "id": "w05_002",
+    "level": 5,
+    "english": "field",
+    "japanese": "分野",
+    "type": "noun"
+  },
+  {
+    "id": "w05_003",
+    "level": 5,
+    "english": "development",
+    "japanese": "発展",
+    "type": "noun"
+  },
+  {
+    "id": "w05_004",
+    "level": 5,
+    "english": "role",
+    "japanese": "役割",
+    "type": "noun"
+  },
+  {
+    "id": "w05_005",
+    "level": 5,
+    "english": "good",
+    "japanese": "良い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_006",
+    "level": 5,
+    "english": "new",
+    "japanese": "新しい",
+    "type": "adj"
+  },
+  {
+    "id": "w05_007",
+    "level": 5,
+    "english": "first",
+    "japanese": "最初の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_008",
+    "level": 5,
+    "english": "last",
+    "japanese": "最後の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_009",
+    "level": 5,
+    "english": "long",
+    "japanese": "長い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_010",
+    "level": 5,
+    "english": "great",
+    "japanese": "偉大な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_011",
+    "level": 5,
+    "english": "little",
+    "japanese": "少しの",
+    "type": "adj"
+  },
+  {
+    "id": "w05_012",
+    "level": 5,
+    "english": "own",
+    "japanese": "自身の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_013",
+    "level": 5,
+    "english": "other",
+    "japanese": "他の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_014",
+    "level": 5,
+    "english": "old",
+    "japanese": "古い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_015",
+    "level": 5,
+    "english": "big",
+    "japanese": "大きい",
+    "type": "adj"
+  },
+  {
+    "id": "w05_016",
+    "level": 5,
+    "english": "high",
+    "japanese": "高い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_017",
+    "level": 5,
+    "english": "different",
+    "japanese": "異なる",
+    "type": "adj"
+  },
+  {
+    "id": "w05_018",
+    "level": 5,
+    "english": "small",
+    "japanese": "小さい",
+    "type": "adj"
+  },
+  {
+    "id": "w05_019",
+    "level": 5,
+    "english": "large",
+    "japanese": "大きい",
+    "type": "adj"
+  },
+  {
+    "id": "w05_020",
+    "level": 5,
+    "english": "next",
+    "japanese": "次の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_021",
+    "level": 5,
+    "english": "early",
+    "japanese": "早い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_022",
+    "level": 5,
+    "english": "young",
+    "japanese": "若い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_023",
+    "level": 5,
+    "english": "important",
+    "japanese": "重要な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_024",
+    "level": 5,
+    "english": "few",
+    "japanese": "少ない",
+    "type": "adj"
+  },
+  {
+    "id": "w05_025",
+    "level": 5,
+    "english": "public",
+    "japanese": "公共の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_026",
+    "level": 5,
+    "english": "bad",
+    "japanese": "悪い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_027",
+    "level": 5,
+    "english": "same",
+    "japanese": "同じ",
+    "type": "adj"
+  },
+  {
+    "id": "w05_028",
+    "level": 5,
+    "english": "able",
+    "japanese": "有能な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_029",
+    "level": 5,
+    "english": "basic",
+    "japanese": "基本的な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_030",
+    "level": 5,
+    "english": "second",
+    "japanese": "2番目の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_031",
+    "level": 5,
+    "english": "clear",
+    "japanese": "明確な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_032",
+    "level": 5,
+    "english": "true",
+    "japanese": "本当の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_033",
+    "level": 5,
+    "english": "free",
+    "japanese": "自由な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_034",
+    "level": 5,
+    "english": "sure",
+    "japanese": "確かな",
+    "type": "adj"
+  },
+  {
+    "id": "w05_035",
+    "level": 5,
+    "english": "local",
+    "japanese": "地元の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_036",
+    "level": 5,
+    "english": "general",
+    "japanese": "一般的な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_037",
+    "level": 5,
+    "english": "hard",
+    "japanese": "難しい・硬い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_038",
+    "level": 5,
+    "english": "social",
+    "japanese": "社会的な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_039",
+    "level": 5,
+    "english": "white",
+    "japanese": "白い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_040",
+    "level": 5,
+    "english": "special",
+    "japanese": "特別な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_041",
+    "level": 5,
+    "english": "recent",
+    "japanese": "最近の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_042",
+    "level": 5,
+    "english": "late",
+    "japanese": "遅い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_043",
+    "level": 5,
+    "english": "strong",
+    "japanese": "強い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_044",
+    "level": 5,
+    "english": "past",
+    "japanese": "過去の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_045",
+    "level": 5,
+    "english": "whole",
+    "japanese": "全体の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_046",
+    "level": 5,
+    "english": "short",
+    "japanese": "短い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_047",
+    "level": 5,
+    "english": "easy",
+    "japanese": "簡単な",
+    "type": "adj"
+  },
+  {
+    "id": "w05_048",
+    "level": 5,
+    "english": "human",
+    "japanese": "人間の",
+    "type": "adj"
+  },
+  {
+    "id": "w05_049",
+    "level": 5,
+    "english": "black",
+    "japanese": "黒い",
+    "type": "adj"
+  },
+  {
+    "id": "w05_050",
+    "level": 5,
+    "english": "certain",
+    "japanese": "特定の",
+    "type": "adj"
+  },
+  {
+    "id": "w06_001",
+    "level": 6,
+    "english": "personal",
+    "japanese": "個人的な",
+    "type": "adj"
+  },
+  {
+    "id": "w06_002",
+    "level": 6,
+    "english": "single",
+    "japanese": "単一の",
+    "type": "adj"
+  },
+  {
+    "id": "w06_003",
+    "level": 6,
+    "english": "medical",
+    "japanese": "医学の",
+    "type": "adj"
+  },
+  {
+    "id": "w06_004",
+    "level": 6,
+    "english": "red",
+    "japanese": "赤い",
+    "type": "adj"
+  },
+  {
+    "id": "w06_005",
+    "level": 6,
+    "english": "main",
+    "japanese": "主な",
+    "type": "adj"
+  },
+  {
+    "id": "w06_006",
+    "level": 6,
+    "english": "half",
+    "japanese": "半分の",
+    "type": "adj"
+  },
+  {
+    "id": "w06_007",
+    "level": 6,
+    "english": "cold",
+    "japanese": "冷たい",
+    "type": "adj"
+  },
+  {
+    "id": "w06_008",
+    "level": 6,
+    "english": "ready",
+    "japanese": "準備できた",
+    "type": "adj"
+  },
+  {
+    "id": "w06_009",
+    "level": 6,
+    "english": "round",
+    "japanese": "丸い",
+    "type": "adj"
+  },
+  {
+    "id": "w06_010",
+    "level": 6,
+    "english": "dark",
+    "japanese": "暗い",
+    "type": "adj"
+  },
+  {
+    "id": "w06_011",
+    "level": 6,
+    "english": "fine",
+    "japanese": "立派な",
+    "type": "adj"
+  },
+  {
+    "id": "w06_012",
+    "level": 6,
+    "english": "heavy",
+    "japanese": "重い",
+    "type": "adj"
+  },
+  {
+    "id": "w06_013",
+    "level": 6,
+    "english": "rich",
+    "japanese": "豊かな",
+    "type": "adj"
+  },
+  {
+    "id": "w06_014",
+    "level": 6,
+    "english": "beautiful",
+    "japanese": "美しい",
+    "type": "adj"
+  },
+  {
+    "id": "w06_015",
+    "level": 6,
+    "english": "safe",
+    "japanese": "安全な",
+    "type": "adj"
+  },
+  {
+    "id": "w06_016",
+    "level": 6,
+    "english": "hot",
+    "japanese": "暑い",
+    "type": "adj"
+  },
+  {
+    "id": "w06_017",
+    "level": 6,
+    "english": "poor",
+    "japanese": "貧しい",
+    "type": "adj"
+  },
+  {
+    "id": "w06_018",
+    "level": 6,
+    "english": "happy",
+    "japanese": "幸せな",
+    "type": "adj"
+  },
+  {
+    "id": "w06_019",
+    "level": 6,
+    "english": "serious",
+    "japanese": "深刻な",
+    "type": "adj"
+  },
+  {
+    "id": "w06_020",
+    "level": 6,
+    "english": "deep",
+    "japanese": "深い",
+    "type": "adj"
+  },
+  {
+    "id": "w06_021",
+    "level": 6,
+    "english": "simple",
+    "japanese": "単純な",
+    "type": "adj"
+  },
+  {
+    "id": "w06_022",
+    "level": 6,
+    "english": "popular",
+    "japanese": "人気のある",
+    "type": "adj"
+  },
+  {
+    "id": "w06_023",
+    "level": 6,
+    "english": "wide",
+    "japanese": "広い",
+    "type": "adj"
+  },
+  {
+    "id": "w06_024",
+    "level": 6,
+    "english": "left",
+    "japanese": "左の",
+    "type": "adj"
+  },
+  {
+    "id": "w06_025",
+    "level": 6,
+    "english": "physical",
+    "japanese": "物理的な",
+    "type": "adj"
+  },
+  {
+    "id": "w06_026",
+    "level": 6,
+    "english": "environmental",
+    "japanese": "環境の",
+    "type": "adj"
+  },
+  {
+    "id": "w06_027",
+    "level": 6,
+    "english": "financial",
+    "japanese": "財政の",
+    "type": "adj"
+  },
+  {
+    "id": "w06_028",
+    "level": 6,
+    "english": "blue",
+    "japanese": "青い",
+    "type": "adj"
+  },
+  {
+    "id": "w06_029",
+    "level": 6,
+    "english": "democratic",
+    "japanese": "民主的な",
+    "type": "adj"
+  },
+  {
+    "id": "w06_030",
+    "level": 6,
+    "english": "up",
+    "japanese": "上に",
+    "type": "adv"
+  },
+  {
+    "id": "w06_031",
+    "level": 6,
+    "english": "so",
+    "japanese": "そのように",
+    "type": "adv"
+  },
+  {
+    "id": "w06_032",
+    "level": 6,
+    "english": "out",
+    "japanese": "外に",
+    "type": "adv"
+  },
+  {
+    "id": "w06_033",
+    "level": 6,
+    "english": "just",
+    "japanese": "ちょうど",
+    "type": "adv"
+  },
+  {
+    "id": "w06_034",
+    "level": 6,
+    "english": "now",
+    "japanese": "今",
+    "type": "adv"
+  },
+  {
+    "id": "w06_035",
+    "level": 6,
+    "english": "how",
+    "japanese": "どのように",
+    "type": "adv"
+  },
+  {
+    "id": "w06_036",
+    "level": 6,
+    "english": "then",
+    "japanese": "それから",
+    "type": "adv"
+  },
+  {
+    "id": "w06_037",
+    "level": 6,
+    "english": "more",
+    "japanese": "もっと",
+    "type": "adv"
+  },
+  {
+    "id": "w06_038",
+    "level": 6,
+    "english": "also",
+    "japanese": "また",
+    "type": "adv"
+  },
+  {
+    "id": "w06_039",
+    "level": 6,
+    "english": "here",
+    "japanese": "ここに",
+    "type": "adv"
+  },
+  {
+    "id": "w06_040",
+    "level": 6,
+    "english": "well",
+    "japanese": "よく",
+    "type": "adv"
+  },
+  {
+    "id": "w06_041",
+    "level": 6,
+    "english": "only",
+    "japanese": "ただ〜だけ",
+    "type": "adv"
+  },
+  {
+    "id": "w06_042",
+    "level": 6,
+    "english": "very",
+    "japanese": "とても",
+    "type": "adv"
+  },
+  {
+    "id": "w06_043",
+    "level": 6,
+    "english": "even",
+    "japanese": "〜でさえ",
+    "type": "adv"
+  },
+  {
+    "id": "w06_044",
+    "level": 6,
+    "english": "there",
+    "japanese": "そこに",
+    "type": "adv"
+  },
+  {
+    "id": "w06_045",
+    "level": 6,
+    "english": "down",
+    "japanese": "下に",
+    "type": "adv"
+  },
+  {
+    "id": "w06_046",
+    "level": 6,
+    "english": "still",
+    "japanese": "まだ",
+    "type": "adv"
+  },
+  {
+    "id": "w06_047",
+    "level": 6,
+    "english": "in",
+    "japanese": "中に",
+    "type": "adv"
+  },
+  {
+    "id": "w06_048",
+    "level": 6,
+    "english": "as",
+    "japanese": "〜として",
+    "type": "adv"
+  },
+  {
+    "id": "w06_049",
+    "level": 6,
+    "english": "too",
+    "japanese": "〜もまた",
+    "type": "adv"
+  },
+  {
+    "id": "w06_050",
+    "level": 6,
+    "english": "when",
+    "japanese": "いつ",
+    "type": "adv"
+  },
+  {
+    "id": "w07_001",
+    "level": 7,
+    "english": "never",
+    "japanese": "決して〜ない",
+    "type": "adv"
+  },
+  {
+    "id": "w07_002",
+    "level": 7,
+    "english": "really",
+    "japanese": "本当に",
+    "type": "adv"
+  },
+  {
+    "id": "w07_003",
+    "level": 7,
+    "english": "most",
+    "japanese": "最も",
+    "type": "adv"
+  },
+  {
+    "id": "w07_004",
+    "level": 7,
+    "english": "on",
+    "japanese": "上に",
+    "type": "adv"
+  },
+  {
+    "id": "w07_005",
+    "level": 7,
+    "english": "why",
+    "japanese": "なぜ",
+    "type": "adv"
+  },
+  {
+    "id": "w07_006",
+    "level": 7,
+    "english": "about",
+    "japanese": "約",
+    "type": "adv"
+  },
+  {
+    "id": "w07_007",
+    "level": 7,
+    "english": "over",
+    "japanese": "越えて",
+    "type": "adv"
+  },
+  {
+    "id": "w07_008",
+    "level": 7,
+    "english": "again",
+    "japanese": "再び",
+    "type": "adv"
+  },
+  {
+    "id": "w07_009",
+    "level": 7,
+    "english": "where",
+    "japanese": "どこに",
+    "type": "adv"
+  },
+  {
+    "id": "w07_010",
+    "level": 7,
+    "english": "off",
+    "japanese": "離れて",
+    "type": "adv"
+  },
+  {
+    "id": "w07_011",
+    "level": 7,
+    "english": "always",
+    "japanese": "いつも",
+    "type": "adv"
+  },
+  {
+    "id": "w07_012",
+    "level": 7,
+    "english": "today",
+    "japanese": "今日",
+    "type": "adv"
+  },
+  {
+    "id": "w07_013",
+    "level": 7,
+    "english": "all",
+    "japanese": "すべて",
+    "type": "adv"
+  },
+  {
+    "id": "w07_014",
+    "level": 7,
+    "english": "far",
+    "japanese": "遠くに",
+    "type": "adv"
+  },
+  {
+    "id": "w07_015",
+    "level": 7,
+    "english": "much",
+    "japanese": "たくさん",
+    "type": "adv"
+  },
+  {
+    "id": "w07_016",
+    "level": 7,
+    "english": "often",
+    "japanese": "しばしば",
+    "type": "adv"
+  },
+  {
+    "id": "w07_017",
+    "level": 7,
+    "english": "yet",
+    "japanese": "まだ",
+    "type": "adv"
+  },
+  {
+    "id": "w07_018",
+    "level": 7,
+    "english": "ever",
+    "japanese": "かつて",
+    "type": "adv"
+  },
+  {
+    "id": "w07_019",
+    "level": 7,
+    "english": "however",
+    "japanese": "しかしながら",
+    "type": "adv"
+  },
+  {
+    "id": "w07_020",
+    "level": 7,
+    "english": "almost",
+    "japanese": "ほとんど",
+    "type": "adv"
+  },
+  {
+    "id": "w07_021",
+    "level": 7,
+    "english": "later",
+    "japanese": "後で",
+    "type": "adv"
+  },
+  {
+    "id": "w07_022",
+    "level": 7,
+    "english": "once",
+    "japanese": "一度",
+    "type": "adv"
+  },
+  {
+    "id": "w07_023",
+    "level": 7,
+    "english": "least",
+    "japanese": "少なくとも",
+    "type": "adv"
+  },
+  {
+    "id": "w07_024",
+    "level": 7,
+    "english": "ago",
+    "japanese": "前に",
+    "type": "adv"
+  },
+  {
+    "id": "w07_025",
+    "level": 7,
+    "english": "together",
+    "japanese": "一緒に",
+    "type": "adv"
+  },
+  {
+    "id": "w07_026",
+    "level": 7,
+    "english": "around",
+    "japanese": "周りに",
+    "type": "adv"
+  },
+  {
+    "id": "w07_027",
+    "level": 7,
+    "english": "look for",
+    "japanese": "〜を探す",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_028",
+    "level": 7,
+    "english": "get up",
+    "japanese": "起きる",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_029",
+    "level": 7,
+    "english": "take care of",
+    "japanese": "〜の世話をする",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_030",
+    "level": 7,
+    "english": "give up",
+    "japanese": "あきらめる",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_031",
+    "level": 7,
+    "english": "look after",
+    "japanese": "〜の世話をする",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_032",
+    "level": 7,
+    "english": "listen to",
+    "japanese": "〜を聞く",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_033",
+    "level": 7,
+    "english": "put on",
+    "japanese": "〜を着る",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_034",
+    "level": 7,
+    "english": "take off",
+    "japanese": "〜を脱ぐ",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_035",
+    "level": 7,
+    "english": "turn on",
+    "japanese": "〜をつける",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_036",
+    "level": 7,
+    "english": "turn off",
+    "japanese": "〜を消す",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_037",
+    "level": 7,
+    "english": "be interested in",
+    "japanese": "〜に興味がある",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_038",
+    "level": 7,
+    "english": "be good at",
+    "japanese": "〜が得意である",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_039",
+    "level": 7,
+    "english": "be fond of",
+    "japanese": "〜が好きである",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_040",
+    "level": 7,
+    "english": "be famous for",
+    "japanese": "〜で有名である",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_041",
+    "level": 7,
+    "english": "be full of",
+    "japanese": "〜でいっぱいである",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_042",
+    "level": 7,
+    "english": "be ready for",
+    "japanese": "〜の準備ができている",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_043",
+    "level": 7,
+    "english": "be afraid of",
+    "japanese": "〜を恐れる",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_044",
+    "level": 7,
+    "english": "be late for",
+    "japanese": "〜に遅れる",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_045",
+    "level": 7,
+    "english": "be proud of",
+    "japanese": "〜を誇りに思う",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_046",
+    "level": 7,
+    "english": "be different from",
+    "japanese": "〜と異なる",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_047",
+    "level": 7,
+    "english": "for example",
+    "japanese": "例えば",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_048",
+    "level": 7,
+    "english": "of course",
+    "japanese": "もちろん",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_049",
+    "level": 7,
+    "english": "at first",
+    "japanese": "最初は",
+    "type": "idiom"
+  },
+  {
+    "id": "w07_050",
+    "level": 7,
+    "english": "at last",
+    "japanese": "ついに",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_001",
+    "level": 8,
+    "english": "in fact",
+    "japanese": "実は",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_002",
+    "level": 8,
+    "english": "in front of",
+    "japanese": "〜の前に",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_003",
+    "level": 8,
+    "english": "in the future",
+    "japanese": "将来",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_004",
+    "level": 8,
+    "english": "on time",
+    "japanese": "時間通りに",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_005",
+    "level": 8,
+    "english": "at once",
+    "japanese": "すぐに",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_006",
+    "level": 8,
+    "english": "by the way",
+    "japanese": "ところで",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_007",
+    "level": 8,
+    "english": "a lot of",
+    "japanese": "たくさんの",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_008",
+    "level": 8,
+    "english": "a piece of",
+    "japanese": "1つの〜",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_009",
+    "level": 8,
+    "english": "a few",
+    "japanese": "いくつかの",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_010",
+    "level": 8,
+    "english": "a little",
+    "japanese": "少しの",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_011",
+    "level": 8,
+    "english": "how about",
+    "japanese": "〜はどうですか",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_012",
+    "level": 8,
+    "english": "look forward to",
+    "japanese": "〜を楽しみに待つ",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_013",
+    "level": 8,
+    "english": "make friends with",
+    "japanese": "〜と友達になる",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_014",
+    "level": 8,
+    "english": "catch a cold",
+    "japanese": "風邪をひく",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_015",
+    "level": 8,
+    "english": "do one's best",
+    "japanese": "ベストを尽くす",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_016",
+    "level": 8,
+    "english": "take part in",
+    "japanese": "〜に参加する",
+    "type": "idiom"
+  },
+  {
+    "id": "w08_017",
+    "level": 8,
+    "english": "accept",
+    "japanese": "受け入れる",
+    "type": "verb"
+  },
+  {
+    "id": "w08_018",
+    "level": 8,
+    "english": "achieve",
+    "japanese": "達成する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_019",
+    "level": 8,
+    "english": "act",
+    "japanese": "行動する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_020",
+    "level": 8,
+    "english": "agree",
+    "japanese": "同意する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_021",
+    "level": 8,
+    "english": "answer",
+    "japanese": "答える",
+    "type": "verb"
+  },
+  {
+    "id": "w08_022",
+    "level": 8,
+    "english": "arrive",
+    "japanese": "到着する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_023",
+    "level": 8,
+    "english": "attack",
+    "japanese": "攻撃する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_024",
+    "level": 8,
+    "english": "attend",
+    "japanese": "出席する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_025",
+    "level": 8,
+    "english": "avoid",
+    "japanese": "避ける",
+    "type": "verb"
+  },
+  {
+    "id": "w08_026",
+    "level": 8,
+    "english": "base",
+    "japanese": "基礎を置く",
+    "type": "verb"
+  },
+  {
+    "id": "w08_027",
+    "level": 8,
+    "english": "beat",
+    "japanese": "打つ",
+    "type": "verb"
+  },
+  {
+    "id": "w08_028",
+    "level": 8,
+    "english": "belong",
+    "japanese": "属する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_029",
+    "level": 8,
+    "english": "blame",
+    "japanese": "責める",
+    "type": "verb"
+  },
+  {
+    "id": "w08_030",
+    "level": 8,
+    "english": "borrow",
+    "japanese": "借りる",
+    "type": "verb"
+  },
+  {
+    "id": "w08_031",
+    "level": 8,
+    "english": "bother",
+    "japanese": "悩ます",
+    "type": "verb"
+  },
+  {
+    "id": "w08_032",
+    "level": 8,
+    "english": "catch",
+    "japanese": "捕まえる",
+    "type": "verb"
+  },
+  {
+    "id": "w08_033",
+    "level": 8,
+    "english": "cause",
+    "japanese": "引き起こす",
+    "type": "verb"
+  },
+  {
+    "id": "w08_034",
+    "level": 8,
+    "english": "check",
+    "japanese": "確認する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_035",
+    "level": 8,
+    "english": "choose",
+    "japanese": "選ぶ",
+    "type": "verb"
+  },
+  {
+    "id": "w08_036",
+    "level": 8,
+    "english": "clean",
+    "japanese": "掃除する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_037",
+    "level": 8,
+    "english": "climb",
+    "japanese": "登る",
+    "type": "verb"
+  },
+  {
+    "id": "w08_038",
+    "level": 8,
+    "english": "close",
+    "japanese": "閉める",
+    "type": "verb"
+  },
+  {
+    "id": "w08_039",
+    "level": 8,
+    "english": "collect",
+    "japanese": "集める",
+    "type": "verb"
+  },
+  {
+    "id": "w08_040",
+    "level": 8,
+    "english": "compare",
+    "japanese": "比較する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_041",
+    "level": 8,
+    "english": "complain",
+    "japanese": "文句を言う",
+    "type": "verb"
+  },
+  {
+    "id": "w08_042",
+    "level": 8,
+    "english": "complete",
+    "japanese": "完了する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_043",
+    "level": 8,
+    "english": "contain",
+    "japanese": "含む",
+    "type": "verb"
+  },
+  {
+    "id": "w08_044",
+    "level": 8,
+    "english": "cook",
+    "japanese": "料理する",
+    "type": "verb"
+  },
+  {
+    "id": "w08_045",
+    "level": 8,
+    "english": "copy",
+    "japanese": "コピーする",
+    "type": "verb"
+  },
+  {
+    "id": "w08_046",
+    "level": 8,
+    "english": "cost",
+    "japanese": "費用がかかる",
+    "type": "verb"
+  },
+  {
+    "id": "w08_047",
+    "level": 8,
+    "english": "count",
+    "japanese": "数える",
+    "type": "verb"
+  },
+  {
+    "id": "w08_048",
+    "level": 8,
+    "english": "cover",
+    "japanese": "覆う",
+    "type": "verb"
+  },
+  {
+    "id": "w08_049",
+    "level": 8,
+    "english": "cross",
+    "japanese": "横切る",
+    "type": "verb"
+  },
+  {
+    "id": "w08_050",
+    "level": 8,
+    "english": "cry",
+    "japanese": "泣く",
+    "type": "verb"
+  },
+  {
+    "id": "w09_001",
+    "level": 9,
+    "english": "damage",
+    "japanese": "損害を与える",
+    "type": "verb"
+  },
+  {
+    "id": "w09_002",
+    "level": 9,
+    "english": "dance",
+    "japanese": "踊る",
+    "type": "verb"
+  },
+  {
+    "id": "w09_003",
+    "level": 9,
+    "english": "deal",
+    "japanese": "扱う",
+    "type": "verb"
+  },
+  {
+    "id": "w09_004",
+    "level": 9,
+    "english": "depend",
+    "japanese": "頼る",
+    "type": "verb"
+  },
+  {
+    "id": "w09_005",
+    "level": 9,
+    "english": "describe",
+    "japanese": "描写する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_006",
+    "level": 9,
+    "english": "destroy",
+    "japanese": "破壊する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_007",
+    "level": 9,
+    "english": "discover",
+    "japanese": "発見する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_008",
+    "level": 9,
+    "english": "discuss",
+    "japanese": "議論する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_009",
+    "level": 9,
+    "english": "divide",
+    "japanese": "分ける",
+    "type": "verb"
+  },
+  {
+    "id": "w09_010",
+    "level": 9,
+    "english": "draw",
+    "japanese": "描く",
+    "type": "verb"
+  },
+  {
+    "id": "w09_011",
+    "level": 9,
+    "english": "dream",
+    "japanese": "夢を見る",
+    "type": "verb"
+  },
+  {
+    "id": "w09_012",
+    "level": 9,
+    "english": "drink",
+    "japanese": "飲む",
+    "type": "verb"
+  },
+  {
+    "id": "w09_013",
+    "level": 9,
+    "english": "drive",
+    "japanese": "運転する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_014",
+    "level": 9,
+    "english": "drop",
+    "japanese": "落とす",
+    "type": "verb"
+  },
+  {
+    "id": "w09_015",
+    "level": 9,
+    "english": "eat",
+    "japanese": "食べる",
+    "type": "verb"
+  },
+  {
+    "id": "w09_016",
+    "level": 9,
+    "english": "enjoy",
+    "japanese": "楽しむ",
+    "type": "verb"
+  },
+  {
+    "id": "w09_017",
+    "level": 9,
+    "english": "enter",
+    "japanese": "入る",
+    "type": "verb"
+  },
+  {
+    "id": "w09_018",
+    "level": 9,
+    "english": "exist",
+    "japanese": "存在する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_019",
+    "level": 9,
+    "english": "fail",
+    "japanese": "失敗する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_020",
+    "level": 9,
+    "english": "feed",
+    "japanese": "食べ物を与える",
+    "type": "verb"
+  },
+  {
+    "id": "w09_021",
+    "level": 9,
+    "english": "fight",
+    "japanese": "戦う",
+    "type": "verb"
+  },
+  {
+    "id": "w09_022",
+    "level": 9,
+    "english": "fill",
+    "japanese": "満たす",
+    "type": "verb"
+  },
+  {
+    "id": "w09_023",
+    "level": 9,
+    "english": "finish",
+    "japanese": "終える",
+    "type": "verb"
+  },
+  {
+    "id": "w09_024",
+    "level": 9,
+    "english": "fit",
+    "japanese": "合う",
+    "type": "verb"
+  },
+  {
+    "id": "w09_025",
+    "level": 9,
+    "english": "fly",
+    "japanese": "飛ぶ",
+    "type": "verb"
+  },
+  {
+    "id": "w09_026",
+    "level": 9,
+    "english": "forget",
+    "japanese": "忘れる",
+    "type": "verb"
+  },
+  {
+    "id": "w09_027",
+    "level": 9,
+    "english": "forgive",
+    "japanese": "許す",
+    "type": "verb"
+  },
+  {
+    "id": "w09_028",
+    "level": 9,
+    "english": "guess",
+    "japanese": "推測する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_029",
+    "level": 9,
+    "english": "guide",
+    "japanese": "案内する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_030",
+    "level": 9,
+    "english": "hate",
+    "japanese": "憎む",
+    "type": "verb"
+  },
+  {
+    "id": "w09_031",
+    "level": 9,
+    "english": "hide",
+    "japanese": "隠す",
+    "type": "verb"
+  },
+  {
+    "id": "w09_032",
+    "level": 9,
+    "english": "hit",
+    "japanese": "打つ",
+    "type": "verb"
+  },
+  {
+    "id": "w09_033",
+    "level": 9,
+    "english": "hold",
+    "japanese": "持つ",
+    "type": "verb"
+  },
+  {
+    "id": "w09_034",
+    "level": 9,
+    "english": "hurt",
+    "japanese": "傷つける",
+    "type": "verb"
+  },
+  {
+    "id": "w09_035",
+    "level": 9,
+    "english": "imagine",
+    "japanese": "想像する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_036",
+    "level": 9,
+    "english": "improve",
+    "japanese": "向上させる",
+    "type": "verb"
+  },
+  {
+    "id": "w09_037",
+    "level": 9,
+    "english": "invite",
+    "japanese": "招待する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_038",
+    "level": 9,
+    "english": "join",
+    "japanese": "参加する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_039",
+    "level": 9,
+    "english": "jump",
+    "japanese": "跳ぶ",
+    "type": "verb"
+  },
+  {
+    "id": "w09_040",
+    "level": 9,
+    "english": "kick",
+    "japanese": "蹴る",
+    "type": "verb"
+  },
+  {
+    "id": "w09_041",
+    "level": 9,
+    "english": "kiss",
+    "japanese": "キスする",
+    "type": "verb"
+  },
+  {
+    "id": "w09_042",
+    "level": 9,
+    "english": "laugh",
+    "japanese": "笑う",
+    "type": "verb"
+  },
+  {
+    "id": "w09_043",
+    "level": 9,
+    "english": "lay",
+    "japanese": "横たえる",
+    "type": "verb"
+  },
+  {
+    "id": "w09_044",
+    "level": 9,
+    "english": "lie",
+    "japanese": "嘘をつく・横たわる",
+    "type": "verb"
+  },
+  {
+    "id": "w09_045",
+    "level": 9,
+    "english": "lift",
+    "japanese": "持ち上げる",
+    "type": "verb"
+  },
+  {
+    "id": "w09_046",
+    "level": 9,
+    "english": "listen",
+    "japanese": "聞く",
+    "type": "verb"
+  },
+  {
+    "id": "w09_047",
+    "level": 9,
+    "english": "look",
+    "japanese": "見る",
+    "type": "verb"
+  },
+  {
+    "id": "w09_048",
+    "level": 9,
+    "english": "marry",
+    "japanese": "結婚する",
+    "type": "verb"
+  },
+  {
+    "id": "w09_049",
+    "level": 9,
+    "english": "matter",
+    "japanese": "重要である",
+    "type": "verb"
+  },
+  {
+    "id": "w09_050",
+    "level": 9,
+    "english": "mind",
+    "japanese": "気にする",
+    "type": "verb"
+  },
+  {
+    "id": "w10_001",
+    "level": 10,
+    "english": "miss",
+    "japanese": "逃す・恋しく思う",
+    "type": "verb"
+  },
+  {
+    "id": "w10_002",
+    "level": 10,
+    "english": "notice",
+    "japanese": "気づく",
+    "type": "verb"
+  },
+  {
+    "id": "w10_003",
+    "level": 10,
+    "english": "pick",
+    "japanese": "選ぶ",
+    "type": "verb"
+  },
+  {
+    "id": "w10_004",
+    "level": 10,
+    "english": "plant",
+    "japanese": "植える",
+    "type": "verb"
+  },
+  {
+    "id": "w10_005",
+    "level": 10,
+    "english": "ability",
+    "japanese": "能力",
+    "type": "noun"
+  },
+  {
+    "id": "w10_006",
+    "level": 10,
+    "english": "accident",
+    "japanese": "事故",
+    "type": "noun"
+  },
+  {
+    "id": "w10_007",
+    "level": 10,
+    "english": "action",
+    "japanese": "行動",
+    "type": "noun"
+  },
+  {
+    "id": "w10_008",
+    "level": 10,
+    "english": "activity",
+    "japanese": "活動",
+    "type": "noun"
+  },
+  {
+    "id": "w10_009",
+    "level": 10,
+    "english": "actor",
+    "japanese": "俳優",
+    "type": "noun"
+  },
+  {
+    "id": "w10_010",
+    "level": 10,
+    "english": "address",
+    "japanese": "住所",
+    "type": "noun"
+  },
+  {
+    "id": "w10_011",
+    "level": 10,
+    "english": "adult",
+    "japanese": "大人",
+    "type": "noun"
+  },
+  {
+    "id": "w10_012",
+    "level": 10,
+    "english": "advantage",
+    "japanese": "利点",
+    "type": "noun"
+  },
+  {
+    "id": "w10_013",
+    "level": 10,
+    "english": "advice",
+    "japanese": "助言",
+    "type": "noun"
+  },
+  {
+    "id": "w10_014",
+    "level": 10,
+    "english": "afternoon",
+    "japanese": "午後",
+    "type": "noun"
+  },
+  {
+    "id": "w10_015",
+    "level": 10,
+    "english": "agreement",
+    "japanese": "合意",
+    "type": "noun"
+  },
+  {
+    "id": "w10_016",
+    "level": 10,
+    "english": "airport",
+    "japanese": "空港",
+    "type": "noun"
+  },
+  {
+    "id": "w10_017",
+    "level": 10,
+    "english": "album",
+    "japanese": "アルバム",
+    "type": "noun"
+  },
+  {
+    "id": "w10_018",
+    "level": 10,
+    "english": "amount",
+    "japanese": "量",
+    "type": "noun"
+  },
+  {
+    "id": "w10_019",
+    "level": 10,
+    "english": "animal",
+    "japanese": "動物",
+    "type": "noun"
+  },
+  {
+    "id": "w10_020",
+    "level": 10,
+    "english": "apple",
+    "japanese": "りんご",
+    "type": "noun"
+  },
+  {
+    "id": "w10_021",
+    "level": 10,
+    "english": "area",
+    "japanese": "地域",
+    "type": "noun"
+  },
+  {
+    "id": "w10_022",
+    "level": 10,
+    "english": "arm",
+    "japanese": "腕",
+    "type": "noun"
+  },
+  {
+    "id": "w10_023",
+    "level": 10,
+    "english": "army",
+    "japanese": "軍隊",
+    "type": "noun"
+  },
+  {
+    "id": "w10_024",
+    "level": 10,
+    "english": "article",
+    "japanese": "記事",
+    "type": "noun"
+  },
+  {
+    "id": "w10_025",
+    "level": 10,
+    "english": "artist",
+    "japanese": "芸術家",
+    "type": "noun"
+  },
+  {
+    "id": "w10_026",
+    "level": 10,
+    "english": "attention",
+    "japanese": "注意",
+    "type": "noun"
+  },
+  {
+    "id": "w10_027",
+    "level": 10,
+    "english": "aunt",
+    "japanese": "おば",
+    "type": "noun"
+  },
+  {
+    "id": "w10_028",
+    "level": 10,
+    "english": "author",
+    "japanese": "著者",
+    "type": "noun"
+  },
+  {
+    "id": "w10_029",
+    "level": 10,
+    "english": "autumn",
+    "japanese": "秋",
+    "type": "noun"
+  },
+  {
+    "id": "w10_030",
+    "level": 10,
+    "english": "bag",
+    "japanese": "かばん",
+    "type": "noun"
+  },
+  {
+    "id": "w10_031",
+    "level": 10,
+    "english": "ball",
+    "japanese": "ボール",
+    "type": "noun"
+  },
+  {
+    "id": "w10_032",
+    "level": 10,
+    "english": "bank",
+    "japanese": "銀行",
+    "type": "noun"
+  },
+  {
+    "id": "w10_033",
+    "level": 10,
+    "english": "basket",
+    "japanese": "かご",
+    "type": "noun"
+  },
+  {
+    "id": "w10_034",
+    "level": 10,
+    "english": "bath",
+    "japanese": "入浴",
+    "type": "noun"
+  },
+  {
+    "id": "w10_035",
+    "level": 10,
+    "english": "battle",
+    "japanese": "戦闘",
+    "type": "noun"
+  },
+  {
+    "id": "w10_036",
+    "level": 10,
+    "english": "beach",
+    "japanese": "ビーチ",
+    "type": "noun"
+  },
+  {
+    "id": "w10_037",
+    "level": 10,
+    "english": "bear",
+    "japanese": "熊",
+    "type": "noun"
+  },
+  {
+    "id": "w10_038",
+    "level": 10,
+    "english": "beauty",
+    "japanese": "美しさ",
+    "type": "noun"
+  },
+  {
+    "id": "w10_039",
+    "level": 10,
+    "english": "bed",
+    "japanese": "ベッド",
+    "type": "noun"
+  },
+  {
+    "id": "w10_040",
+    "level": 10,
+    "english": "bedroom",
+    "japanese": "寝室",
+    "type": "noun"
+  },
+  {
+    "id": "w10_041",
+    "level": 10,
+    "english": "beef",
+    "japanese": "牛肉",
+    "type": "noun"
+  },
+  {
+    "id": "w10_042",
+    "level": 10,
+    "english": "bell",
+    "japanese": "ベル",
+    "type": "noun"
+  },
+  {
+    "id": "w10_043",
+    "level": 10,
+    "english": "bicycle",
+    "japanese": "自転車",
+    "type": "noun"
+  },
+  {
+    "id": "w10_044",
+    "level": 10,
+    "english": "bird",
+    "japanese": "鳥",
+    "type": "noun"
+  },
+  {
+    "id": "w10_045",
+    "level": 10,
+    "english": "birth",
+    "japanese": "誕生",
+    "type": "noun"
+  },
+  {
+    "id": "w10_046",
+    "level": 10,
+    "english": "birthday",
+    "japanese": "誕生日",
+    "type": "noun"
+  },
+  {
+    "id": "w10_047",
+    "level": 10,
+    "english": "blood",
+    "japanese": "血",
+    "type": "noun"
+  },
+  {
+    "id": "w10_048",
+    "level": 10,
+    "english": "board",
+    "japanese": "板",
+    "type": "noun"
+  },
+  {
+    "id": "w10_049",
+    "level": 10,
+    "english": "boat",
+    "japanese": "ボート",
+    "type": "noun"
+  },
+  {
+    "id": "w10_050",
+    "level": 10,
+    "english": "bone",
+    "japanese": "骨",
+    "type": "noun"
+  },
+  {
+    "id": "w11_001",
+    "level": 11,
+    "english": "boss",
+    "japanese": "上司",
+    "type": "noun"
+  },
+  {
+    "id": "w11_002",
+    "level": 11,
+    "english": "bottom",
+    "japanese": "底",
+    "type": "noun"
+  },
+  {
+    "id": "w11_003",
+    "level": 11,
+    "english": "box",
+    "japanese": "箱",
+    "type": "noun"
+  },
+  {
+    "id": "w11_004",
+    "level": 11,
+    "english": "brain",
+    "japanese": "脳",
+    "type": "noun"
+  },
+  {
+    "id": "w11_005",
+    "level": 11,
+    "english": "branch",
+    "japanese": "枝",
+    "type": "noun"
+  },
+  {
+    "id": "w11_006",
+    "level": 11,
+    "english": "bread",
+    "japanese": "パン",
+    "type": "noun"
+  },
+  {
+    "id": "w11_007",
+    "level": 11,
+    "english": "breakfast",
+    "japanese": "朝食",
+    "type": "noun"
+  },
+  {
+    "id": "w11_008",
+    "level": 11,
+    "english": "bridge",
+    "japanese": "橋",
+    "type": "noun"
+  },
+  {
+    "id": "w11_009",
+    "level": 11,
+    "english": "brother",
+    "japanese": "兄弟",
+    "type": "noun"
+  },
+  {
+    "id": "w11_010",
+    "level": 11,
+    "english": "brush",
+    "japanese": "ブラシ",
+    "type": "noun"
+  },
+  {
+    "id": "w11_011",
+    "level": 11,
+    "english": "building",
+    "japanese": "建物",
+    "type": "noun"
+  },
+  {
+    "id": "w11_012",
+    "level": 11,
+    "english": "bus",
+    "japanese": "バス",
+    "type": "noun"
+  },
+  {
+    "id": "w11_013",
+    "level": 11,
+    "english": "butter",
+    "japanese": "バター",
+    "type": "noun"
+  },
+  {
+    "id": "w11_014",
+    "level": 11,
+    "english": "button",
+    "japanese": "ボタン",
+    "type": "noun"
+  },
+  {
+    "id": "w11_015",
+    "level": 11,
+    "english": "cake",
+    "japanese": "ケーキ",
+    "type": "noun"
+  },
+  {
+    "id": "w11_016",
+    "level": 11,
+    "english": "camera",
+    "japanese": "カメラ",
+    "type": "noun"
+  },
+  {
+    "id": "w11_017",
+    "level": 11,
+    "english": "camp",
+    "japanese": "キャンプ",
+    "type": "noun"
+  },
+  {
+    "id": "w11_018",
+    "level": 11,
+    "english": "capital",
+    "japanese": "首都",
+    "type": "noun"
+  },
+  {
+    "id": "w11_019",
+    "level": 11,
+    "english": "captain",
+    "japanese": "キャプテン",
+    "type": "noun"
+  },
+  {
+    "id": "w11_020",
+    "level": 11,
+    "english": "card",
+    "japanese": "カード",
+    "type": "noun"
+  },
+  {
+    "id": "w11_021",
+    "level": 11,
+    "english": "career",
+    "japanese": "経歴",
+    "type": "noun"
+  },
+  {
+    "id": "w11_022",
+    "level": 11,
+    "english": "cat",
+    "japanese": "猫",
+    "type": "noun"
+  },
+  {
+    "id": "w11_023",
+    "level": 11,
+    "english": "center",
+    "japanese": "中心",
+    "type": "noun"
+  },
+  {
+    "id": "w11_024",
+    "level": 11,
+    "english": "century",
+    "japanese": "世紀",
+    "type": "noun"
+  },
+  {
+    "id": "w11_025",
+    "level": 11,
+    "english": "chair",
+    "japanese": "椅子",
+    "type": "noun"
+  },
+  {
+    "id": "w11_026",
+    "level": 11,
+    "english": "chance",
+    "japanese": "機会",
+    "type": "noun"
+  },
+  {
+    "id": "w11_027",
+    "level": 11,
+    "english": "character",
+    "japanese": "性格",
+    "type": "noun"
+  },
+  {
+    "id": "w11_028",
+    "level": 11,
+    "english": "charge",
+    "japanese": "料金",
+    "type": "noun"
+  },
+  {
+    "id": "w11_029",
+    "level": 11,
+    "english": "chief",
+    "japanese": "長",
+    "type": "noun"
+  },
+  {
+    "id": "w11_030",
+    "level": 11,
+    "english": "church",
+    "japanese": "教会",
+    "type": "noun"
+  },
+  {
+    "id": "w11_031",
+    "level": 11,
+    "english": "circle",
+    "japanese": "円",
+    "type": "noun"
+  },
+  {
+    "id": "w11_032",
+    "level": 11,
+    "english": "citizen",
+    "japanese": "市民",
+    "type": "noun"
+  },
+  {
+    "id": "w11_033",
+    "level": 11,
+    "english": "classmate",
+    "japanese": "同級生",
+    "type": "noun"
+  },
+  {
+    "id": "w11_034",
+    "level": 11,
+    "english": "clock",
+    "japanese": "時計",
+    "type": "noun"
+  },
+  {
+    "id": "w11_035",
+    "level": 11,
+    "english": "clothes",
+    "japanese": "衣服",
+    "type": "noun"
+  },
+  {
+    "id": "w11_036",
+    "level": 11,
+    "english": "cloud",
+    "japanese": "雲",
+    "type": "noun"
+  },
+  {
+    "id": "w11_037",
+    "level": 11,
+    "english": "club",
+    "japanese": "クラブ",
+    "type": "noun"
+  },
+  {
+    "id": "w11_038",
+    "level": 11,
+    "english": "coast",
+    "japanese": "海岸",
+    "type": "noun"
+  },
+  {
+    "id": "w11_039",
+    "level": 11,
+    "english": "coat",
+    "japanese": "コート",
+    "type": "noun"
+  },
+  {
+    "id": "w11_040",
+    "level": 11,
+    "english": "coffee",
+    "japanese": "コーヒー",
+    "type": "noun"
+  },
+  {
+    "id": "w11_041",
+    "level": 11,
+    "english": "coin",
+    "japanese": "硬貨",
+    "type": "noun"
+  },
+  {
+    "id": "w11_042",
+    "level": 11,
+    "english": "color",
+    "japanese": "色",
+    "type": "noun"
+  },
+  {
+    "id": "w11_043",
+    "level": 11,
+    "english": "condition",
+    "japanese": "条件",
+    "type": "noun"
+  },
+  {
+    "id": "w11_044",
+    "level": 11,
+    "english": "corner",
+    "japanese": "角",
+    "type": "noun"
+  },
+  {
+    "id": "w11_045",
+    "level": 11,
+    "english": "cotton",
+    "japanese": "綿",
+    "type": "noun"
+  },
+  {
+    "id": "w11_046",
+    "level": 11,
+    "english": "course",
+    "japanese": "コース",
+    "type": "noun"
+  },
+  {
+    "id": "w11_047",
+    "level": 11,
+    "english": "cousin",
+    "japanese": "いとこ",
+    "type": "noun"
+  },
+  {
+    "id": "w11_048",
+    "level": 11,
+    "english": "cow",
+    "japanese": "牛",
+    "type": "noun"
+  },
+  {
+    "id": "w11_049",
+    "level": 11,
+    "english": "crowd",
+    "japanese": "群衆",
+    "type": "noun"
+  },
+  {
+    "id": "w11_050",
+    "level": 11,
+    "english": "cup",
+    "japanese": "カップ",
+    "type": "noun"
+  },
+  {
+    "id": "w12_001",
+    "level": 12,
+    "english": "custom",
+    "japanese": "習慣",
+    "type": "noun"
+  },
+  {
+    "id": "w12_002",
+    "level": 12,
+    "english": "customer",
+    "japanese": "客",
+    "type": "noun"
+  },
+  {
+    "id": "w12_003",
+    "level": 12,
+    "english": "danger",
+    "japanese": "危険",
+    "type": "noun"
+  },
+  {
+    "id": "w12_004",
+    "level": 12,
+    "english": "date",
+    "japanese": "日付",
+    "type": "noun"
+  },
+  {
+    "id": "w12_005",
+    "level": 12,
+    "english": "daughter",
+    "japanese": "娘",
+    "type": "noun"
+  },
+  {
+    "id": "w12_006",
+    "level": 12,
+    "english": "decision",
+    "japanese": "決定",
+    "type": "noun"
+  },
+  {
+    "id": "w12_007",
+    "level": 12,
+    "english": "degree",
+    "japanese": "程度",
+    "type": "noun"
+  },
+  {
+    "id": "w12_008",
+    "level": 12,
+    "english": "department",
+    "japanese": "部門",
+    "type": "noun"
+  },
+  {
+    "id": "w12_009",
+    "level": 12,
+    "english": "design",
+    "japanese": "デザイン",
+    "type": "noun"
+  },
+  {
+    "id": "w12_010",
+    "level": 12,
+    "english": "desk",
+    "japanese": "机",
+    "type": "noun"
+  },
+  {
+    "id": "w12_011",
+    "level": 12,
+    "english": "detail",
+    "japanese": "詳細",
+    "type": "noun"
+  },
+  {
+    "id": "w12_012",
+    "level": 12,
+    "english": "diary",
+    "japanese": "日記",
+    "type": "noun"
+  },
+  {
+    "id": "w12_013",
+    "level": 12,
+    "english": "dictionary",
+    "japanese": "辞書",
+    "type": "noun"
+  },
+  {
+    "id": "w12_014",
+    "level": 12,
+    "english": "difference",
+    "japanese": "違い",
+    "type": "noun"
+  },
+  {
+    "id": "w12_015",
+    "level": 12,
+    "english": "difficulty",
+    "japanese": "困難",
+    "type": "noun"
+  },
+  {
+    "id": "w12_016",
+    "level": 12,
+    "english": "dinner",
+    "japanese": "夕食",
+    "type": "noun"
+  },
+  {
+    "id": "w12_017",
+    "level": 12,
+    "english": "direction",
+    "japanese": "方向",
+    "type": "noun"
+  },
+  {
+    "id": "w12_018",
+    "level": 12,
+    "english": "director",
+    "japanese": "監督",
+    "type": "noun"
+  },
+  {
+    "id": "w12_019",
+    "level": 12,
+    "english": "dirty",
+    "japanese": "汚れ",
+    "type": "noun"
+  },
+  {
+    "id": "w12_020",
+    "level": 12,
+    "english": "disease",
+    "japanese": "病気",
+    "type": "noun"
+  },
+  {
+    "id": "w12_021",
+    "level": 12,
+    "english": "dish",
+    "japanese": "皿",
+    "type": "noun"
+  },
+  {
+    "id": "w12_022",
+    "level": 12,
+    "english": "distance",
+    "japanese": "距離",
+    "type": "noun"
+  },
+  {
+    "id": "w12_023",
+    "level": 12,
+    "english": "doctor",
+    "japanese": "医者",
+    "type": "noun"
+  },
+  {
+    "id": "w12_024",
+    "level": 12,
+    "english": "dog",
+    "japanese": "犬",
+    "type": "noun"
+  },
+  {
+    "id": "w12_025",
+    "level": 12,
+    "english": "dollar",
+    "japanese": "ドル",
+    "type": "noun"
+  },
+  {
+    "id": "w12_026",
+    "level": 12,
+    "english": "doubt",
+    "japanese": "疑い",
+    "type": "noun"
+  },
+  {
+    "id": "w12_027",
+    "level": 12,
+    "english": "dress",
+    "japanese": "ドレス",
+    "type": "noun"
+  },
+  {
+    "id": "w12_028",
+    "level": 12,
+    "english": "driver",
+    "japanese": "運転手",
+    "type": "noun"
+  },
+  {
+    "id": "w12_029",
+    "level": 12,
+    "english": "duty",
+    "japanese": "義務",
+    "type": "noun"
+  },
+  {
+    "id": "w12_030",
+    "level": 12,
+    "english": "ear",
+    "japanese": "耳",
+    "type": "noun"
+  },
+  {
+    "id": "w12_031",
+    "level": 12,
+    "english": "earth",
+    "japanese": "地球",
+    "type": "noun"
+  },
+  {
+    "id": "w12_032",
+    "level": 12,
+    "english": "east",
+    "japanese": "東",
+    "type": "noun"
+  },
+  {
+    "id": "w12_033",
+    "level": 12,
+    "english": "effort",
+    "japanese": "努力",
+    "type": "noun"
+  },
+  {
+    "id": "w12_034",
+    "level": 12,
+    "english": "egg",
+    "japanese": "卵",
+    "type": "noun"
+  },
+  {
+    "id": "w12_035",
+    "level": 12,
+    "english": "elephant",
+    "japanese": "象",
+    "type": "noun"
+  },
+  {
+    "id": "w12_036",
+    "level": 12,
+    "english": "emotion",
+    "japanese": "感情",
+    "type": "noun"
+  },
+  {
+    "id": "w12_037",
+    "level": 12,
+    "english": "end",
+    "japanese": "終わり",
+    "type": "noun"
+  },
+  {
+    "id": "w12_038",
+    "level": 12,
+    "english": "enemy",
+    "japanese": "敵",
+    "type": "noun"
+  },
+  {
+    "id": "w12_039",
+    "level": 12,
+    "english": "energy",
+    "japanese": "エネルギー",
+    "type": "noun"
+  },
+  {
+    "id": "w12_040",
+    "level": 12,
+    "english": "engine",
+    "japanese": "エンジン",
+    "type": "noun"
+  },
+  {
+    "id": "w12_041",
+    "level": 12,
+    "english": "engineer",
+    "japanese": "技術者",
+    "type": "noun"
+  },
+  {
+    "id": "w12_042",
+    "level": 12,
+    "english": "evening",
+    "japanese": "夕方",
+    "type": "noun"
+  },
+  {
+    "id": "w12_043",
+    "level": 12,
+    "english": "event",
+    "japanese": "出来事",
+    "type": "noun"
+  },
+  {
+    "id": "w12_044",
+    "level": 12,
+    "english": "example",
+    "japanese": "例",
+    "type": "noun"
+  },
+  {
+    "id": "w12_045",
+    "level": 12,
+    "english": "exchange",
+    "japanese": "交換",
+    "type": "noun"
+  },
+  {
+    "id": "w12_046",
+    "level": 12,
+    "english": "exercise",
+    "japanese": "運動",
+    "type": "noun"
+  },
+  {
+    "id": "w12_047",
+    "level": 12,
+    "english": "factory",
+    "japanese": "工場",
+    "type": "noun"
+  },
+  {
+    "id": "w12_048",
+    "level": 12,
+    "english": "farm",
+    "japanese": "農場",
+    "type": "noun"
+  },
+  {
+    "id": "w12_049",
+    "level": 12,
+    "english": "farmer",
+    "japanese": "農民",
+    "type": "noun"
+  },
+  {
+    "id": "w12_050",
+    "level": 12,
+    "english": "father",
+    "japanese": "父親",
+    "type": "noun"
+  },
+  {
+    "id": "w13_001",
+    "level": 13,
+    "english": "fault",
+    "japanese": "欠点",
+    "type": "noun"
+  },
+  {
+    "id": "w13_002",
+    "level": 13,
+    "english": "fear",
+    "japanese": "恐れ",
+    "type": "noun"
+  },
+  {
+    "id": "w13_003",
+    "level": 13,
+    "english": "feeling",
+    "japanese": "感情",
+    "type": "noun"
+  },
+  {
+    "id": "w13_004",
+    "level": 13,
+    "english": "festival",
+    "japanese": "祭り",
+    "type": "noun"
+  },
+  {
+    "id": "w13_005",
+    "level": 13,
+    "english": "figure",
+    "japanese": "数字・姿",
+    "type": "noun"
+  },
+  {
+    "id": "w13_006",
+    "level": 13,
+    "english": "finger",
+    "japanese": "指",
+    "type": "noun"
+  },
+  {
+    "id": "w13_007",
+    "level": 13,
+    "english": "fire",
+    "japanese": "火",
+    "type": "noun"
+  },
+  {
+    "id": "w13_008",
+    "level": 13,
+    "english": "fish",
+    "japanese": "魚",
+    "type": "noun"
+  },
+  {
+    "id": "w13_009",
+    "level": 13,
+    "english": "flight",
+    "japanese": "飛行",
+    "type": "noun"
+  },
+  {
+    "id": "w13_010",
+    "level": 13,
+    "english": "floor",
+    "japanese": "床",
+    "type": "noun"
+  },
+  {
+    "id": "w13_011",
+    "level": 13,
+    "english": "flower",
+    "japanese": "花",
+    "type": "noun"
+  },
+  {
+    "id": "w13_012",
+    "level": 13,
+    "english": "forest",
+    "japanese": "森",
+    "type": "noun"
+  },
+  {
+    "id": "w13_013",
+    "level": 13,
+    "english": "form",
+    "japanese": "形",
+    "type": "noun"
+  },
+  {
+    "id": "w13_014",
+    "level": 13,
+    "english": "friendship",
+    "japanese": "友情",
+    "type": "noun"
+  },
+  {
+    "id": "w13_015",
+    "level": 13,
+    "english": "fruit",
+    "japanese": "果物",
+    "type": "noun"
+  },
+  {
+    "id": "w13_016",
+    "level": 13,
+    "english": "fun",
+    "japanese": "楽しみ",
+    "type": "noun"
+  },
+  {
+    "id": "w13_017",
+    "level": 13,
+    "english": "future",
+    "japanese": "未来",
+    "type": "noun"
+  },
+  {
+    "id": "w13_018",
+    "level": 13,
+    "english": "game",
+    "japanese": "ゲーム",
+    "type": "noun"
+  },
+  {
+    "id": "w13_019",
+    "level": 13,
+    "english": "garden",
+    "japanese": "庭",
+    "type": "noun"
+  },
+  {
+    "id": "w13_020",
+    "level": 13,
+    "english": "gas",
+    "japanese": "ガス",
+    "type": "noun"
+  },
+  {
+    "id": "w13_021",
+    "level": 13,
+    "english": "gate",
+    "japanese": "門",
+    "type": "noun"
+  },
+  {
+    "id": "w13_022",
+    "level": 13,
+    "english": "gentleman",
+    "japanese": "紳士",
+    "type": "noun"
+  },
+  {
+    "id": "w13_023",
+    "level": 13,
+    "english": "gift",
+    "japanese": "贈り物",
+    "type": "noun"
+  },
+  {
+    "id": "w13_024",
+    "level": 13,
+    "english": "glad",
+    "japanese": "喜び",
+    "type": "noun"
+  },
+  {
+    "id": "w13_025",
+    "level": 13,
+    "english": "glass",
+    "japanese": "ガラス",
+    "type": "noun"
+  },
+  {
+    "id": "w13_026",
+    "level": 13,
+    "english": "goal",
+    "japanese": "目標",
+    "type": "noun"
+  },
+  {
+    "id": "w13_027",
+    "level": 13,
+    "english": "gold",
+    "japanese": "金",
+    "type": "noun"
+  },
+  {
+    "id": "w13_028",
+    "level": 13,
+    "english": "grammar",
+    "japanese": "文法",
+    "type": "noun"
+  },
+  {
+    "id": "w13_029",
+    "level": 13,
+    "english": "grandfather",
+    "japanese": "祖父",
+    "type": "noun"
+  },
+  {
+    "id": "w13_030",
+    "level": 13,
+    "english": "grandmother",
+    "japanese": "祖母",
+    "type": "noun"
+  },
+  {
+    "id": "w13_031",
+    "level": 13,
+    "english": "grass",
+    "japanese": "草",
+    "type": "noun"
+  },
+  {
+    "id": "w13_032",
+    "level": 13,
+    "english": "ground",
+    "japanese": "地面",
+    "type": "noun"
+  },
+  {
+    "id": "w13_033",
+    "level": 13,
+    "english": "guest",
+    "japanese": "客",
+    "type": "noun"
+  },
+  {
+    "id": "w13_034",
+    "level": 13,
+    "english": "habit",
+    "japanese": "習慣",
+    "type": "noun"
+  },
+  {
+    "id": "w13_035",
+    "level": 13,
+    "english": "hair",
+    "japanese": "髪",
+    "type": "noun"
+  },
+  {
+    "id": "w13_036",
+    "level": 13,
+    "english": "hall",
+    "japanese": "ホール",
+    "type": "noun"
+  },
+  {
+    "id": "w13_037",
+    "level": 13,
+    "english": "hat",
+    "japanese": "帽子",
+    "type": "noun"
+  },
+  {
+    "id": "w13_038",
+    "level": 13,
+    "english": "headache",
+    "japanese": "頭痛",
+    "type": "noun"
+  },
+  {
+    "id": "w13_039",
+    "level": 13,
+    "english": "heart",
+    "japanese": "心",
+    "type": "noun"
+  },
+  {
+    "id": "w13_040",
+    "level": 13,
+    "english": "heat",
+    "japanese": "熱",
+    "type": "noun"
+  },
+  {
+    "id": "w13_041",
+    "level": 13,
+    "english": "heaven",
+    "japanese": "天国",
+    "type": "noun"
+  },
+  {
+    "id": "w13_042",
+    "level": 13,
+    "english": "height",
+    "japanese": "高さ",
+    "type": "noun"
+  },
+  {
+    "id": "w13_043",
+    "level": 13,
+    "english": "hill",
+    "japanese": "丘",
+    "type": "noun"
+  },
+  {
+    "id": "w13_044",
+    "level": 13,
+    "english": "hobby",
+    "japanese": "趣味",
+    "type": "noun"
+  },
+  {
+    "id": "w13_045",
+    "level": 13,
+    "english": "hole",
+    "japanese": "穴",
+    "type": "noun"
+  },
+  {
+    "id": "w13_046",
+    "level": 13,
+    "english": "holiday",
+    "japanese": "休日",
+    "type": "noun"
+  },
+  {
+    "id": "w13_047",
+    "level": 13,
+    "english": "home",
+    "japanese": "家",
+    "type": "noun"
+  },
+  {
+    "id": "w13_048",
+    "level": 13,
+    "english": "horse",
+    "japanese": "馬",
+    "type": "noun"
+  },
+  {
+    "id": "w13_049",
+    "level": 13,
+    "english": "hospital",
+    "japanese": "病院",
+    "type": "noun"
+  },
+  {
+    "id": "w13_050",
+    "level": 13,
+    "english": "host",
+    "japanese": "主人",
+    "type": "noun"
+  },
+  {
+    "id": "w14_001",
+    "level": 14,
+    "english": "hotel",
+    "japanese": "ホテル",
+    "type": "noun"
+  },
+  {
+    "id": "w14_002",
+    "level": 14,
+    "english": "hour",
+    "japanese": "時間",
+    "type": "noun"
+  },
+  {
+    "id": "w14_003",
+    "level": 14,
+    "english": "ice",
+    "japanese": "氷",
+    "type": "noun"
+  },
+  {
+    "id": "w14_004",
+    "level": 14,
+    "english": "image",
+    "japanese": "画像",
+    "type": "noun"
+  },
+  {
+    "id": "w14_005",
+    "level": 14,
+    "english": "importance",
+    "japanese": "重要性",
+    "type": "noun"
+  },
+  {
+    "id": "w14_006",
+    "level": 14,
+    "english": "industry",
+    "japanese": "産業",
+    "type": "noun"
+  },
+  {
+    "id": "w14_007",
+    "level": 14,
+    "english": "island",
+    "japanese": "島",
+    "type": "noun"
+  },
+  {
+    "id": "w14_008",
+    "level": 14,
+    "english": "journey",
+    "japanese": "旅行",
+    "type": "noun"
+  },
+  {
+    "id": "w14_009",
+    "level": 14,
+    "english": "joy",
+    "japanese": "喜び",
+    "type": "noun"
+  },
+  {
+    "id": "w14_010",
+    "level": 14,
+    "english": "judge",
+    "japanese": "裁判官",
+    "type": "noun"
+  },
+  {
+    "id": "w14_011",
+    "level": 14,
+    "english": "key",
+    "japanese": "鍵",
+    "type": "noun"
+  },
+  {
+    "id": "w14_012",
+    "level": 14,
+    "english": "king",
+    "japanese": "王",
+    "type": "noun"
+  },
+  {
+    "id": "w14_013",
+    "level": 14,
+    "english": "kitchen",
+    "japanese": "台所",
+    "type": "noun"
+  },
+  {
+    "id": "w14_014",
+    "level": 14,
+    "english": "knee",
+    "japanese": "膝",
+    "type": "noun"
+  },
+  {
+    "id": "w14_015",
+    "level": 14,
+    "english": "knife",
+    "japanese": "ナイフ",
+    "type": "noun"
+  },
+  {
+    "id": "w14_016",
+    "level": 14,
+    "english": "knowledge",
+    "japanese": "知識",
+    "type": "noun"
+  },
+  {
+    "id": "w14_017",
+    "level": 14,
+    "english": "lake",
+    "japanese": "湖",
+    "type": "noun"
+  },
+  {
+    "id": "w14_018",
+    "level": 14,
+    "english": "language",
+    "japanese": "言語",
+    "type": "noun"
+  },
+  {
+    "id": "w14_019",
+    "level": 14,
+    "english": "leader",
+    "japanese": "指導者",
+    "type": "noun"
+  },
+  {
+    "id": "w14_020",
+    "level": 14,
+    "english": "leaf",
+    "japanese": "葉",
+    "type": "noun"
+  },
+  {
+    "id": "w14_021",
+    "level": 14,
+    "english": "leg",
+    "japanese": "脚",
+    "type": "noun"
+  },
+  {
+    "id": "w14_022",
+    "level": 14,
+    "english": "lesson",
+    "japanese": "レッスン",
+    "type": "noun"
+  },
+  {
+    "id": "w14_023",
+    "level": 14,
+    "english": "letter",
+    "japanese": "手紙",
+    "type": "noun"
+  },
+  {
+    "id": "w14_024",
+    "level": 14,
+    "english": "library",
+    "japanese": "図書館",
+    "type": "noun"
+  },
+  {
+    "id": "w14_025",
+    "level": 14,
+    "english": "light",
+    "japanese": "光",
+    "type": "noun"
+  },
+  {
+    "id": "w14_026",
+    "level": 14,
+    "english": "lion",
+    "japanese": "ライオン",
+    "type": "noun"
+  },
+  {
+    "id": "w14_027",
+    "level": 14,
+    "english": "lip",
+    "japanese": "唇",
+    "type": "noun"
+  },
+  {
+    "id": "w14_028",
+    "level": 14,
+    "english": "list",
+    "japanese": "リスト",
+    "type": "noun"
+  },
+  {
+    "id": "w14_029",
+    "level": 14,
+    "english": "machine",
+    "japanese": "機械",
+    "type": "noun"
+  },
+  {
+    "id": "w14_030",
+    "level": 14,
+    "english": "magazine",
+    "japanese": "雑誌",
+    "type": "noun"
+  },
+  {
+    "id": "w14_031",
+    "level": 14,
+    "english": "mail",
+    "japanese": "郵便",
+    "type": "noun"
+  },
+  {
+    "id": "w14_032",
+    "level": 14,
+    "english": "manager",
+    "japanese": "マネージャー",
+    "type": "noun"
+  },
+  {
+    "id": "w14_033",
+    "level": 14,
+    "english": "map",
+    "japanese": "地図",
+    "type": "noun"
+  },
+  {
+    "id": "w14_034",
+    "level": 14,
+    "english": "mark",
+    "japanese": "印",
+    "type": "noun"
+  },
+  {
+    "id": "w14_035",
+    "level": 14,
+    "english": "marriage",
+    "japanese": "結婚",
+    "type": "noun"
+  },
+  {
+    "id": "w14_036",
+    "level": 14,
+    "english": "master",
+    "japanese": "主人",
+    "type": "noun"
+  },
+  {
+    "id": "w14_037",
+    "level": 14,
+    "english": "match",
+    "japanese": "試合",
+    "type": "noun"
+  },
+  {
+    "id": "w14_038",
+    "level": 14,
+    "english": "material",
+    "japanese": "材料",
+    "type": "noun"
+  },
+  {
+    "id": "w14_039",
+    "level": 14,
+    "english": "meal",
+    "japanese": "食事",
+    "type": "noun"
+  },
+  {
+    "id": "w14_040",
+    "level": 14,
+    "english": "meat",
+    "japanese": "肉",
+    "type": "noun"
+  },
+  {
+    "id": "w14_041",
+    "level": 14,
+    "english": "medicine",
+    "japanese": "薬",
+    "type": "noun"
+  },
+  {
+    "id": "w14_042",
+    "level": 14,
+    "english": "memory",
+    "japanese": "記憶",
+    "type": "noun"
+  },
+  {
+    "id": "w14_043",
+    "level": 14,
+    "english": "message",
+    "japanese": "伝言",
+    "type": "noun"
+  },
+  {
+    "id": "w14_044",
+    "level": 14,
+    "english": "metal",
+    "japanese": "金属",
+    "type": "noun"
+  },
+  {
+    "id": "w14_045",
+    "level": 14,
+    "english": "middle",
+    "japanese": "真ん中",
+    "type": "noun"
+  },
+  {
+    "id": "w14_046",
+    "level": 14,
+    "english": "midnight",
+    "japanese": "真夜中",
+    "type": "noun"
+  },
+  {
+    "id": "w14_047",
+    "level": 14,
+    "english": "milk",
+    "japanese": "牛乳",
+    "type": "noun"
+  },
+  {
+    "id": "w14_048",
+    "level": 14,
+    "english": "mistake",
+    "japanese": "間違い",
+    "type": "noun"
+  },
+  {
+    "id": "w14_049",
+    "level": 14,
+    "english": "model",
+    "japanese": "模型",
+    "type": "noun"
+  },
+  {
+    "id": "w14_050",
+    "level": 14,
+    "english": "monkey",
+    "japanese": "猿",
+    "type": "noun"
+  },
+  {
+    "id": "w15_001",
+    "level": 15,
+    "english": "moon",
+    "japanese": "月",
+    "type": "noun"
+  },
+  {
+    "id": "w15_002",
+    "level": 15,
+    "english": "mother",
+    "japanese": "母親",
+    "type": "noun"
+  },
+  {
+    "id": "w15_003",
+    "level": 15,
+    "english": "mountain",
+    "japanese": "山",
+    "type": "noun"
+  },
+  {
+    "id": "w15_004",
+    "level": 15,
+    "english": "mouse",
+    "japanese": "ネズミ",
+    "type": "noun"
+  },
+  {
+    "id": "w15_005",
+    "level": 15,
+    "english": "mouth",
+    "japanese": "口",
+    "type": "noun"
+  },
+  {
+    "id": "w15_006",
+    "level": 15,
+    "english": "movie",
+    "japanese": "映画",
+    "type": "noun"
+  },
+  {
+    "id": "w15_007",
+    "level": 15,
+    "english": "museum",
+    "japanese": "博物館",
+    "type": "noun"
+  },
+  {
+    "id": "w15_008",
+    "level": 15,
+    "english": "nature",
+    "japanese": "自然",
+    "type": "noun"
+  },
+  {
+    "id": "w15_009",
+    "level": 15,
+    "english": "neck",
+    "japanese": "首",
+    "type": "noun"
+  },
+  {
+    "id": "w15_010",
+    "level": 15,
+    "english": "neighbor",
+    "japanese": "隣人",
+    "type": "noun"
+  },
+  {
+    "id": "w15_011",
+    "level": 15,
+    "english": "news",
+    "japanese": "ニュース",
+    "type": "noun"
+  },
+  {
+    "id": "w15_012",
+    "level": 15,
+    "english": "newspaper",
+    "japanese": "新聞",
+    "type": "noun"
+  },
+  {
+    "id": "w15_013",
+    "level": 15,
+    "english": "night",
+    "japanese": "夜",
+    "type": "noun"
+  },
+  {
+    "id": "w15_014",
+    "level": 15,
+    "english": "noise",
+    "japanese": "騒音",
+    "type": "noun"
+  },
+  {
+    "id": "w15_015",
+    "level": 15,
+    "english": "north",
+    "japanese": "北",
+    "type": "noun"
+  },
+  {
+    "id": "w15_016",
+    "level": 15,
+    "english": "nose",
+    "japanese": "鼻",
+    "type": "noun"
+  },
+  {
+    "id": "w15_017",
+    "level": 15,
+    "english": "note",
+    "japanese": "メモ",
+    "type": "noun"
+  },
+  {
+    "id": "w15_018",
+    "level": 15,
+    "english": "ocean",
+    "japanese": "大洋",
+    "type": "noun"
+  },
+  {
+    "id": "w15_019",
+    "level": 15,
+    "english": "officer",
+    "japanese": "役人",
+    "type": "noun"
+  },
+  {
+    "id": "w15_020",
+    "level": 15,
+    "english": "oil",
+    "japanese": "油",
+    "type": "noun"
+  },
+  {
+    "id": "w15_021",
+    "level": 15,
+    "english": "opinion",
+    "japanese": "意見",
+    "type": "noun"
+  },
+  {
+    "id": "w15_022",
+    "level": 15,
+    "english": "order",
+    "japanese": "命令",
+    "type": "noun"
+  },
+  {
+    "id": "w15_023",
+    "level": 15,
+    "english": "page",
+    "japanese": "ページ",
+    "type": "noun"
+  },
+  {
+    "id": "w15_024",
+    "level": 15,
+    "english": "pain",
+    "japanese": "痛み",
+    "type": "noun"
+  },
+  {
+    "id": "w15_025",
+    "level": 15,
+    "english": "paint",
+    "japanese": "ペンキ",
+    "type": "noun"
+  },
+  {
+    "id": "w15_026",
+    "level": 15,
+    "english": "pair",
+    "japanese": "一対",
+    "type": "noun"
+  },
+  {
+    "id": "w15_027",
+    "level": 15,
+    "english": "paper",
+    "japanese": "紙",
+    "type": "noun"
+  },
+  {
+    "id": "w15_028",
+    "level": 15,
+    "english": "park",
+    "japanese": "公園",
+    "type": "noun"
+  },
+  {
+    "id": "w15_029",
+    "level": 15,
+    "english": "partner",
+    "japanese": "パートナー",
+    "type": "noun"
+  },
+  {
+    "id": "w15_030",
+    "level": 15,
+    "english": "passenger",
+    "japanese": "乗客",
+    "type": "noun"
+  },
+  {
+    "id": "w15_031",
+    "level": 15,
+    "english": "path",
+    "japanese": "小道",
+    "type": "noun"
+  },
+  {
+    "id": "w15_032",
+    "level": 15,
+    "english": "peace",
+    "japanese": "平和",
+    "type": "noun"
+  },
+  {
+    "id": "w15_033",
+    "level": 15,
+    "english": "pen",
+    "japanese": "ペン",
+    "type": "noun"
+  },
+  {
+    "id": "w15_034",
+    "level": 15,
+    "english": "pencil",
+    "japanese": "鉛筆",
+    "type": "noun"
+  },
+  {
+    "id": "w15_035",
+    "level": 15,
+    "english": "picture",
+    "japanese": "写真",
+    "type": "noun"
+  },
+  {
+    "id": "w15_036",
+    "level": 15,
+    "english": "piece",
+    "japanese": "一片",
+    "type": "noun"
+  },
+  {
+    "id": "w15_037",
+    "level": 15,
+    "english": "pig",
+    "japanese": "豚",
+    "type": "noun"
+  },
+  {
+    "id": "w15_038",
+    "level": 15,
+    "english": "pilot",
+    "japanese": "パイロット",
+    "type": "noun"
+  },
+  {
+    "id": "w15_039",
+    "level": 15,
+    "english": "pity",
+    "japanese": "哀れみ",
+    "type": "noun"
+  },
+  {
+    "id": "w15_040",
+    "level": 15,
+    "english": "plane",
+    "japanese": "飛行機",
+    "type": "noun"
+  },
+  {
+    "id": "w15_041",
+    "level": 15,
+    "english": "planet",
+    "japanese": "惑星",
+    "type": "noun"
+  },
+  {
+    "id": "w15_042",
+    "level": 15,
+    "english": "plastic",
+    "japanese": "プラスチック",
+    "type": "noun"
+  },
+  {
+    "id": "w15_043",
+    "level": 15,
+    "english": "plate",
+    "japanese": "皿",
+    "type": "noun"
+  },
+  {
+    "id": "w15_044",
+    "level": 15,
+    "english": "player",
+    "japanese": "選手",
+    "type": "noun"
+  },
+  {
+    "id": "w15_045",
+    "level": 15,
+    "english": "pleasure",
+    "japanese": "喜び",
+    "type": "noun"
+  },
+  {
+    "id": "w15_046",
+    "level": 15,
+    "english": "pocket",
+    "japanese": "ポケット",
+    "type": "noun"
+  },
+  {
+    "id": "w15_047",
+    "level": 15,
+    "english": "poem",
+    "japanese": "詩",
+    "type": "noun"
+  },
+  {
+    "id": "w15_048",
+    "level": 15,
+    "english": "police",
+    "japanese": "警察",
+    "type": "noun"
+  },
+  {
+    "id": "w15_049",
+    "level": 15,
+    "english": "pool",
+    "japanese": "プール",
+    "type": "noun"
+  },
+  {
+    "id": "w15_050",
+    "level": 15,
+    "english": "population",
+    "japanese": "人口",
+    "type": "noun"
+  },
+  {
+    "id": "w16_001",
+    "level": 16,
+    "english": "position",
+    "japanese": "位置",
+    "type": "noun"
+  },
+  {
+    "id": "w16_002",
+    "level": 16,
+    "english": "post",
+    "japanese": "郵便",
+    "type": "noun"
+  },
+  {
+    "id": "w16_003",
+    "level": 16,
+    "english": "pot",
+    "japanese": "鍋",
+    "type": "noun"
+  },
+  {
+    "id": "w16_004",
+    "level": 16,
+    "english": "potato",
+    "japanese": "じゃがいも",
+    "type": "noun"
+  },
+  {
+    "id": "w16_005",
+    "level": 16,
+    "english": "power",
+    "japanese": "力",
+    "type": "noun"
+  },
+  {
+    "id": "w16_006",
+    "level": 16,
+    "english": "practice",
+    "japanese": "練習",
+    "type": "noun"
+  },
+  {
+    "id": "w16_007",
+    "level": 16,
+    "english": "present",
+    "japanese": "贈り物",
+    "type": "noun"
+  },
+  {
+    "id": "w16_008",
+    "level": 16,
+    "english": "price",
+    "japanese": "価格",
+    "type": "noun"
+  },
+  {
+    "id": "w16_009",
+    "level": 16,
+    "english": "pride",
+    "japanese": "誇り",
+    "type": "noun"
+  },
+  {
+    "id": "w16_010",
+    "level": 16,
+    "english": "prince",
+    "japanese": "王子",
+    "type": "noun"
+  },
+  {
+    "id": "w16_011",
+    "level": 16,
+    "english": "princess",
+    "japanese": "王女",
+    "type": "noun"
+  },
+  {
+    "id": "w16_012",
+    "level": 16,
+    "english": "prize",
+    "japanese": "賞",
+    "type": "noun"
+  },
+  {
+    "id": "w16_013",
+    "level": 16,
+    "english": "produce",
+    "japanese": "生産物",
+    "type": "noun"
+  },
+  {
+    "id": "w16_014",
+    "level": 16,
+    "english": "product",
+    "japanese": "製品",
+    "type": "noun"
+  },
+  {
+    "id": "w16_015",
+    "level": 16,
+    "english": "profit",
+    "japanese": "利益",
+    "type": "noun"
+  },
+  {
+    "id": "w16_016",
+    "level": 16,
+    "english": "program",
+    "japanese": "番組",
+    "type": "noun"
+  },
+  {
+    "id": "w16_017",
+    "level": 16,
+    "english": "progress",
+    "japanese": "進歩",
+    "type": "noun"
+  },
+  {
+    "id": "w16_018",
+    "level": 16,
+    "english": "promise",
+    "japanese": "約束",
+    "type": "noun"
+  },
+  {
+    "id": "w16_019",
+    "level": 16,
+    "english": "proof",
+    "japanese": "証拠",
+    "type": "noun"
+  },
+  {
+    "id": "w16_020",
+    "level": 16,
+    "english": "purpose",
+    "japanese": "目的",
+    "type": "noun"
+  },
+  {
+    "id": "w16_021",
+    "level": 16,
+    "english": "quality",
+    "japanese": "品質",
+    "type": "noun"
+  },
+  {
+    "id": "w16_022",
+    "level": 16,
+    "english": "quarter",
+    "japanese": "4分の1",
+    "type": "noun"
+  },
+  {
+    "id": "w16_023",
+    "level": 16,
+    "english": "queen",
+    "japanese": "女王",
+    "type": "noun"
+  },
+  {
+    "id": "w16_024",
+    "level": 16,
+    "english": "question",
+    "japanese": "質問",
+    "type": "noun"
+  },
+  {
+    "id": "w16_025",
+    "level": 16,
+    "english": "radio",
+    "japanese": "ラジオ",
+    "type": "noun"
+  },
+  {
+    "id": "w16_026",
+    "level": 16,
+    "english": "rain",
+    "japanese": "雨",
+    "type": "noun"
+  },
+  {
+    "id": "w16_027",
+    "level": 16,
+    "english": "rate",
+    "japanese": "割合",
+    "type": "noun"
+  },
+  {
+    "id": "w16_028",
+    "level": 16,
+    "english": "reality",
+    "japanese": "現実",
+    "type": "noun"
+  },
+  {
+    "id": "w16_029",
+    "level": 16,
+    "english": "record",
+    "japanese": "記録",
+    "type": "noun"
+  },
+  {
+    "id": "w16_030",
+    "level": 16,
+    "english": "relation",
+    "japanese": "関係",
+    "type": "noun"
+  },
+  {
+    "id": "w16_031",
+    "level": 16,
+    "english": "religion",
+    "japanese": "宗教",
+    "type": "noun"
+  },
+  {
+    "id": "w16_032",
+    "level": 16,
+    "english": "respect",
+    "japanese": "尊敬",
+    "type": "noun"
+  },
+  {
+    "id": "w16_033",
+    "level": 16,
+    "english": "rest",
+    "japanese": "休息",
+    "type": "noun"
+  },
+  {
+    "id": "w16_034",
+    "level": 16,
+    "english": "restaurant",
+    "japanese": "レストラン",
+    "type": "noun"
+  },
+  {
+    "id": "w16_035",
+    "level": 16,
+    "english": "rice",
+    "japanese": "米",
+    "type": "noun"
+  },
+  {
+    "id": "w16_036",
+    "level": 16,
+    "english": "ring",
+    "japanese": "指輪",
+    "type": "noun"
+  },
+  {
+    "id": "w16_037",
+    "level": 16,
+    "english": "river",
+    "japanese": "川",
+    "type": "noun"
+  },
+  {
+    "id": "w16_038",
+    "level": 16,
+    "english": "road",
+    "japanese": "道路",
+    "type": "noun"
+  },
+  {
+    "id": "w16_039",
+    "level": 16,
+    "english": "rock",
+    "japanese": "岩",
+    "type": "noun"
+  },
+  {
+    "id": "w16_040",
+    "level": 16,
+    "english": "roof",
+    "japanese": "屋根",
+    "type": "noun"
+  },
+  {
+    "id": "w16_041",
+    "level": 16,
+    "english": "room",
+    "japanese": "部屋",
+    "type": "noun"
+  },
+  {
+    "id": "w16_042",
+    "level": 16,
+    "english": "root",
+    "japanese": "根",
+    "type": "noun"
+  },
+  {
+    "id": "w16_043",
+    "level": 16,
+    "english": "rose",
+    "japanese": "バラ",
+    "type": "noun"
+  },
+  {
+    "id": "w16_044",
+    "level": 16,
+    "english": "rule",
+    "japanese": "規則",
+    "type": "noun"
+  },
+  {
+    "id": "w16_045",
+    "level": 16,
+    "english": "salt",
+    "japanese": "塩",
+    "type": "noun"
+  },
+  {
+    "id": "w16_046",
+    "level": 16,
+    "english": "sand",
+    "japanese": "砂",
+    "type": "noun"
+  },
+  {
+    "id": "w16_047",
+    "level": 16,
+    "english": "scene",
+    "japanese": "場面",
+    "type": "noun"
+  },
+  {
+    "id": "w16_048",
+    "level": 16,
+    "english": "science",
+    "japanese": "科学",
+    "type": "noun"
+  },
+  {
+    "id": "w16_049",
+    "level": 16,
+    "english": "sea",
+    "japanese": "海",
+    "type": "noun"
+  },
+  {
+    "id": "w16_050",
+    "level": 16,
+    "english": "season",
+    "japanese": "季節",
+    "type": "noun"
+  },
+  {
+    "id": "w17_001",
+    "level": 17,
+    "english": "seat",
+    "japanese": "座席",
+    "type": "noun"
+  },
+  {
+    "id": "w17_002",
+    "level": 17,
+    "english": "secret",
+    "japanese": "秘密",
+    "type": "noun"
+  },
+  {
+    "id": "w17_003",
+    "level": 17,
+    "english": "seed",
+    "japanese": "種",
+    "type": "noun"
+  },
+  {
+    "id": "w17_004",
+    "level": 17,
+    "english": "service",
+    "japanese": "サービス",
+    "type": "noun"
+  },
+  {
+    "id": "w17_005",
+    "level": 17,
+    "english": "shadow",
+    "japanese": "影",
+    "type": "noun"
+  },
+  {
+    "id": "w17_006",
+    "level": 17,
+    "english": "shape",
+    "japanese": "形",
+    "type": "noun"
+  },
+  {
+    "id": "w17_007",
+    "level": 17,
+    "english": "sheep",
+    "japanese": "羊",
+    "type": "noun"
+  },
+  {
+    "id": "w17_008",
+    "level": 17,
+    "english": "sheet",
+    "japanese": "シーツ",
+    "type": "noun"
+  },
+  {
+    "id": "w17_009",
+    "level": 17,
+    "english": "ship",
+    "japanese": "船",
+    "type": "noun"
+  },
+  {
+    "id": "w17_010",
+    "level": 17,
+    "english": "shirt",
+    "japanese": "シャツ",
+    "type": "noun"
+  },
+  {
+    "id": "w17_011",
+    "level": 17,
+    "english": "shoe",
+    "japanese": "靴",
+    "type": "noun"
+  },
+  {
+    "id": "w17_012",
+    "level": 17,
+    "english": "shop",
+    "japanese": "店",
+    "type": "noun"
+  },
+  {
+    "id": "w17_013",
+    "level": 17,
+    "english": "shoulder",
+    "japanese": "肩",
+    "type": "noun"
+  },
+  {
+    "id": "w17_014",
+    "level": 17,
+    "english": "shower",
+    "japanese": "シャワー",
+    "type": "noun"
+  },
+  {
+    "id": "w17_015",
+    "level": 17,
+    "english": "sight",
+    "japanese": "視力",
+    "type": "noun"
+  },
+  {
+    "id": "w17_016",
+    "level": 17,
+    "english": "sign",
+    "japanese": "記号",
+    "type": "noun"
+  },
+  {
+    "id": "w17_017",
+    "level": 17,
+    "english": "silence",
+    "japanese": "沈黙",
+    "type": "noun"
+  },
+  {
+    "id": "w17_018",
+    "level": 17,
+    "english": "silk",
+    "japanese": "絹",
+    "type": "noun"
+  },
+  {
+    "id": "w17_019",
+    "level": 17,
+    "english": "silver",
+    "japanese": "銀",
+    "type": "noun"
+  },
+  {
+    "id": "w17_020",
+    "level": 17,
+    "english": "sister",
+    "japanese": "姉妹",
+    "type": "noun"
+  },
+  {
+    "id": "w17_021",
+    "level": 17,
+    "english": "size",
+    "japanese": "サイズ",
+    "type": "noun"
+  },
+  {
+    "id": "w17_022",
+    "level": 17,
+    "english": "skill",
+    "japanese": "技能",
+    "type": "noun"
+  },
+  {
+    "id": "w17_023",
+    "level": 17,
+    "english": "skin",
+    "japanese": "皮膚",
+    "type": "noun"
+  },
+  {
+    "id": "w17_024",
+    "level": 17,
+    "english": "sky",
+    "japanese": "空",
+    "type": "noun"
+  },
+  {
+    "id": "w17_025",
+    "level": 17,
+    "english": "sleep",
+    "japanese": "睡眠",
+    "type": "noun"
+  },
+  {
+    "id": "w17_026",
+    "level": 17,
+    "english": "smile",
+    "japanese": "微笑み",
+    "type": "noun"
+  },
+  {
+    "id": "w17_027",
+    "level": 17,
+    "english": "smoke",
+    "japanese": "煙",
+    "type": "noun"
+  },
+  {
+    "id": "w17_028",
+    "level": 17,
+    "english": "snow",
+    "japanese": "雪",
+    "type": "noun"
+  },
+  {
+    "id": "w17_029",
+    "level": 17,
+    "english": "soap",
+    "japanese": "石鹸",
+    "type": "noun"
+  },
+  {
+    "id": "w17_030",
+    "level": 17,
+    "english": "society",
+    "japanese": "社会",
+    "type": "noun"
+  },
+  {
+    "id": "w17_031",
+    "level": 17,
+    "english": "soil",
+    "japanese": "土壌",
+    "type": "noun"
+  },
+  {
+    "id": "w17_032",
+    "level": 17,
+    "english": "soldier",
+    "japanese": "兵士",
+    "type": "noun"
+  },
+  {
+    "id": "w17_033",
+    "level": 17,
+    "english": "son",
+    "japanese": "息子",
+    "type": "noun"
+  },
+  {
+    "id": "w17_034",
+    "level": 17,
+    "english": "song",
+    "japanese": "歌",
+    "type": "noun"
+  },
+  {
+    "id": "w17_035",
+    "level": 17,
+    "english": "sound",
+    "japanese": "音",
+    "type": "noun"
+  },
+  {
+    "id": "w17_036",
+    "level": 17,
+    "english": "soup",
+    "japanese": "スープ",
+    "type": "noun"
+  },
+  {
+    "id": "w17_037",
+    "level": 17,
+    "english": "south",
+    "japanese": "南",
+    "type": "noun"
+  },
+  {
+    "id": "w17_038",
+    "level": 17,
+    "english": "space",
+    "japanese": "空間",
+    "type": "noun"
+  },
+  {
+    "id": "w17_039",
+    "level": 17,
+    "english": "speech",
+    "japanese": "スピーチ",
+    "type": "noun"
+  },
+  {
+    "id": "w17_040",
+    "level": 17,
+    "english": "speed",
+    "japanese": "速度",
+    "type": "noun"
+  },
+  {
+    "id": "w17_041",
+    "level": 17,
+    "english": "spirit",
+    "japanese": "精神",
+    "type": "noun"
+  },
+  {
+    "id": "w17_042",
+    "level": 17,
+    "english": "sport",
+    "japanese": "スポーツ",
+    "type": "noun"
+  },
+  {
+    "id": "w17_043",
+    "level": 17,
+    "english": "spring",
+    "japanese": "春",
+    "type": "noun"
+  },
+  {
+    "id": "w17_044",
+    "level": 17,
+    "english": "square",
+    "japanese": "正方形",
+    "type": "noun"
+  },
+  {
+    "id": "w17_045",
+    "level": 17,
+    "english": "stage",
+    "japanese": "舞台",
+    "type": "noun"
+  },
+  {
+    "id": "w17_046",
+    "level": 17,
+    "english": "stair",
+    "japanese": "階段",
+    "type": "noun"
+  },
+  {
+    "id": "w17_047",
+    "level": 17,
+    "english": "stamp",
+    "japanese": "切手",
+    "type": "noun"
+  },
+  {
+    "id": "w17_048",
+    "level": 17,
+    "english": "star",
+    "japanese": "星",
+    "type": "noun"
+  },
+  {
+    "id": "w17_049",
+    "level": 17,
+    "english": "station",
+    "japanese": "駅",
+    "type": "noun"
+  },
+  {
+    "id": "w17_050",
+    "level": 17,
+    "english": "step",
+    "japanese": "歩み",
+    "type": "noun"
+  },
+  {
+    "id": "w18_001",
+    "level": 18,
+    "english": "stick",
+    "japanese": "杖",
+    "type": "noun"
+  },
+  {
+    "id": "w18_002",
+    "level": 18,
+    "english": "stone",
+    "japanese": "石",
+    "type": "noun"
+  },
+  {
+    "id": "w18_003",
+    "level": 18,
+    "english": "store",
+    "japanese": "店",
+    "type": "noun"
+  },
+  {
+    "id": "w18_004",
+    "level": 18,
+    "english": "storm",
+    "japanese": "嵐",
+    "type": "noun"
+  },
+  {
+    "id": "w18_005",
+    "level": 18,
+    "english": "street",
+    "japanese": "通り",
+    "type": "noun"
+  },
+  {
+    "id": "w18_006",
+    "level": 18,
+    "english": "strength",
+    "japanese": "力",
+    "type": "noun"
+  },
+  {
+    "id": "w18_007",
+    "level": 18,
+    "english": "strike",
+    "japanese": "ストライキ",
+    "type": "noun"
+  },
+  {
+    "id": "w18_008",
+    "level": 18,
+    "english": "subject",
+    "japanese": "主題",
+    "type": "noun"
+  },
+  {
+    "id": "w18_009",
+    "level": 18,
+    "english": "success",
+    "japanese": "成功",
+    "type": "noun"
+  },
+  {
+    "id": "w18_010",
+    "level": 18,
+    "english": "sugar",
+    "japanese": "砂糖",
+    "type": "noun"
+  },
+  {
+    "id": "w18_011",
+    "level": 18,
+    "english": "suit",
+    "japanese": "スーツ",
+    "type": "noun"
+  },
+  {
+    "id": "w18_012",
+    "level": 18,
+    "english": "summer",
+    "japanese": "夏",
+    "type": "noun"
+  },
+  {
+    "id": "w18_013",
+    "level": 18,
+    "english": "sun",
+    "japanese": "太陽",
+    "type": "noun"
+  },
+  {
+    "id": "w18_014",
+    "level": 18,
+    "english": "surface",
+    "japanese": "表面",
+    "type": "noun"
+  },
+  {
+    "id": "w18_015",
+    "level": 18,
+    "english": "surprise",
+    "japanese": "驚き",
+    "type": "noun"
+  },
+  {
+    "id": "w18_016",
+    "level": 18,
+    "english": "sweet",
+    "japanese": "甘いもの",
+    "type": "noun"
+  },
+  {
+    "id": "w18_017",
+    "level": 18,
+    "english": "system",
+    "japanese": "体系",
+    "type": "noun"
+  },
+  {
+    "id": "w18_018",
+    "level": 18,
+    "english": "table",
+    "japanese": "テーブル",
+    "type": "noun"
+  },
+  {
+    "id": "w18_019",
+    "level": 18,
+    "english": "tail",
+    "japanese": "しっぽ",
+    "type": "noun"
+  },
+  {
+    "id": "w18_020",
+    "level": 18,
+    "english": "task",
+    "japanese": "仕事",
+    "type": "noun"
+  },
+  {
+    "id": "w18_021",
+    "level": 18,
+    "english": "taste",
+    "japanese": "味",
+    "type": "noun"
+  },
+  {
+    "id": "w18_022",
+    "level": 18,
+    "english": "tax",
+    "japanese": "税金",
+    "type": "noun"
+  },
+  {
+    "id": "w18_023",
+    "level": 18,
+    "english": "tea",
+    "japanese": "お茶",
+    "type": "noun"
+  },
+  {
+    "id": "w18_024",
+    "level": 18,
+    "english": "tear",
+    "japanese": "涙",
+    "type": "noun"
+  },
+  {
+    "id": "w18_025",
+    "level": 18,
+    "english": "technology",
+    "japanese": "技術",
+    "type": "noun"
+  },
+  {
+    "id": "w18_026",
+    "level": 18,
+    "english": "telephone",
+    "japanese": "電話",
+    "type": "noun"
+  },
+  {
+    "id": "w18_027",
+    "level": 18,
+    "english": "television",
+    "japanese": "テレビ",
+    "type": "noun"
+  },
+  {
+    "id": "w18_028",
+    "level": 18,
+    "english": "temperature",
+    "japanese": "温度",
+    "type": "noun"
+  },
+  {
+    "id": "w18_029",
+    "level": 18,
+    "english": "tent",
+    "japanese": "テント",
+    "type": "noun"
+  },
+  {
+    "id": "w18_030",
+    "level": 18,
+    "english": "term",
+    "japanese": "期間",
+    "type": "noun"
+  },
+  {
+    "id": "w18_031",
+    "level": 18,
+    "english": "test",
+    "japanese": "試験",
+    "type": "noun"
+  },
+  {
+    "id": "w18_032",
+    "level": 18,
+    "english": "theater",
+    "japanese": "劇場",
+    "type": "noun"
+  },
+  {
+    "id": "w18_033",
+    "level": 18,
+    "english": "thief",
+    "japanese": "泥棒",
+    "type": "noun"
+  },
+  {
+    "id": "w18_034",
+    "level": 18,
+    "english": "thought",
+    "japanese": "考え",
+    "type": "noun"
+  },
+  {
+    "id": "w18_035",
+    "level": 18,
+    "english": "throat",
+    "japanese": "のど",
+    "type": "noun"
+  },
+  {
+    "id": "w18_036",
+    "level": 18,
+    "english": "ticket",
+    "japanese": "切符",
+    "type": "noun"
+  },
+  {
+    "id": "w18_037",
+    "level": 18,
+    "english": "tie",
+    "japanese": "ネクタイ",
+    "type": "noun"
+  },
+  {
+    "id": "w18_038",
+    "level": 18,
+    "english": "title",
+    "japanese": "肩書",
+    "type": "noun"
+  },
+  {
+    "id": "w18_039",
+    "level": 18,
+    "english": "toe",
+    "japanese": "足の指",
+    "type": "noun"
+  },
+  {
+    "id": "w18_040",
+    "level": 18,
+    "english": "tomato",
+    "japanese": "トマト",
+    "type": "noun"
+  },
+  {
+    "id": "w18_041",
+    "level": 18,
+    "english": "tongue",
+    "japanese": "舌",
+    "type": "noun"
+  },
+  {
+    "id": "w18_042",
+    "level": 18,
+    "english": "tooth",
+    "japanese": "歯",
+    "type": "noun"
+  },
+  {
+    "id": "w18_043",
+    "level": 18,
+    "english": "top",
+    "japanese": "頂上",
+    "type": "noun"
+  },
+  {
+    "id": "w18_044",
+    "level": 18,
+    "english": "tour",
+    "japanese": "旅行",
+    "type": "noun"
+  },
+  {
+    "id": "w18_045",
+    "level": 18,
+    "english": "town",
+    "japanese": "町",
+    "type": "noun"
+  },
+  {
+    "id": "w18_046",
+    "level": 18,
+    "english": "toy",
+    "japanese": "おもちゃ",
+    "type": "noun"
+  },
+  {
+    "id": "w18_047",
+    "level": 18,
+    "english": "track",
+    "japanese": "跡",
+    "type": "noun"
+  },
+  {
+    "id": "w18_048",
+    "level": 18,
+    "english": "trade",
+    "japanese": "貿易",
+    "type": "noun"
+  },
+  {
+    "id": "w18_049",
+    "level": 18,
+    "english": "train",
+    "japanese": "列車",
+    "type": "noun"
+  },
+  {
+    "id": "w18_050",
+    "level": 18,
+    "english": "tree",
+    "japanese": "木",
+    "type": "noun"
+  },
+  {
+    "id": "w19_001",
+    "level": 19,
+    "english": "trip",
+    "japanese": "旅行",
+    "type": "noun"
+  },
+  {
+    "id": "w19_002",
+    "level": 19,
+    "english": "trouble",
+    "japanese": "困難",
+    "type": "noun"
+  },
+  {
+    "id": "w19_003",
+    "level": 19,
+    "english": "truck",
+    "japanese": "トラック",
+    "type": "noun"
+  },
+  {
+    "id": "w19_004",
+    "level": 19,
+    "english": "truth",
+    "japanese": "真実",
+    "type": "noun"
+  },
+  {
+    "id": "w19_005",
+    "level": 19,
+    "english": "tube",
+    "japanese": "管",
+    "type": "noun"
+  },
+  {
+    "id": "w19_006",
+    "level": 19,
+    "english": "turn",
+    "japanese": "順番",
+    "type": "noun"
+  },
+  {
+    "id": "w19_007",
+    "level": 19,
+    "english": "type",
+    "japanese": "型",
+    "type": "noun"
+  },
+  {
+    "id": "w19_008",
+    "level": 19,
+    "english": "uncle",
+    "japanese": "おじ",
+    "type": "noun"
+  },
+  {
+    "id": "w19_009",
+    "level": 19,
+    "english": "university",
+    "japanese": "大学",
+    "type": "noun"
+  },
+  {
+    "id": "w19_010",
+    "level": 19,
+    "english": "valley",
+    "japanese": "谷",
+    "type": "noun"
+  },
+  {
+    "id": "w19_011",
+    "level": 19,
+    "english": "value",
+    "japanese": "価値",
+    "type": "noun"
+  },
+  {
+    "id": "w19_012",
+    "level": 19,
+    "english": "view",
+    "japanese": "眺め",
+    "type": "noun"
+  },
+  {
+    "id": "w19_013",
+    "level": 19,
+    "english": "village",
+    "japanese": "村",
+    "type": "noun"
+  },
+  {
+    "id": "w19_014",
+    "level": 19,
+    "english": "voice",
+    "japanese": "声",
+    "type": "noun"
+  },
+  {
+    "id": "w19_015",
+    "level": 19,
+    "english": "waiter",
+    "japanese": "ウェイター",
+    "type": "noun"
+  },
+  {
+    "id": "w19_016",
+    "level": 19,
+    "english": "wall",
+    "japanese": "壁",
+    "type": "noun"
+  },
+  {
+    "id": "w19_017",
+    "level": 19,
+    "english": "wash",
+    "japanese": "洗濯",
+    "type": "noun"
+  },
+  {
+    "id": "w19_018",
+    "level": 19,
+    "english": "wave",
+    "japanese": "波",
+    "type": "noun"
+  },
+  {
+    "id": "w19_019",
+    "level": 19,
+    "english": "weather",
+    "japanese": "天気",
+    "type": "noun"
+  },
+  {
+    "id": "w19_020",
+    "level": 19,
+    "english": "wedding",
+    "japanese": "結婚式",
+    "type": "noun"
+  },
+  {
+    "id": "w19_021",
+    "level": 19,
+    "english": "weight",
+    "japanese": "重さ",
+    "type": "noun"
+  },
+  {
+    "id": "w19_022",
+    "level": 19,
+    "english": "west",
+    "japanese": "西",
+    "type": "noun"
+  },
+  {
+    "id": "w19_023",
+    "level": 19,
+    "english": "wheel",
+    "japanese": "車輪",
+    "type": "noun"
+  },
+  {
+    "id": "w19_024",
+    "level": 19,
+    "english": "wife",
+    "japanese": "妻",
+    "type": "noun"
+  },
+  {
+    "id": "w19_025",
+    "level": 19,
+    "english": "wind",
+    "japanese": "風",
+    "type": "noun"
+  },
+  {
+    "id": "w19_026",
+    "level": 19,
+    "english": "window",
+    "japanese": "窓",
+    "type": "noun"
+  },
+  {
+    "id": "w19_027",
+    "level": 19,
+    "english": "wine",
+    "japanese": "ワイン",
+    "type": "noun"
+  },
+  {
+    "id": "w19_028",
+    "level": 19,
+    "english": "wing",
+    "japanese": "翼",
+    "type": "noun"
+  },
+  {
+    "id": "w19_029",
+    "level": 19,
+    "english": "winter",
+    "japanese": "冬",
+    "type": "noun"
+  },
+  {
+    "id": "w19_030",
+    "level": 19,
+    "english": "wood",
+    "japanese": "木材",
+    "type": "noun"
+  },
+  {
+    "id": "w19_031",
+    "level": 19,
+    "english": "wool",
+    "japanese": "羊毛",
+    "type": "noun"
+  },
+  {
+    "id": "w19_032",
+    "level": 19,
+    "english": "yard",
+    "japanese": "庭",
+    "type": "noun"
+  },
+  {
+    "id": "w19_033",
+    "level": 19,
+    "english": "youth",
+    "japanese": "若者",
+    "type": "noun"
+  },
+  {
+    "id": "w19_034",
+    "level": 19,
+    "english": "zero",
+    "japanese": "ゼロ",
+    "type": "noun"
+  },
+  {
+    "id": "w19_035",
+    "level": 19,
+    "english": "zone",
+    "japanese": "地帯",
+    "type": "noun"
+  },
+  {
+    "id": "w19_036",
+    "level": 19,
+    "english": "zoo",
+    "japanese": "動物園",
+    "type": "noun"
+  },
+  {
+    "id": "w19_037",
+    "level": 19,
+    "english": "word_936",
+    "japanese": "テスト単語936",
+    "type": "noun"
+  },
+  {
+    "id": "w19_038",
+    "level": 19,
+    "english": "word_937",
+    "japanese": "テスト単語937",
+    "type": "noun"
+  },
+  {
+    "id": "w19_039",
+    "level": 19,
+    "english": "word_938",
+    "japanese": "テスト単語938",
+    "type": "noun"
+  },
+  {
+    "id": "w19_040",
+    "level": 19,
+    "english": "word_939",
+    "japanese": "テスト単語939",
+    "type": "noun"
+  },
+  {
+    "id": "w19_041",
+    "level": 19,
+    "english": "word_940",
+    "japanese": "テスト単語940",
+    "type": "noun"
+  },
+  {
+    "id": "w19_042",
+    "level": 19,
+    "english": "word_941",
+    "japanese": "テスト単語941",
+    "type": "noun"
+  },
+  {
+    "id": "w19_043",
+    "level": 19,
+    "english": "word_942",
+    "japanese": "テスト単語942",
+    "type": "noun"
+  },
+  {
+    "id": "w19_044",
+    "level": 19,
+    "english": "word_943",
+    "japanese": "テスト単語943",
+    "type": "noun"
+  },
+  {
+    "id": "w19_045",
+    "level": 19,
+    "english": "word_944",
+    "japanese": "テスト単語944",
+    "type": "noun"
+  },
+  {
+    "id": "w19_046",
+    "level": 19,
+    "english": "word_945",
+    "japanese": "テスト単語945",
+    "type": "noun"
+  },
+  {
+    "id": "w19_047",
+    "level": 19,
+    "english": "word_946",
+    "japanese": "テスト単語946",
+    "type": "noun"
+  },
+  {
+    "id": "w19_048",
+    "level": 19,
+    "english": "word_947",
+    "japanese": "テスト単語947",
+    "type": "noun"
+  },
+  {
+    "id": "w19_049",
+    "level": 19,
+    "english": "word_948",
+    "japanese": "テスト単語948",
+    "type": "noun"
+  },
+  {
+    "id": "w19_050",
+    "level": 19,
+    "english": "word_949",
+    "japanese": "テスト単語949",
+    "type": "noun"
+  },
+  {
+    "id": "w20_001",
+    "level": 20,
+    "english": "word_950",
+    "japanese": "テスト単語950",
+    "type": "noun"
+  },
+  {
+    "id": "w20_002",
+    "level": 20,
+    "english": "word_951",
+    "japanese": "テスト単語951",
+    "type": "noun"
+  },
+  {
+    "id": "w20_003",
+    "level": 20,
+    "english": "word_952",
+    "japanese": "テスト単語952",
+    "type": "noun"
+  },
+  {
+    "id": "w20_004",
+    "level": 20,
+    "english": "word_953",
+    "japanese": "テスト単語953",
+    "type": "noun"
+  },
+  {
+    "id": "w20_005",
+    "level": 20,
+    "english": "word_954",
+    "japanese": "テスト単語954",
+    "type": "noun"
+  },
+  {
+    "id": "w20_006",
+    "level": 20,
+    "english": "word_955",
+    "japanese": "テスト単語955",
+    "type": "noun"
+  },
+  {
+    "id": "w20_007",
+    "level": 20,
+    "english": "word_956",
+    "japanese": "テスト単語956",
+    "type": "noun"
+  },
+  {
+    "id": "w20_008",
+    "level": 20,
+    "english": "word_957",
+    "japanese": "テスト単語957",
+    "type": "noun"
+  },
+  {
+    "id": "w20_009",
+    "level": 20,
+    "english": "word_958",
+    "japanese": "テスト単語958",
+    "type": "noun"
+  },
+  {
+    "id": "w20_010",
+    "level": 20,
+    "english": "word_959",
+    "japanese": "テスト単語959",
+    "type": "noun"
+  },
+  {
+    "id": "w20_011",
+    "level": 20,
+    "english": "word_960",
+    "japanese": "テスト単語960",
+    "type": "noun"
+  },
+  {
+    "id": "w20_012",
+    "level": 20,
+    "english": "word_961",
+    "japanese": "テスト単語961",
+    "type": "noun"
+  },
+  {
+    "id": "w20_013",
+    "level": 20,
+    "english": "word_962",
+    "japanese": "テスト単語962",
+    "type": "noun"
+  },
+  {
+    "id": "w20_014",
+    "level": 20,
+    "english": "word_963",
+    "japanese": "テスト単語963",
+    "type": "noun"
+  },
+  {
+    "id": "w20_015",
+    "level": 20,
+    "english": "word_964",
+    "japanese": "テスト単語964",
+    "type": "noun"
+  },
+  {
+    "id": "w20_016",
+    "level": 20,
+    "english": "word_965",
+    "japanese": "テスト単語965",
+    "type": "noun"
+  },
+  {
+    "id": "w20_017",
+    "level": 20,
+    "english": "word_966",
+    "japanese": "テスト単語966",
+    "type": "noun"
+  },
+  {
+    "id": "w20_018",
+    "level": 20,
+    "english": "word_967",
+    "japanese": "テスト単語967",
+    "type": "noun"
+  },
+  {
+    "id": "w20_019",
+    "level": 20,
+    "english": "word_968",
+    "japanese": "テスト単語968",
+    "type": "noun"
+  },
+  {
+    "id": "w20_020",
+    "level": 20,
+    "english": "word_969",
+    "japanese": "テスト単語969",
+    "type": "noun"
+  },
+  {
+    "id": "w20_021",
+    "level": 20,
+    "english": "word_970",
+    "japanese": "テスト単語970",
+    "type": "noun"
+  },
+  {
+    "id": "w20_022",
+    "level": 20,
+    "english": "word_971",
+    "japanese": "テスト単語971",
+    "type": "noun"
+  },
+  {
+    "id": "w20_023",
+    "level": 20,
+    "english": "word_972",
+    "japanese": "テスト単語972",
+    "type": "noun"
+  },
+  {
+    "id": "w20_024",
+    "level": 20,
+    "english": "word_973",
+    "japanese": "テスト単語973",
+    "type": "noun"
+  },
+  {
+    "id": "w20_025",
+    "level": 20,
+    "english": "word_974",
+    "japanese": "テスト単語974",
+    "type": "noun"
+  },
+  {
+    "id": "w20_026",
+    "level": 20,
+    "english": "word_975",
+    "japanese": "テスト単語975",
+    "type": "noun"
+  },
+  {
+    "id": "w20_027",
+    "level": 20,
+    "english": "word_976",
+    "japanese": "テスト単語976",
+    "type": "noun"
+  },
+  {
+    "id": "w20_028",
+    "level": 20,
+    "english": "word_977",
+    "japanese": "テスト単語977",
+    "type": "noun"
+  },
+  {
+    "id": "w20_029",
+    "level": 20,
+    "english": "word_978",
+    "japanese": "テスト単語978",
+    "type": "noun"
+  },
+  {
+    "id": "w20_030",
+    "level": 20,
+    "english": "word_979",
+    "japanese": "テスト単語979",
+    "type": "noun"
+  },
+  {
+    "id": "w20_031",
+    "level": 20,
+    "english": "word_980",
+    "japanese": "テスト単語980",
+    "type": "noun"
+  },
+  {
+    "id": "w20_032",
+    "level": 20,
+    "english": "word_981",
+    "japanese": "テスト単語981",
+    "type": "noun"
+  },
+  {
+    "id": "w20_033",
+    "level": 20,
+    "english": "word_982",
+    "japanese": "テスト単語982",
+    "type": "noun"
+  },
+  {
+    "id": "w20_034",
+    "level": 20,
+    "english": "word_983",
+    "japanese": "テスト単語983",
+    "type": "noun"
+  },
+  {
+    "id": "w20_035",
+    "level": 20,
+    "english": "word_984",
+    "japanese": "テスト単語984",
+    "type": "noun"
+  },
+  {
+    "id": "w20_036",
+    "level": 20,
+    "english": "word_985",
+    "japanese": "テスト単語985",
+    "type": "noun"
+  },
+  {
+    "id": "w20_037",
+    "level": 20,
+    "english": "word_986",
+    "japanese": "テスト単語986",
+    "type": "noun"
+  },
+  {
+    "id": "w20_038",
+    "level": 20,
+    "english": "word_987",
+    "japanese": "テスト単語987",
+    "type": "noun"
+  },
+  {
+    "id": "w20_039",
+    "level": 20,
+    "english": "word_988",
+    "japanese": "テスト単語988",
+    "type": "noun"
+  },
+  {
+    "id": "w20_040",
+    "level": 20,
+    "english": "word_989",
+    "japanese": "テスト単語989",
+    "type": "noun"
+  },
+  {
+    "id": "w20_041",
+    "level": 20,
+    "english": "word_990",
+    "japanese": "テスト単語990",
+    "type": "noun"
+  },
+  {
+    "id": "w20_042",
+    "level": 20,
+    "english": "word_991",
+    "japanese": "テスト単語991",
+    "type": "noun"
+  },
+  {
+    "id": "w20_043",
+    "level": 20,
+    "english": "word_992",
+    "japanese": "テスト単語992",
+    "type": "noun"
+  },
+  {
+    "id": "w20_044",
+    "level": 20,
+    "english": "word_993",
+    "japanese": "テスト単語993",
+    "type": "noun"
+  },
+  {
+    "id": "w20_045",
+    "level": 20,
+    "english": "word_994",
+    "japanese": "テスト単語994",
+    "type": "noun"
+  },
+  {
+    "id": "w20_046",
+    "level": 20,
+    "english": "word_995",
+    "japanese": "テスト単語995",
+    "type": "noun"
+  },
+  {
+    "id": "w20_047",
+    "level": 20,
+    "english": "word_996",
+    "japanese": "テスト単語996",
+    "type": "noun"
+  },
+  {
+    "id": "w20_048",
+    "level": 20,
+    "english": "word_997",
+    "japanese": "テスト単語997",
+    "type": "noun"
+  },
+  {
+    "id": "w20_049",
+    "level": 20,
+    "english": "word_998",
+    "japanese": "テスト単語998",
+    "type": "noun"
+  },
+  {
+    "id": "w20_050",
+    "level": 20,
+    "english": "word_999",
+    "japanese": "テスト単語999",
+    "type": "noun"
+  }
+]
