@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENGRAM – 英語文法トレーニング</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>body{margin:0;padding:0;}</style>
+</head>
+<body>
+  <div id="root"></div>
+
+<script type="text/babel">
+const { useState, useEffect, useCallback } = React;
+
+// ── 単元定義 ──
+const UNIT_META = {
+  "単元1": {
+    label:"単元1", title:"be動詞と一般動詞", emoji:"⚡",
+    color:"#4F46E5", bg:"#EEF2FF",
+    genres:["一般動詞","be動詞"],
+    levelDesc:{ "Lv1":"肯定文", "Lv2":"否定・疑問文", "Lv3":"応用・混合" },
+  },
+  "単元2": {
+    label:"単元2", title:"命令文", emoji:"📢",
+    color:"#059669", bg:"#ECFDF5",
+    genres:["命令文"],
+    levelDesc:{ "Lv1":"肯定の命令文", "Lv2":"Don't・Please", "Lv3":"be動詞命令文" },
+  },
+  "単元3": {
+    label:"単元3", title:"過去形", emoji:"⏰",
+    color:"#B45309", bg:"#FEF3C7",
+    genres:["過去形"],
+    levelDesc:{ "Lv1":"過去形・肯定文", "Lv2":"過去形・否定文", "Lv3":"過去形・疑問文" },
+  },
+  "単元4": {
+    label:"単元4", title:"過去進行形", emoji:"🎬",
+    color:"#7C3AED", bg:"#EDE9FE",
+    genres:["過去進行形"],
+    levelDesc:{ "Lv1":"肯定文", "Lv2":"否定文", "Lv3":"疑問文" },
+  },
+  "単元5":  { label:"単元5",  title:"未来形（will・be going to）", emoji:"🚀", color:"#0284C7", bg:"#E0F2FE", genres:["未来形"],        levelDesc:{ "Lv1":"will・肯定文", "Lv2":"be going to・肯定", "Lv3":"否定・疑問文" } },
+  "単元6":  { label:"単元6",  title:"There is / There are",        emoji:"📍", color:"#0F766E", bg:"#CCFBF1", genres:["There is/are"], levelDesc:{ "Lv1":"肯定文（単数・複数）", "Lv2":"否定文", "Lv3":"疑問文・応答" } },
+  "単元7":  { label:"単元7",  title:"助動詞（must・may・should）",  emoji:"🛡️", color:"#0F766E", bg:"#CCFBF1", genres:["助動詞"],       levelDesc:{ "Lv1":"must・may", "Lv2":"have to", "Lv3":"should" } },
+  "まとめ": { label:"まとめ", title:"単元1〜7 総復習",            emoji:"🎯", color:"#6D28D9", bg:"#EDE9FE", genres:["まとめ"],       levelDesc:{ "Lv1":"be動詞・一般動詞・命令文", "Lv2":"過去形・進行形・未来形", "Lv3":"There is・助動詞・総合" } },
+  "単元8":  { label:"単元8",  title:"〜すること",               emoji:"📌", color:"#C2410C", bg:"#FFEDD5", genres:["不定詞・動名詞"], levelDesc:{ "Lv1":"to不定詞（want/hope）", "Lv2":"動名詞（enjoy/finish）", "Lv3":"前置詞＋動名詞" } },
+  "単元9":  { label:"単元9",  title:"不定詞の応用",               emoji:"🎯", color:"#4D7C0F", bg:"#ECFCCB", genres:["不定詞の応用"], levelDesc:{ "Lv1":"目的「〜するために」", "Lv2":"感情の原因「〜して」", "Lv3":"名詞修飾「〜するための」" } },
+  "単元10": { label:"単元10", title:"比較級・最上級",             emoji:"⚖️", color:"#1D4ED8", bg:"#DBEAFE", genres:["比較級・最上級"], levelDesc:{ "Lv1":"基本の比較級（er+than）", "Lv2":"基本の最上級（the+est）", "Lv3":"スペル変化・不規則変化" } },
+  "単元11": { label:"単元11", title:"比較の応用",               emoji:"🔃", color:"#6D28D9", bg:"#EDE9FE", genres:["比較の応用"],   levelDesc:{ "Lv1":"more/most比較", "Lv2":"as...as同等比較", "Lv3":"like better/best" } },
+  "単元12": { label:"単元12", title:"〜をあげる・〜に見える",    emoji:"🔗", color:"#0E7490", bg:"#CFFAFE", genres:["SVOO・感覚動詞"], levelDesc:{ "Lv1":"第4文型（人+物）", "Lv2":"to・for書き換え", "Lv3":"感覚動詞+形容詞" } },
+  "単元13": { label:"単元13", title:"接続詞（when・because・if・that）", emoji:"🔗", color:"#9A3412", bg:"#FFEDD5", genres:["接続詞"], levelDesc:{ "Lv1":"when・because", "Lv2":"if（条件）", "Lv3":"that・before・after" } },
+  "単元14": { label:"単元14", title:"代名詞（格変化・所有代名詞）", emoji:"👤", color:"#6D28D9", bg:"#EDE9FE", genres:["代名詞"], levelDesc:{ "Lv1":"主格・所有格・目的格", "Lv2":"所有代名詞（〜のもの）", "Lv3":"-thing系代名詞" } },
+};
+const GENRE_META = {
+  "一般動詞":    { color:"#4F46E5", bg:"#EEF2FF", emoji:"🏃" },
+  "be動詞":      { color:"#D97706", bg:"#FFF7ED", emoji:"🔵" },
+  "命令文":      { color:"#059669", bg:"#ECFDF5", emoji:"📢" },
+  "過去形":      { color:"#B45309", bg:"#FEF3C7", emoji:"⏰" },
+  "過去進行形":  { color:"#7C3AED", bg:"#EDE9FE", emoji:"🎬" },
+  "未来形":      { color:"#0284C7", bg:"#E0F2FE", emoji:"🚀" },
+  "There is/are":{ color:"#0F766E", bg:"#CCFBF1", emoji:"📍" },
+  "助動詞":      { color:"#0F766E", bg:"#CCFBF1", emoji:"🛡️" },
+  "まとめ":      { color:"#6D28D9", bg:"#EDE9FE", emoji:"🎯" },
+  "不定詞・動名詞":{ color:"#C2410C", bg:"#FFEDD5", emoji:"📌" },
+  "不定詞の応用": { color:"#4D7C0F", bg:"#ECFCCB", emoji:"🎯" },
+  "比較級・最上級":{ color:"#1D4ED8", bg:"#DBEAFE", emoji:"⚖️" },
+  "比較の応用":   { color:"#6D28D9", bg:"#EDE9FE", emoji:"🔃" },
+  "SVOO・感覚動詞":{ color:"#0E7490", bg:"#CFFAFE", emoji:"🔗" },
+  "接続詞":       { color:"#9A3412", bg:"#FFEDD5", emoji:"🔗" },
+  "代名詞":       { color:"#6D28D9", bg:"#EDE9FE", emoji:"👤" },
+};
+
+// ── 代名詞変化表データ ──
+const PRONOUN_TABLE = [
+  { subj:"I",   poss:"my",   obj:"me",   pp:"mine",   label:"私" },
+  { subj:"You", poss:"your", obj:"you",  pp:"yours",  label:"あなた" },
+  { subj:"He",  poss:"his",  obj:"him",  pp:"his",    label:"彼" },
+  { subj:"She", poss:"her",  obj:"her",  pp:"hers",   label:"彼女" },
+  { subj:"It",  poss:"its",  obj:"it",   pp:"—",      label:"それ" },
+  { subj:"We",  poss:"our",  obj:"us",   pp:"ours",   label:"私たち" },
+  { subj:"They",poss:"their",obj:"them", pp:"theirs", label:"彼ら" },
+];
+
+// ── シール定義 ──
+const SEALS = [
+  { id:"s_lv1_first",  emoji:"⭐", label:"はじめの一歩",   cond:(stats)=>stats.totalCorrect>=1 },
+  { id:"s_perfect",    emoji:"💯", label:"パーフェクト！",  cond:(stats)=>stats.lastPct===100 },
+  { id:"s_streak3",    emoji:"🔥", label:"3問連続正解",     cond:(stats)=>stats.streak>=3 },
+  { id:"s_streak5",    emoji:"⚡", label:"5問連続正解",     cond:(stats)=>stats.streak>=5 },
+  { id:"s_100q",       emoji:"🏅", label:"100問達成",       cond:(stats)=>stats.totalCorrect>=100 },
+  { id:"s_u14_clear",  emoji:"👤", label:"代名詞マスター",  cond:(stats)=>stats.u14Clear },
+  { id:"s_u13_clear",  emoji:"🔗", label:"接続詞マスター",  cond:(stats)=>stats.u13Clear },
+  { id:"s_all_lv1",    emoji:"🌟", label:"Lv1全部クリア",   cond:(stats)=>stats.lv1Clear },
+  { id:"s_review",     emoji:"🔁", label:"復習モード完走",  cond:(stats)=>stats.reviewFinish },
+  { id:"s_comeback",   emoji:"💪", label:"不正解からの正解", cond:(stats)=>stats.comeback },
+];
+
+// ── explanation.correctから選択肢別解説を抽出 ──
+function parseExplanation(text, opts) {
+  const result = {};
+  const firstWrong = text.indexOf("❌");
+  result._correct = firstWrong >= 0 ? text.slice(0, firstWrong).trim() : text.trim();
+  const wrongBlocks = text.split("❌").slice(1);
+  wrongBlocks.forEach(block => {
+    block = block.trim();
+    const arrowIdx = block.indexOf("→");
+    if (arrowIdx >= 0) {
+      const key = block.slice(0, arrowIdx).trim();
+      const reason = block.slice(arrowIdx + 1).trim();
+      result[key] = reason;
+    } else {
+      const spIdx = block.indexOf(" ");
+      if (spIdx >= 0) {
+        const key = block.slice(0, spIdx).trim();
+        const reason = block.slice(spIdx + 1).trim();
+        result[key] = reason;
+      }
+    }
+  });
+  return result;
+}
+
+const LEVEL_META = {
+  "Lv1": { label:"Lv 1", desc:"基本",  color:"#059669", bg:"#D1FAE5" },
+  "Lv2": { label:"Lv 2", desc:"応用",  color:"#2563EB", bg:"#DBEAFE" },
+  "Lv3": { label:"Lv 3", desc:"発展",  color:"#DC2626", bg:"#FEE2E2" },
+};
+const STORAGE_KEY  = "engram_v4_mistakes";
+const REVIEW_MS    = 72 * 60 * 60 * 1000;
+const OPT_COLORS   = ["#3B82F6","#10B981","#F59E0B","#EF4444"];
+const OPT_LABELS   = ["A","B","C","D"];
+const CARD_PALETTES= ["#FFFDE7","#E3F2FD","#F3E5F5","#E8F5E9","#FCE4EC","#FFF8E1","#E8EAF6","#E0F2F1"];
+const font = "'Noto Sans JP','Nunito',sans-serif";
+
+const G = `
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Nunito:wght@700;900&display=swap');
+  *{box-sizing:border-box;}
+  @keyframes pop{0%{transform:scale(.85);opacity:0}65%{transform:scale(1.04)}100%{transform:scale(1);opacity:1}}
+  @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  .pop{animation:pop .35s cubic-bezier(.34,1.56,.64,1) both}
+  .shake{animation:shake .55s ease both}
+  .fadeUp{animation:fadeUp .35s ease both}
+  .opt:active{transform:scale(.96)}
+`;
+
+function App({ QUESTION_BANK }) {
+  const [mistakeLog, setMistakeLog]     = useState({});
+  const [screen, setScreen]             = useState("home");
+  const [activeUnit, setActiveUnit]     = useState("単元1");
+  const [selGenre, setSelGenre]         = useState(null);
+  const [selLevel, setSelLevel]         = useState(null);
+  const [queue, setQueue]               = useState([]);
+  const [idx, setIdx]                   = useState(0);
+  const [phase, setPhase]               = useState("question");
+  const [selOpt, setSelOpt]             = useState(null);
+  const [result, setResult]             = useState(null);
+  const [score, setScore]               = useState({c:0,t:0});
+  const [showAll, setShowAll]           = useState(false);
+  const [shaking, setShaking]           = useState(false);
+  const [reviewMode, setReviewMode]     = useState(false);
+  const [showPronounTable, setShowPronounTable] = useState(false);
+  const [earnedSeals, setEarnedSeals]   = useState([]);
+  const [newSeals, setNewSeals]         = useState([]);
+  const [totalCorrect, setTotalCorrect] = useState(0);
+  const [streak, setStreak]             = useState(0);
+  const [unitClears, setUnitClears]     = useState({});
+
+  useEffect(() => {
+    try {
+      const r=localStorage.getItem(STORAGE_KEY); if(r) setMistakeLog(JSON.parse(r));
+      const s=localStorage.getItem("engram_seals"); if(s) setEarnedSeals(JSON.parse(s));
+      const tc=localStorage.getItem("engram_totalCorrect"); if(tc) setTotalCorrect(parseInt(tc)||0);
+      const uc=localStorage.getItem("engram_unitClears"); if(uc) setUnitClears(JSON.parse(uc));
+    } catch{}
+  },[]);
+  const saveMistakes = useCallback(l => { setMistakeLog(l); try{localStorage.setItem(STORAGE_KEY,JSON.stringify(l));}catch{} },[]);
+  const saveSeals = useCallback((seals) => { setEarnedSeals(seals); try{localStorage.setItem("engram_seals",JSON.stringify(seals));}catch{}; },[]);
+
+  const reviewCount = Object.entries(mistakeLog).filter(([,ts])=>Date.now()-ts>=REVIEW_MS).length;
+  const getCount = (g,l) => QUESTION_BANK.filter(q=>q.genre===g&&q.level===l).length;
+  const getUnitCount = (uk) => { const um=UNIT_META[uk]; return QUESTION_BANK.filter(q=>um.genres.includes(q.genre)).length; };
+
+  const startQuiz = useCallback((genre, level) => {
+    const now = Date.now();
+    const rIds = Object.entries(mistakeLog).filter(([,ts])=>now-ts>=REVIEW_MS).map(([id])=>id);
+    let pool = [...QUESTION_BANK];
+    if(genre) pool=pool.filter(q=>q.genre===genre);
+    if(level) pool=pool.filter(q=>q.level===level);
+    for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+    const rQs=pool.filter(q=>rIds.includes(q.id)), nQs=pool.filter(q=>!rIds.includes(q.id));
+    setReviewMode(rQs.length>0);
+    setQueue(rQs.length>0?[...rQs,...nQs]:nQs);
+    setSelGenre(genre); setSelLevel(level);
+    setIdx(0); setScore({c:0,t:0}); setPhase("question"); setSelOpt(null); setResult(null); setShowAll(false);
+    setScreen("quiz");
+  },[mistakeLog, QUESTION_BANK]);
+
+  const q = queue[idx];
+  const cardBg = CARD_PALETTES[idx % CARD_PALETTES.length];
+  const prog = queue.length ? (idx/queue.length)*100 : 0;
+
+  const handleSelect = opt => { setSelOpt(opt); setPhase("confirm"); };
+  const handleConfirm = () => {
+    const ok = selOpt.correct;
+    setResult(ok?"correct":"wrong");
+    const newScore = {c:score.c+(ok?1:0), t:score.t+1};
+    setScore(newScore);
+    const newStreak = ok ? streak+1 : 0;
+    setStreak(newStreak);
+    const newTotal = ok ? totalCorrect+1 : totalCorrect;
+    if(ok) { setTotalCorrect(newTotal); try{localStorage.setItem("engram_totalCorrect",String(newTotal));}catch{}; }
+    if(!ok){ setShaking(true); setTimeout(()=>setShaking(false),600); saveMistakes({...mistakeLog,[q.id]:Date.now()}); }
+    else if(mistakeLog[q.id]){ const l={...mistakeLog}; delete l[q.id]; saveMistakes(l); }
+    setPhase("result");
+  };
+  const handleNext = () => {
+    setShowAll(false); setResult(null); setShowPronounTable(false);
+    if(idx+1>=queue.length) {
+      const pct = score.t ? Math.round(score.c/score.t*100) : 0;
+      const genre = selGenre;
+      const newUC = {...unitClears};
+      if(genre) newUC[genre] = Math.max(newUC[genre]||0, pct);
+      setUnitClears(newUC);
+      try{localStorage.setItem("engram_unitClears",JSON.stringify(newUC));}catch{};
+      const stats = {
+        totalCorrect: totalCorrect,
+        lastPct: pct,
+        streak: streak,
+        u14Clear: (newUC["代名詞"]||0)>=80,
+        u13Clear: (newUC["接続詞"]||0)>=80,
+        lv1Clear: Object.values(newUC).some(v=>v>=80),
+        reviewFinish: reviewMode,
+        comeback: false,
+      };
+      const alreadyIds = earnedSeals.map(s=>s.id);
+      const got = SEALS.filter(s=>!alreadyIds.includes(s.id)&&s.cond(stats));
+      if(got.length>0){ const upd=[...earnedSeals,...got]; saveSeals(upd); setNewSeals(got); }
+      setScreen("complete");
+    } else {
+      setIdx(i=>i+1); setSelOpt(null); setPhase("question");
+    }
+  };
+
+  // ── ホーム ──
+  if(screen==="home") {
+    const um = UNIT_META[activeUnit];
+    return (
+    <div style={{minHeight:"100vh",background:"linear-gradient(160deg,#6366F1,#8B5CF6,#EC4899)",fontFamily:font,padding:"16px 16px 32px"}}>
+      <style>{G}</style>
+      <div style={{maxWidth:480,margin:"0 auto"}}>
+
+        {/* タイトル */}
+        <div className="pop" style={{textAlign:"center",padding:"22px 0 14px"}}>
+          <div style={{fontSize:44}}>📚</div>
+          <h1 style={{fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:34,color:"#fff",margin:"4px 0 0"}}>ENG<span style={{color:"#FFD600"}}>GRAM</span></h1>
+          <p style={{color:"#E0E7FF",fontSize:12,fontWeight:700,margin:"4px 0 0"}}>英語文法トレーニング ｜ 全{QUESTION_BANK.length}問</p>
+        </div>
+
+        {/* 復習バナー */}
+        {reviewCount>0&&(
+          <button onClick={()=>startQuiz(null,null)} style={{width:"100%",background:"#FFF3CD",border:"3px solid #F59E0B",borderRadius:16,padding:"11px 16px",marginBottom:12,cursor:"pointer",fontFamily:font,display:"flex",alignItems:"center",gap:12}}>
+            <span style={{fontSize:24}}>🔁</span>
+            <div style={{textAlign:"left"}}>
+              <p style={{color:"#92400E",fontWeight:900,fontSize:14,margin:0}}>復習モードで練習する</p>
+              <p style={{color:"#B45309",fontSize:11,fontWeight:700,margin:"1px 0 0"}}>{reviewCount}問が復習待ちです（72時間経過）</p>
+            </div>
+            <span style={{marginLeft:"auto",color:"#D97706",fontSize:18}}>→</span>
+          </button>
+        )}
+
+        {/* 単元タブ（横スクロール） */}
+        <div style={{overflowX:"auto",marginBottom:12,paddingBottom:4,WebkitOverflowScrolling:"touch"}}>
+          <div style={{display:"flex",gap:8,width:"max-content",paddingRight:4}}>
+            {Object.entries(UNIT_META).map(([key,meta])=>{
+              const active=activeUnit===key;
+              const hasQ=getUnitCount(key)>0;
+              return (
+                <button key={key} onClick={()=>{ if(hasQ) setActiveUnit(key); }}
+                  style={{background:active?"#fff":hasQ?"rgba(255,255,255,0.18)":"rgba(255,255,255,0.07)",
+                    border:active?`3px solid ${meta.color}`:`2px solid ${hasQ?"rgba(255,255,255,0.35)":"rgba(255,255,255,0.15)"}`,
+                    borderRadius:16,padding:"10px 12px",cursor:hasQ?"pointer":"default",
+                    textAlign:"center",fontFamily:font,minWidth:90,flexShrink:0,opacity:hasQ?1:0.45}}>
+                  <div style={{fontSize:18,marginBottom:2}}>{meta.emoji}</div>
+                  <div style={{fontWeight:900,fontSize:12,color:active?meta.color:"#fff",marginBottom:1,whiteSpace:"nowrap"}}>{meta.label}</div>
+                  <div style={{fontSize:9,color:active?"#374151":"#D1D5DB",fontWeight:700,lineHeight:1.3,marginBottom:4,whiteSpace:"nowrap",maxWidth:80,overflow:"hidden",textOverflow:"ellipsis"}}>{meta.title}</div>
+                  <div style={{background:active?meta.color:hasQ?"rgba(255,255,255,0.35)":"rgba(255,255,255,0.15)",color:"#fff",fontSize:10,fontWeight:900,borderRadius:99,padding:"2px 8px",display:"inline-block"}}>
+                    {hasQ?`${getUnitCount(key)}問`:"準備中"}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 選択パネル */}
+        <div style={{background:"rgba(255,255,255,0.97)",borderRadius:22,padding:"18px 16px",boxShadow:"0 8px 32px rgba(0,0,0,0.16)"}}>
+
+          {/* 単元ヘッダー */}
+          <div style={{display:"flex",alignItems:"center",gap:10,paddingBottom:14,marginBottom:14,borderBottom:"2px solid #F3F4F6"}}>
+            <div style={{width:40,height:40,borderRadius:12,background:um.bg,display:"flex",alignItems:"center",justifyContent:"center",fontSize:22,flexShrink:0}}>{um.emoji}</div>
+            <div>
+              <p style={{color:um.color,fontWeight:900,fontSize:15,margin:0}}>{um.label}：{um.title}</p>
+              <p style={{color:"#6B7280",fontSize:11,fontWeight:700,margin:"2px 0 0"}}>レベルを選んで練習しよう</p>
+            </div>
+          </div>
+
+          {/* ジャンル × レベル グリッド */}
+          {um.genres.map(genre=>{
+            const gm=GENRE_META[genre];
+            return (
+              <div key={genre} style={{marginBottom:14}}>
+                {um.genres.length>1&&(
+                  <div style={{display:"flex",alignItems:"center",gap:7,marginBottom:8}}>
+                    <span style={{fontSize:16}}>{gm.emoji}</span>
+                    <span style={{fontWeight:900,fontSize:13,color:gm.color}}>{genre}</span>
+                    <div style={{flex:1,height:2,background:gm.color,opacity:.18,borderRadius:99}}/>
+                  </div>
+                )}
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8}}>
+                  {["Lv1","Lv2","Lv3"].map(level=>{
+                    const lm=LEVEL_META[level], cnt=getCount(genre,level), locked=cnt===0;
+                    const desc=um.levelDesc[level]||lm.desc;
+                    return (
+                      <button key={level} disabled={locked} onClick={()=>startQuiz(genre,level)}
+                        style={{background:locked?"#F9FAFB":lm.bg,border:`2.5px solid ${locked?"#E5E7EB":lm.color}`,borderRadius:14,padding:"10px 6px",cursor:locked?"not-allowed":"pointer",textAlign:"center",opacity:locked?0.45:1,fontFamily:font}}>
+                        <div style={{fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:17,color:locked?"#9CA3AF":lm.color}}>{lm.label}</div>
+                        <div style={{fontSize:10,color:locked?"#9CA3AF":"#374151",fontWeight:700,margin:"2px 0 5px",lineHeight:1.3}}>{desc}</div>
+                        <div style={{background:locked?"#E5E7EB":lm.color,color:"#fff",fontWeight:900,fontSize:11,borderRadius:99,padding:"2px 8px",display:"inline-block"}}>{locked?"準備中":`${cnt}問`}</div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+
+          {/* 単元まとめて挑戦 */}
+          <button onClick={()=>startQuiz(um.genres.length===1?um.genres[0]:null, null)}
+            style={{width:"100%",background:`linear-gradient(90deg,${um.color},${um.color}bb)`,color:"#fff",fontWeight:900,fontSize:14,padding:"13px 0",borderRadius:14,border:"none",cursor:"pointer",fontFamily:font,marginTop:4,boxShadow:`0 4px 14px ${um.color}44`}}>
+            {um.emoji} {um.label}の全{getUnitCount(activeUnit)}問に挑戦！
+          </button>
+        </div>
+
+        {/* 全問まとめて */}
+        <button onClick={()=>startQuiz(null,null)}
+          style={{width:"100%",marginTop:10,background:"rgba(255,255,255,0.14)",color:"#fff",fontWeight:900,fontSize:14,padding:"12px 0",borderRadius:14,border:"2px solid rgba(255,255,255,0.35)",cursor:"pointer",fontFamily:font}}>
+          🚀 全{QUESTION_BANK.length}問まとめて挑戦！
+        </button>
+
+        {/* シールコレクション */}
+        {earnedSeals.length>0&&(
+          <div style={{background:"rgba(255,255,255,0.13)",borderRadius:14,padding:"14px 16px",marginTop:10}}>
+            <p style={{color:"#FFD600",fontWeight:900,fontSize:13,margin:"0 0 10px"}}>🏅 シールコレクション（{earnedSeals.length}/{SEALS.length}枚）</p>
+            <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
+              {SEALS.map(s=>{
+                const have=earnedSeals.find(e=>e.id===s.id);
+                return (
+                  <div key={s.id} title={s.label} style={{background:have?"rgba(255,255,255,0.92)":"rgba(255,255,255,0.18)",borderRadius:12,padding:"6px 8px",textAlign:"center",minWidth:52,opacity:have?1:0.35,position:"relative"}}>
+                    <div style={{fontSize:22}}>{s.emoji}</div>
+                    <div style={{fontWeight:700,fontSize:9,color:have?"#374151":"#fff",marginTop:2,lineHeight:1.2}}>{s.label}</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* 使い方 */}
+        <div style={{background:"rgba(255,255,255,0.11)",borderRadius:14,padding:"12px 16px",marginTop:10}}>
+          {[["🗣️","答えを選んだら声に出して理由を説明する"],["✅","説明してから確認ボタンで正誤チェック"],["🔁","間違えた問題は72時間後に自動で復習出題"]].map(([ic,tx],i)=>(
+            <div key={i} style={{display:"flex",gap:9,alignItems:"flex-start",marginBottom:i<2?8:0}}>
+              <span style={{fontSize:15,flexShrink:0}}>{ic}</span>
+              <span style={{color:"#E0E7FF",fontSize:12,fontWeight:700,lineHeight:1.5}}>{tx}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    );
+  }
+
+  // ── 完了 ──
+  if(screen==="complete") {
+    const pct=score.t?Math.round(score.c/score.t*100):0, col=pct===100?"#059669":pct>=60?"#2563EB":"#DC2626";
+    return (
+      <div style={{minHeight:"100vh",background:"linear-gradient(160deg,#6366F1,#8B5CF6,#EC4899)",fontFamily:font,padding:"20px 16px 40px",overflowY:"auto"}}>
+        <style>{G}</style>
+        <div className="pop" style={{width:"100%",maxWidth:440,margin:"0 auto",textAlign:"center"}}>
+          <div style={{fontSize:72}}>{pct===100?"🏆":pct>=60?"💪":"📖"}</div>
+          <h2 style={{fontFamily:"'Nunito',sans-serif",fontWeight:900,fontSize:34,color:"#fff",margin:"0 0 4px"}}>おわり！</h2>
+          <p style={{color:"#E0E7FF",fontSize:16,fontWeight:700,marginBottom:22}}>{pct===100?"パーフェクト！すごい！！":pct>=60?"よくできました！":"もう一度がんばろう！"}</p>
+          <div style={{background:"#fff",borderRadius:22,padding:"24px",marginBottom:16,boxShadow:"0 8px 30px rgba(0,0,0,.15)"}}>
+            <div style={{fontSize:60,fontWeight:900,color:col,fontFamily:"'Nunito',sans-serif",lineHeight:1}}>{pct}<span style={{fontSize:30}}>%</span></div>
+            <p style={{color:"#374151",fontWeight:700,fontSize:16,margin:"6px 0 16px"}}>{score.c} / {score.t} 問正解</p>
+            <div style={{height:14,background:"#E5E7EB",borderRadius:99,overflow:"hidden",marginBottom:18}}>
+              <div style={{height:"100%",width:`${pct}%`,background:col,borderRadius:99,transition:"width 1s ease"}}/>
+            </div>
+            {pct<100&&<div style={{background:"#FFF3CD",border:"2px solid #F59E0B",borderRadius:12,padding:"12px 14px"}}><p style={{color:"#92400E",fontSize:13,fontWeight:700,margin:0}}>間違えた問題は <span style={{color:"#DC2626"}}>72時間後</span> に復習出題されます📅</p></div>}
+          </div>
+
+          {/* 新着シール */}
+          {newSeals.length>0&&(
+            <div className="pop" style={{background:"#fff",borderRadius:22,padding:"18px",marginBottom:16,boxShadow:"0 8px 30px rgba(0,0,0,.15)"}}>
+              <p style={{color:"#7C3AED",fontWeight:900,fontSize:15,margin:"0 0 12px"}}>🎊 シールをゲット！</p>
+              <div style={{display:"flex",flexWrap:"wrap",gap:10,justifyContent:"center"}}>
+                {newSeals.map(s=>(
+                  <div key={s.id} className="pop" style={{background:"linear-gradient(135deg,#FFF9C4,#FFE082)",border:"3px solid #FFD600",borderRadius:16,padding:"10px 14px",textAlign:"center",minWidth:90}}>
+                    <div style={{fontSize:36}}>{s.emoji}</div>
+                    <div style={{fontWeight:900,fontSize:11,color:"#92400E",marginTop:4}}>{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 全シールコレクション */}
+          {earnedSeals.length>0&&(
+            <div style={{background:"rgba(255,255,255,0.15)",borderRadius:18,padding:"14px",marginBottom:16}}>
+              <p style={{color:"#fff",fontWeight:900,fontSize:13,margin:"0 0 10px"}}>🏅 コレクション（{earnedSeals.length}/{SEALS.length}）</p>
+              <div style={{display:"flex",flexWrap:"wrap",gap:8,justifyContent:"center"}}>
+                {SEALS.map(s=>{
+                  const have=earnedSeals.find(e=>e.id===s.id);
+                  return (
+                    <div key={s.id} style={{background:have?"rgba(255,255,255,0.9)":"rgba(255,255,255,0.2)",borderRadius:12,padding:"6px 8px",textAlign:"center",minWidth:56,opacity:have?1:0.4}}>
+                      <div style={{fontSize:24}}>{s.emoji}</div>
+                      <div style={{fontWeight:700,fontSize:9,color:have?"#374151":"#fff",marginTop:2,lineHeight:1.2}}>{s.label}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          <div style={{display:"flex",gap:10}}>
+            <button onClick={()=>{setNewSeals([]);startQuiz(selGenre,selLevel);}} style={{flex:1,background:"#FFD600",color:"#1A1A2E",fontWeight:900,fontSize:15,padding:"15px 0",borderRadius:16,border:"none",cursor:"pointer",fontFamily:font}}>🔄 もう一度</button>
+            <button onClick={()=>{setNewSeals([]);setScreen("home");}} style={{flex:1,background:"rgba(255,255,255,.2)",color:"#fff",fontWeight:900,fontSize:15,padding:"15px 0",borderRadius:16,border:"2px solid rgba(255,255,255,.4)",cursor:"pointer",fontFamily:font}}>🏠 ホームへ</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── クイズ ──
+  if(!q) return null;
+  const gm=GENRE_META[q.genre]||{}, lm=LEVEL_META[q.level]||{};
+  return (
+    <div style={{minHeight:"100vh",background:"#F0F4FF",fontFamily:font,paddingBottom:40}}>
+      <style>{G}</style>
+      <div style={{background:"linear-gradient(90deg,#6366F1,#8B5CF6)",padding:"12px 16px 0"}}>
+        <div style={{maxWidth:500,margin:"0 auto"}}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+            <div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
+              <button onClick={()=>setScreen("home")} style={{background:"rgba(255,255,255,.2)",border:"none",color:"#fff",fontWeight:900,fontSize:12,padding:"4px 10px",borderRadius:99,cursor:"pointer",fontFamily:font}}>← ホーム</button>
+              {selGenre&&<span style={{background:gm.bg,color:gm.color,fontWeight:900,fontSize:12,padding:"3px 10px",borderRadius:99}}>{gm.emoji} {selGenre}</span>}
+              {selLevel&&<span style={{background:lm.bg,color:lm.color,fontWeight:900,fontSize:12,padding:"3px 10px",borderRadius:99}}>{lm.label}</span>}
+              {reviewMode&&<span style={{background:"#FFF3CD",color:"#92400E",fontSize:12,fontWeight:700,padding:"3px 10px",borderRadius:99}}>🔁 復習</span>}
+            </div>
+            <div style={{display:"flex",alignItems:"center",gap:8}}>
+              {streak>=3&&<span style={{background:"#FF6B35",color:"#fff",fontWeight:900,fontSize:11,padding:"3px 8px",borderRadius:99}}>{streak>=5?"⚡":"🔥"}{streak}連続！</span>}
+              <span style={{color:"#C7D2FE",fontWeight:900,fontSize:15,fontFamily:"'Nunito',sans-serif",whiteSpace:"nowrap"}}><span style={{color:"#fff"}}>{idx+1}</span>/{queue.length}</span>
+            </div>
+          </div>
+          <div style={{height:12,background:"rgba(255,255,255,.25)",borderRadius:99,overflow:"hidden"}}>
+            <div style={{height:"100%",width:`${prog}%`,background:"#FFD600",borderRadius:99,transition:"width .5s ease"}}/>
+          </div>
+        </div>
+      </div>
+
+      <div style={{maxWidth:500,margin:"0 auto",padding:"16px 16px 0"}}>
+        {/* 問題カード */}
+        <div key={q.id} className={shaking?"shake":"pop"} style={{background:cardBg,border:`3px solid ${gm.color||"#6366F1"}`,borderRadius:22,padding:"20px 22px",marginBottom:16,boxShadow:"0 4px 20px rgba(0,0,0,.09)"}}>
+          <div style={{display:"flex",gap:8,marginBottom:12}}>
+            <span style={{background:gm.color||"#6366F1",color:"#fff",fontSize:12,fontWeight:900,padding:"4px 12px",borderRadius:99}}>{q.topic}</span>
+            <span style={{background:lm.bg||"#DBEAFE",color:lm.color||"#2563EB",fontSize:12,fontWeight:900,padding:"4px 10px",borderRadius:99}}>{lm.label}</span>
+          </div>
+          <div style={{display:"flex",alignItems:"center",gap:14}}>
+            <span style={{fontSize:46,flexShrink:0}}>{q.emoji}</span>
+            <div>
+              <p style={{color:"#374151",fontWeight:700,fontSize:16,margin:"0 0 8px",lineHeight:1.5}}>{q.sentence}</p>
+              <p style={{color:gm.color||"#4F46E5",fontWeight:900,fontSize:24,margin:0,fontFamily:"'Nunito',sans-serif"}}>{q.english}</p>
+            </div>
+          </div>
+          <p style={{color:"#6B7280",fontSize:13,fontWeight:700,margin:"12px 0 0",textAlign:"center"}}>▼ ___ に入る正しい英語を選ぼう！</p>
+        </div>
+
+        {/* 選択肢 */}
+        {phase==="question"&&(
+          <div style={{display:"flex",flexDirection:"column",gap:12}}>
+            {q.options.map((opt,i)=>(
+              <button key={opt.id} className="opt fadeUp" style={{animationDelay:`${i*55}ms`,display:"flex",alignItems:"center",gap:16,background:"#fff",border:`3px solid ${OPT_COLORS[i]}`,borderRadius:18,padding:"15px 20px",cursor:"pointer",fontFamily:font,boxShadow:"0 2px 10px rgba(0,0,0,.07)",transition:"transform .1s",width:"100%"}} onClick={()=>handleSelect(opt)}>
+                <span style={{background:OPT_COLORS[i],color:"#fff",fontWeight:900,fontSize:15,width:36,height:36,borderRadius:99,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,fontFamily:"'Nunito',sans-serif"}}>{OPT_LABELS[i]}</span>
+                <span style={{color:"#111827",fontWeight:900,fontSize:20,fontFamily:"'Nunito',sans-serif"}}>{opt.text}</span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* 確認クッション */}
+        {phase==="confirm"&&(
+          <div className="fadeUp" style={{display:"flex",flexDirection:"column",gap:14}}>
+            <div style={{background:"#EDE9FE",border:"3px solid #7C3AED",borderRadius:22,padding:"22px 20px",textAlign:"center"}}>
+              <div style={{fontSize:50,marginBottom:10}}>🗣️</div>
+              <p style={{color:"#1F2937",fontWeight:900,fontSize:17,margin:"0 0 6px"}}>選んだ答え：<span style={{color:"#7C3AED",background:"#F3E8FF",padding:"3px 12px",borderRadius:10,fontFamily:"'Nunito',sans-serif",fontSize:20}}>{selOpt.text}</span></p>
+              <div style={{height:2,background:"#C4B5FD",margin:"14px 0"}}/>
+              <p style={{color:"#4C1D95",fontWeight:900,fontSize:15,margin:"0 0 8px"}}>なぜその答えを選びましたか？</p>
+              <p style={{color:"#5B21B6",fontWeight:700,fontSize:13,lineHeight:1.8,margin:0}}>声に出して理由を説明してください 📢<br/>{{"代名詞":["「主語だから主格」","「名詞の前だから所有格」","「動詞の後ろだから目的格」"],"接続詞":["「時を表すからwhen」","「理由だからbecause」","「条件だからif」"],"助動詞":["「義務だからmust」","「許可だからmay」","「〜すべきのshould」"],"不定詞・動名詞":["「動名詞（ing）だから」","「to不定詞（to+動詞原形）だから」"],"比較級・最上級":["「2つ比べるから比較級（er）」","「3つ以上だから最上級（est）」"]}[q.genre]?.join("・")||"「なぜこの答えを選んだのか」"}<br/><span style={{color:"#7C3AED",fontWeight:900}}>根拠を言葉にしてから</span>ボタンを押してください！</p>
+            </div>
+            <button onClick={handleConfirm} style={{background:"#7C3AED",color:"#fff",fontWeight:900,fontSize:17,padding:"17px 0",borderRadius:18,border:"none",cursor:"pointer",fontFamily:font,boxShadow:"0 5px 18px rgba(124,58,237,.4)"}}>✅ 説明できた！→ 答えを見る</button>
+            <button onClick={()=>{setSelOpt(null);setPhase("question");}} style={{background:"#fff",color:"#6B7280",fontWeight:700,fontSize:15,padding:"13px 0",borderRadius:14,border:"2.5px solid #D1D5DB",cursor:"pointer",fontFamily:font}}>← 選択肢に戻る</button>
+          </div>
+        )}
+
+        {/* 結果 */}
+        {phase==="result"&&(
+          <div className="fadeUp" style={{display:"flex",flexDirection:"column",gap:14}}>
+            <div style={{background:result==="correct"?"#D1FAE5":"#FEE2E2",border:`3px solid ${result==="correct"?"#059669":"#DC2626"}`,borderRadius:22,padding:"20px",textAlign:"center"}}>
+              <div style={{fontSize:56}}>{result==="correct"?"🎉":"😅"}</div>
+              <p style={{color:result==="correct"?"#065F46":"#991B1B",fontWeight:900,fontSize:24,margin:"6px 0 0",fontFamily:"'Nunito',sans-serif"}}>{result==="correct"?"正解！やったね！":"不正解…"}</p>
+              {result==="correct"&&<p style={{color:"#059669",fontSize:13,fontWeight:700,margin:"6px 0 0"}}>声に出して説明できた？ それが大事！🌟</p>}
+            </div>
+            <div style={{background:"#fff",border:"2.5px solid #E5E7EB",borderRadius:20,padding:"18px 20px",boxShadow:"0 2px 12px rgba(0,0,0,.06)"}}>
+              <div style={{display:"flex",gap:12,alignItems:"flex-start",marginBottom:14}}>
+                <span style={{fontSize:22,flexShrink:0}}>{result==="correct"?"✅":"❌"}</span>
+                <p style={{color:"#111827",fontWeight:700,fontSize:14,lineHeight:1.8,margin:0}}>{q.explanation.correct}</p>
+              </div>
+              {result==="wrong"&&(
+                <div style={{background:"#D1FAE5",border:"2.5px solid #059669",borderRadius:14,padding:"12px 16px"}}>
+                  <p style={{color:"#065F46",fontWeight:900,fontSize:14,margin:0}}>✅ 正解は：<span style={{fontSize:20,fontFamily:"'Nunito',sans-serif",marginLeft:4}}>{q.options.find(o=>o.correct)?.text}</span></p>
+                </div>
+              )}
+              {/* 変化表ボタン（代名詞のとき） */}
+              {q.genre==="代名詞"&&(
+                <button onClick={()=>setShowPronounTable(v=>!v)} style={{background:"#EDE9FE",color:"#6D28D9",fontWeight:900,fontSize:13,padding:"10px 0",borderRadius:12,border:"2px solid #C4B5FD",cursor:"pointer",width:"100%",fontFamily:font,marginTop:14}}>
+                  {showPronounTable?"▲ 代名詞変化表を閉じる":"👤 代名詞変化表を見る"}
+                </button>
+              )}
+              {showPronounTable&&q.genre==="代名詞"&&(
+                <div style={{marginTop:10,background:"#F5F3FF",border:"2px solid #C4B5FD",borderRadius:14,padding:"12px",overflowX:"auto"}}>
+                  <table style={{width:"100%",borderCollapse:"collapse",fontSize:12,fontFamily:"'Nunito',sans-serif"}}>
+                    <thead>
+                      <tr style={{background:"#6D28D9",color:"#fff"}}>
+                        {["","主格（〜は）","所有格（〜の）","目的格（〜を/に）","所有代名詞（〜のもの）"].map((h,i)=>(
+                          <th key={i} style={{padding:"6px 8px",fontWeight:900,fontSize:11,borderRadius:i===0?"6px 0 0 0":i===4?"0 6px 0 0":"0"}}>{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {PRONOUN_TABLE.map((row,i)=>(
+                        <tr key={i} style={{background:i%2===0?"#EDE9FE":"#F5F3FF"}}>
+                          <td style={{padding:"6px 8px",fontWeight:900,color:"#5B21B6",fontSize:12}}>{row.label}</td>
+                          <td style={{padding:"6px 8px",fontWeight:700,color:"#1F2937",textAlign:"center"}}>{row.subj}</td>
+                          <td style={{padding:"6px 8px",fontWeight:700,color:"#1F2937",textAlign:"center"}}>{row.poss}</td>
+                          <td style={{padding:"6px 8px",fontWeight:700,color:"#1F2937",textAlign:"center"}}>{row.obj}</td>
+                          <td style={{padding:"6px 8px",fontWeight:700,color:"#1F2937",textAlign:"center"}}>{row.pp}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  <p style={{color:"#6D28D9",fontSize:10,fontWeight:700,margin:"8px 0 0",textAlign:"center"}}>📌 判断基準：動詞の前→主格 ／ 名詞の前→所有格 ／ 動詞・前置詞の後→目的格 ／ 名詞なし→所有代名詞</p>
+                </div>
+              )}
+              <button onClick={()=>setShowAll(v=>!v)} style={{background:"#F3F4F6",color:"#374151",fontWeight:700,fontSize:13,padding:"10px 0",borderRadius:12,border:"2px solid #E5E7EB",cursor:"pointer",width:"100%",fontFamily:font,marginTop:10}}>
+                {showAll?"▲ 全選択肢の解説を閉じる":"▼ 全選択肢の解説を見る"}
+              </button>
+              {showAll&&(
+                <div style={{marginTop:12,display:"flex",flexDirection:"column",gap:10}}>
+                  {q.options.map((opt,i)=>{
+                    const parsed = parseExplanation(q.explanation.correct, q.options);
+                    let wrongReason = null;
+                    if(!opt.correct){
+                      wrongReason = parsed[opt.text];
+                      if(!wrongReason){
+                        const normOpt = opt.text.replace(/\s/g,'').toLowerCase();
+                        const found = Object.entries(parsed).find(([k])=>k.replace(/\s/g,'').toLowerCase()===normOpt);
+                        if(found) wrongReason = found[1];
+                      }
+                    }
+                    return (
+                    <div key={opt.id} style={{background:opt.correct?"#D1FAE5":"#FEF2F2",border:`2px solid ${opt.correct?"#6EE7B7":"#FECACA"}`,borderRadius:14,padding:"12px 14px"}}>
+                      <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
+                        <span style={{background:OPT_COLORS[i],color:"#fff",fontWeight:900,fontSize:13,width:26,height:26,borderRadius:99,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,fontFamily:"'Nunito',sans-serif"}}>{OPT_LABELS[i]}</span>
+                        <div style={{flex:1}}>
+                          <div style={{display:"flex",alignItems:"center",gap:6}}>
+                            <span style={{color:"#111827",fontWeight:900,fontSize:16,fontFamily:"'Nunito',sans-serif"}}>{opt.text}</span>
+                            {opt.correct&&<span style={{background:"#059669",color:"#fff",fontSize:10,fontWeight:900,padding:"2px 8px",borderRadius:99}}>正解</span>}
+                          </div>
+                          {opt.correct?(
+                            <p style={{color:"#065F46",fontWeight:700,fontSize:12,margin:"6px 0 0",lineHeight:1.7}}>{parsed._correct}</p>
+                          ):(
+                            wrongReason?(
+                              <p style={{color:"#991B1B",fontWeight:700,fontSize:12,margin:"6px 0 0",lineHeight:1.7}}>❌ {wrongReason}</p>
+                            ):(
+                              <p style={{color:"#991B1B",fontWeight:700,fontSize:12,margin:"6px 0 0",lineHeight:1.7}}>❌ 正解は「{q.options.find(o=>o.correct)?.text}」です。解説を確認しよう！</p>
+                            )
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                  })}
+                </div>
+              )}
+            </div>
+            <button onClick={handleNext} style={{background:"#FFD600",color:"#1A1A2E",fontWeight:900,fontSize:18,padding:"17px 0",borderRadius:18,border:"none",cursor:"pointer",fontFamily:font,boxShadow:"0 5px 18px rgba(255,214,0,.45)"}}>
+              {idx+1>=queue.length?"🏁 結果を見る！":"次の問題へ →"}
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── 起動：questions.json を fetch してから App を描画 ──
+fetch("questions.json")
+  .then(r => r.json())
+  .then(data => {
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App QUESTION_BANK={data} />);
+  })
+  .catch(err => {
+    document.getElementById("root").innerHTML =
+      `<div style="color:red;padding:20px;font-family:sans-serif;">
+        <h2>⚠️ 問題データの読み込みに失敗しました</h2>
+        <p>questions.json が見つかりません。index.html と同じフォルダに questions.json を置いてください。</p>
+        <pre>${err}</pre>
+      </div>`;
+  });
+</script>
+</body>
+</html>
