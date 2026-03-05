@@ -136,6 +136,12 @@ function parseExp(text){
   return r;
 }
 
+/* ─── topicから答えのヒントを除去するヘルパー ─── */
+function stripAnswerHint(topic){
+  // 「過去進行形・肯定文（were）」→「過去進行形・肯定文」
+  return topic.replace(/（[^）]*）/g,"").replace(/\([^)]*\)/g,"").trim();
+}
+
 /* ═══════════════ SPEECH ═══════════════ */
 function speak(text,rate=0.85){
   if(!window.speechSynthesis||!text)return;
@@ -148,7 +154,7 @@ function speak(text,rate=0.85){
   window.speechSynthesis.speak(u);
 }
 
-/* ═══════════════ SRS (hidden from UI, internal only) ═══════════════ */
+/* ═══════════════ SRS ═══════════════ */
 function srsDefault(){return{ef:2.5,interval:1,reps:0,nextReview:Date.now()};}
 function srsUpdate(rec,grade){
   let{ef,interval,reps}=rec;
@@ -209,8 +215,8 @@ function genSortExpl(q){
   let rule="";
   if(ruleMap[genre]&&ruleMap[genre][topic])rule=ruleMap[genre][topic];
   else if(ruleMap[genre])rule=Object.values(ruleMap[genre])[0]||"";
-  const roles=["主語（S）","動詞（V）","目的語/補語","前置詞","冠詞/限定詞","否定語","文頭の語","副詞"];
-  const breakdown=answer.map((w,i)=>{
+  const answer2=answer;
+  const breakdown=answer2.map((w,i)=>{
     let role="";
     if(i===0){if(["I","You","He","She","We","They","It"].includes(w))role="主語（S）";else if(["not","no"].includes(w.toLowerCase()))role="否定語";else role="文頭の語";}
     else if(["not","no"].includes(w.toLowerCase()))role="否定語";
@@ -219,7 +225,7 @@ function genSortExpl(q){
     else if(i===1&&!role)role="動詞（V）";
     return role?`「${w}」→${role}`:`「${w}」`;
   }).join("　");
-  return{rule,breakdown,answerStr:answer.join(" "),japanese:q.japanese};
+  return{rule,breakdown,answerStr:answer2.join(" "),japanese:q.japanese};
 }
 
 /* ═══════════════ SHARED COMPONENTS ═══════════════ */
@@ -259,7 +265,91 @@ function LevelBar({xp}){
   );
 }
 
-/* ── Big speak button (used in result/explanation sections) ── */
+/* ── AI Chat Button (Gemini Integration) ── */
+function AiChatButton({question, answer}) {
+  const [open, setOpen] = React.useState(false);
+  const [userQ, setUserQ] = React.useState("もっと詳しく解説してください。");
+  const [done, setDone] = React.useState(false);
+
+  const promptText = `問題：\n${question}\n\n正解：\n${answer}\n\n質問：\n${userQ}\n\nこの英語の問題について、小学生・中学生にわかりやすく日本語で解説してください。`;
+
+  const handleOpenGemini = () => {
+    const doOpen = () => {
+      setDone(true);
+      setTimeout(() => { setDone(false); setOpen(false); }, 1800);
+      window.open("https://gemini.google.com/app", "_blank");
+    };
+    const doFallback = () => {
+      const ta = document.createElement("textarea");
+      ta.value = promptText;
+      ta.style.position = "fixed"; ta.style.left = "-9999px";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      try { document.execCommand("copy"); doOpen(); }
+      catch { alert("コピーに失敗しました。テキストを手動でコピーしてください。"); }
+      ta.remove();
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(promptText).then(doOpen).catch(doFallback);
+    } else { doFallback(); }
+  };
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}
+        style={{
+          background:"linear-gradient(90deg,#10B981,#059669)", color:"#fff", fontWeight:900, fontSize:13, padding:"12px 0",
+          borderRadius:14, border:"none", cursor:"pointer", width:"100%", fontFamily:F,
+          marginTop:4, marginBottom:4, display:"flex", alignItems:"center", justifyContent:"center", gap:6,
+          boxShadow:"0 4px 12px rgba(16,185,129,0.35)"
+        }}>
+        <span style={{fontSize:18}}>🤖</span> AIに詳しく解説してもらう
+      </button>
+
+      {open && (
+        <div style={{position:"fixed",inset:0,zIndex:9999,background:"rgba(0,0,0,.6)",display:"flex",alignItems:"flex-end",justifyContent:"center"}}
+          onClick={e => { if(e.target===e.currentTarget) setOpen(false); }}>
+          <div className="fadeUp" style={{background:"#fff",borderRadius:"22px 22px 0 0",padding:"22px 18px 36px",width:"100%",maxWidth:520,maxHeight:"88vh",overflowY:"auto"}}>
+
+            <div style={{display:"flex",alignItems:"center",marginBottom:14}}>
+              <span style={{fontSize:22}}>🤖</span>
+              <span style={{fontWeight:900,fontSize:16,color:"#1F2937",marginLeft:8,flex:1}}>AIに質問する</span>
+              <button onClick={() => setOpen(false)}
+                style={{background:"#F3F4F6",border:"none",borderRadius:99,width:32,height:32,fontSize:18,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",color:"#6B7280"}}>×</button>
+            </div>
+
+            <p style={{color:"#374151",fontWeight:700,fontSize:11,margin:"0 0 6px"}}>❓ AIへの質問内容（編集できます）</p>
+            <textarea value={userQ} onChange={e => setUserQ(e.target.value)} rows={3}
+              style={{width:"100%",border:"2px solid #D1D5DB",borderRadius:10,padding:"10px 12px",fontSize:13,fontWeight:700,fontFamily:F,color:"#1F2937",resize:"vertical",lineHeight:1.6,boxSizing:"border-box"}}/>
+
+            <p style={{color:"#6B7280",fontWeight:700,fontSize:10,margin:"10px 0 5px"}}>📋 Geminiに送る内容（プレビュー）</p>
+            <div style={{background:"#F9FAFB",border:"1.5px solid #E5E7EB",borderRadius:10,padding:"10px 12px",fontSize:10,fontWeight:700,color:"#374151",lineHeight:1.8,whiteSpace:"pre-wrap",maxHeight:130,overflowY:"auto"}}>
+              {promptText}
+            </div>
+
+            <button onClick={handleOpenGemini}
+              style={{
+                width:"100%", marginTop:14,
+                background: done ? "#059669" : "linear-gradient(90deg,#4285F4,#0F9D58)",
+                color:"#fff", fontWeight:900, fontSize:15, padding:"16px 0",
+                borderRadius:14, border:"none", cursor:"pointer", fontFamily:F,
+                boxShadow: done ? "0 4px 14px rgba(5,150,105,.4)" : "0 4px 14px rgba(66,133,244,.4)",
+                display:"flex", alignItems:"center", justifyContent:"center", gap:8,
+                transition:"all .2s"
+              }}>
+              <span style={{fontSize:20}}>{done ? "✅" : "🚀"}</span>
+              {done ? "コピー完了！Geminiが開きます" : "コピーしてGeminiを開く"}
+            </button>
+            <p style={{color:"#9CA3AF",fontSize:10,fontWeight:700,textAlign:"center",margin:"10px 0 0",lineHeight:1.7}}>
+              Geminiが開いたら入力欄に貼り付けて（Ctrl+V / ⌘+V）送信してください
+            </p>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+/* ── Big speak button ── */
 function SpeakButton({text,label="🔊 音声を聴く",color="#3B82F6",size="normal"}){
   const [playing,setPlaying]=useState(false);
   const handleClick=()=>{
@@ -289,7 +379,7 @@ function SpeakButton({text,label="🔊 音声を聴く",color="#3B82F6",size="no
   );
 }
 
-/* ── Compact speak icon (inline next to word) ── */
+/* ── Compact speak icon ── */
 function SpeakIcon({text,size=32}){
   const [playing,setPlaying]=useState(false);
   return(
@@ -647,20 +737,8 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
   const gc=(g,l)=>bank.filter(q=>q.genre===g&&q.level===l).length;
   const guc=(uk)=>{const um=UM[uk];return bank.filter(q=>um.genres.includes(q.genre)).length;};
 
-  // ★ 途中で戻るときに、1問以上解いていれば履歴を保存する
-  const handleBack = useCallback(() => {
-    if(sub==="quiz" && score.t > 0){
-      addHist({mode:"fill",label:sg||"全問",correct:score.c,total:score.t});
-    }
-    setSub("home");
-  },[sub,score,sg,addHist]);
-
-  const handleBackToMenu = useCallback(() => {
-    if(sub==="quiz" && score.t > 0){
-      addHist({mode:"fill",label:sg||"全問",correct:score.c,total:score.t});
-    }
-    back();
-  },[sub,score,sg,addHist,back]);
+  const handleBack = useCallback(() => { setSub("home"); },[]);
+  const handleBackToMenu = useCallback(() => { back(); },[back]);
 
   const start=useCallback((genre,level)=>{
     const rIds=Object.entries(mist).filter(([,ts])=>Date.now()-ts>=REVIEW_MS).map(([id])=>id);
@@ -758,6 +836,11 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
   if(!q)return null;
   const gm=GM[q.genre]||{},lm=LM[q.level]||{},prog=queue.length?(idx/queue.length)*100:0;
   const correctText=q.options.find(o=>o.correct)?.text||"";
+  // ★ Fix: 正解全文を構築。___、( )、（ ）いずれの形式にも対応
+  const fullSentence=q.english
+    .replace(/___+/g,correctText)
+    .replace(/\([^)]*\)/g,correctText)
+    .replace(/（[^）]*）/g,correctText);
 
   const doSel=opt=>{setSel(opt);setPhase("confirm");};
   const doConf=()=>{
@@ -768,12 +851,12 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
     if(ok){addXP(XP_PER_CORRECT+(newCombo>=3?XP_BONUS_STREAK:0),null);}
     if(!ok){setShaking(true);setTimeout(()=>setShaking(false),600);setMist({...mist,[q.id]:Date.now()});}
     else if(mist[q.id]){const l={...mist};delete l[q.id];setMist(l);}
+    addHist({mode:"fill",label:sg||"全問",correct:ns.c,total:ns.t});
     setPhase("result");
   };
   const doNext=()=>{
     setShowAll(false);setResult(null);setShowPron(false);
     if(idx+1>=queue.length){
-      addHist({mode:"fill",label:sg||"全問",correct:score.c,total:score.t});
       if(score.c===score.t&&score.t>0)setShowFireworks(true);
       setSub("complete");
     } else{setIdx(i=>i+1);setSel(null);setPhase("question");}
@@ -785,7 +868,6 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
         <div style={{maxWidth:500,margin:"0 auto"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
             <div style={{display:"flex",alignItems:"center",gap:4,flexWrap:"wrap"}}>
-              {/* ★ 途中保存付き「戻る」ボタン */}
               <button onClick={handleBack} style={{background:"rgba(255,255,255,.2)",border:"none",color:"#fff",fontWeight:900,fontSize:10,padding:"4px 8px",borderRadius:99,cursor:"pointer",fontFamily:F}}>← 単元選択</button>
               <button onClick={handleBackToMenu} style={{background:"rgba(255,255,255,.12)",border:"1px solid rgba(255,255,255,.3)",color:"rgba(255,255,255,.8)",fontWeight:900,fontSize:10,padding:"4px 8px",borderRadius:99,cursor:"pointer",fontFamily:F}}>🏠</button>
               {sg&&<span style={{background:gm.bg,color:gm.color,fontWeight:900,fontSize:9,padding:"2px 7px",borderRadius:99}}>{sg}</span>}
@@ -806,7 +888,8 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
 
         <div key={q.id} className={shaking?"shake":"pop"} style={{background:CB[idx%CB.length],border:`3px solid ${gm.color||"#6366F1"}`,borderRadius:18,padding:"16px 18px",marginBottom:12}}>
           <div style={{display:"flex",gap:6,marginBottom:9,alignItems:"center"}}>
-            <span style={{background:gm.color||"#6366F1",color:"#fff",fontSize:9,fontWeight:900,padding:"3px 9px",borderRadius:99}}>{q.topic}</span>
+            {/* ★ Fix: topicバッジから（答え）を除去して表示 */}
+            <span style={{background:gm.color||"#6366F1",color:"#fff",fontSize:9,fontWeight:900,padding:"3px 9px",borderRadius:99}}>{stripAnswerHint(q.topic)}</span>
             <span style={{background:lm.bg||"#DBEAFE",color:lm.color||"#2563EB",fontSize:9,fontWeight:900,padding:"3px 7px",borderRadius:99}}>{lm.label}</span>
           </div>
           <div style={{display:"flex",alignItems:"center",gap:11}}>
@@ -855,14 +938,13 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
             <div style={{background:"#fff",border:"2.5px solid #E5E7EB",borderRadius:16,padding:"13px 15px"}}>
               <p style={{color:"#111827",fontWeight:700,fontSize:11,lineHeight:1.8,margin:"0 0 10px"}}>{q.explanation.correct}</p>
 
-              {/* ★ 正解の音声ボタン（大きく・目立つ） */}
               <div style={{background:"#F0F9FF",border:"2px solid #BAE6FD",borderRadius:12,padding:"10px 12px",marginBottom:10}}>
-                <p style={{color:"#0369A1",fontWeight:900,fontSize:10,margin:"0 0 6px"}}>✅ 正解の英語を声に出して練習しよう！</p>
+                <p style={{color:"#0369A1",fontWeight:900,fontSize:10,margin:"0 0 6px"}}>✅ 正解の全文を声に出して練習しよう！</p>
                 <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:8}}>
-                  <span style={{color:"#0369A1",fontWeight:900,fontSize:18,fontFamily:"'Nunito',sans-serif",flex:1}}>{correctText}</span>
-                  <SpeakIcon text={correctText} size={42}/>
+                  <span style={{color:"#0369A1",fontWeight:900,fontSize:15,fontFamily:"'Nunito',sans-serif",flex:1,lineHeight:1.4}}>{fullSentence}</span>
                 </div>
-                <SpeakButton text={correctText} label="🔊 正解の英語を聴く" color="#0369A1" size="large"/>
+                {/* ★ Fix: fullSentenceには正解が埋め込まれているので、正しく全文が読まれる */}
+                <SpeakButton text={fullSentence} label="🔊 正解の全文を聴く" color="#0369A1" size="large"/>
               </div>
 
               {result==="wrong"&&<div style={{background:"#D1FAE5",border:"2.5px solid #059669",borderRadius:11,padding:"9px 11px",marginBottom:8}}><p style={{color:"#065F46",fontWeight:900,fontSize:12,margin:0}}>✅ 正解：<span style={{fontSize:16,fontFamily:"'Nunito',sans-serif",marginLeft:3}}>{correctText}</span></p></div>}
@@ -870,6 +952,7 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
               {showPron&&<div style={{marginBottom:7,overflowX:"auto"}}><table style={{width:"100%",borderCollapse:"collapse",fontSize:9}}><thead><tr style={{background:"#6D28D9",color:"#fff"}}>{["","主格","所有格","目的格","所有代名詞"].map((h,i)=><th key={i} style={{padding:"3px 4px",fontWeight:900,fontSize:8}}>{h}</th>)}</tr></thead><tbody>{PT.map((r,i)=><tr key={i} style={{background:i%2===0?"#EDE9FE":"#F5F3FF"}}><td style={{padding:"3px 4px",fontWeight:900,color:"#5B21B6",fontSize:9}}>{r.label}</td>{[r.subj,r.poss,r.obj,r.pp].map((v,j)=><td key={j} style={{padding:"3px 4px",textAlign:"center",fontFamily:"'Nunito',sans-serif",fontWeight:700,fontSize:10}}>{v}</td>)}</tr>)}</tbody></table></div>}
               <button onClick={()=>setShowAll(v=>!v)} style={{background:"#F3F4F6",color:"#374151",fontWeight:700,fontSize:10,padding:"7px 0",borderRadius:8,border:"2px solid #E5E7EB",cursor:"pointer",width:"100%",fontFamily:F}}>{showAll?"▲ 全選択肢の解説を閉じる":"▼ 全選択肢の解説を見る"}</button>
               {showAll&&<div style={{marginTop:8,display:"flex",flexDirection:"column",gap:6}}>{q.options.map((opt,i)=>{const p=parseExp(q.explanation.correct);return(<div key={opt.id} style={{background:opt.correct?"#D1FAE5":"#FEF2F2",border:`2px solid ${opt.correct?"#6EE7B7":"#FECACA"}`,borderRadius:10,padding:"8px 10px"}}><div style={{display:"flex",gap:6,alignItems:"center",marginBottom:2}}><span style={{background:OC[i],color:"#fff",fontWeight:900,fontSize:9,width:18,height:18,borderRadius:99,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>{OL[i]}</span><span style={{fontWeight:900,fontSize:12,fontFamily:"'Nunito',sans-serif"}}>{opt.text}</span>{opt.correct&&<span style={{background:"#059669",color:"#fff",fontSize:8,fontWeight:900,padding:"1px 5px",borderRadius:99}}>正解</span>}</div><p style={{color:opt.correct?"#065F46":"#991B1B",fontSize:10,fontWeight:700,margin:"0 0 0 24px",lineHeight:1.6}}>{opt.correct?p._correct:(p[opt.text]||"正解の解説を確認しよう！")}</p></div>);})}</div>}
+              <AiChatButton question={q.sentence} answer={fullSentence} />
             </div>
             <button onClick={doNext} style={{background:"#FFD600",color:"#1A1A2E",fontWeight:900,fontSize:15,padding:"14px 0",borderRadius:16,border:"none",cursor:"pointer",fontFamily:F,boxShadow:"0 5px 18px rgba(255,214,0,.45)"}}>{idx+1>=queue.length?"🏁 結果を見る！":"次の問題へ →"}</button>
           </div>
@@ -898,21 +981,9 @@ function SortQuiz({bank,addHist,addXP,back}){
 
   const gc=(u,l)=>bank.filter(q=>q.unit===u&&(l?q.level===l:true)).length;
   const initQ=q=>{const all=shuf([...q.answer.filter(w=>w!==","),...q.extra]);setAvail(all.map((w,i)=>({w,id:`av${i}_${Date.now()}`})));setArr([]);};
-  
-  // ★ 途中保存付き「戻る」ハンドラ
-  const handleBack = useCallback(() => {
-    if(sub==="quiz" && score.t > 0){
-      addHist({mode:"sort",label:su||"全問",correct:score.c,total:score.t});
-    }
-    setSub("home");
-  },[sub,score,su,addHist]);
 
-  const handleBackToMenu = useCallback(() => {
-    if(sub==="quiz" && score.t > 0){
-      addHist({mode:"sort",label:su||"全問",correct:score.c,total:score.t});
-    }
-    back();
-  },[sub,score,su,addHist,back]);
+  const handleBack = useCallback(() => { setSub("home"); },[]);
+  const handleBackToMenu = useCallback(() => { back(); },[back]);
 
   const start=useCallback((unit,level)=>{
     let pool=[...bank];if(unit)pool=pool.filter(q=>q.unit===unit);if(level)pool=pool.filter(q=>q.level===level);
@@ -931,11 +1002,16 @@ function SortQuiz({bank,addHist,addXP,back}){
     if(!ok){setShaking(true);setTimeout(()=>setShaking(false),600);}
     const newCombo=ok?combo+1:0;setCombo(newCombo);
     if(ok)addXP(XP_PER_CORRECT+(newCombo>=3?XP_BONUS_STREAK:0),null);
-    setScore(s=>({c:s.c+(ok?1:0),t:s.t+1}));setPhase("result");
+    setScore(s=>{
+      const ns={c:s.c+(ok?1:0),t:s.t+1};
+      addHist({mode:"sort",label:su||"全問",correct:ns.c,total:ns.t});
+      return ns;
+    });
+    setPhase("result");
   };
   const next=()=>{
     setResult(null);setShowExpl(false);
-    if(idx+1>=queue.length){addHist({mode:"sort",label:su||"全問",correct:score.c,total:score.t});setSub("complete");}
+    if(idx+1>=queue.length){setSub("complete");}
     else{setIdx(i=>i+1);setPhase("question");}
   };
   const um=UM[au]||{};
@@ -1020,7 +1096,6 @@ function SortQuiz({bank,addHist,addXP,back}){
         <div style={{maxWidth:500,margin:"0 auto"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
             <div style={{display:"flex",alignItems:"center",gap:4}}>
-              {/* ★ 途中保存付き「戻る」ボタン */}
               <button onClick={handleBack} style={{background:"rgba(255,255,255,.2)",border:"none",color:"#fff",fontWeight:900,fontSize:10,padding:"4px 8px",borderRadius:99,cursor:"pointer",fontFamily:F}}>← 単元選択</button>
               <button onClick={handleBackToMenu} style={{background:"rgba(255,255,255,.12)",border:"1px solid rgba(255,255,255,.3)",color:"rgba(255,255,255,.8)",fontWeight:900,fontSize:10,padding:"4px 8px",borderRadius:99,cursor:"pointer",fontFamily:F}}>🏠</button>
               {su&&<span style={{background:"rgba(255,255,255,.22)",color:"#fff",fontWeight:900,fontSize:9,padding:"2px 7px",borderRadius:99}}>{um2.label}</span>}
@@ -1072,12 +1147,10 @@ function SortQuiz({bank,addHist,addXP,back}){
                   </div>
                 </>
               )}
-              {/* ★ 正解文の音声ボタン（大きく・見やすく） */}
               <div style={{background:"rgba(255,255,255,.6)",borderRadius:10,padding:"9px"}}>
                 <p style={{color:"#065F46",fontWeight:900,fontSize:10,margin:"0 0 5px"}}>🔊 正解の文を音声で確認しよう</p>
                 <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:6}}>
                   <span style={{color:"#1F2937",fontWeight:900,fontSize:15,fontFamily:"'Nunito',sans-serif",flex:1}}>{correctStr}</span>
-                  <SpeakIcon text={correctStr} size={44}/>
                 </div>
                 <SpeakButton text={correctStr} label="🔊 正解の文を聴く" color="#059669" size="large"/>
               </div>
@@ -1086,6 +1159,7 @@ function SortQuiz({bank,addHist,addXP,back}){
             <button onClick={()=>setShowExpl(v=>!v)} style={{background:"#EDE9FE",color:"#6D28D9",fontWeight:900,fontSize:11,padding:"11px 0",borderRadius:12,border:"2px solid #C4B5FD",cursor:"pointer",fontFamily:F}}>
               {showExpl?"▲ 文法解説を閉じる":"📖 文法解説を見る（なぜこの語順？）"}
             </button>
+            <AiChatButton question={expl?.japanese || "並べ替え問題"} answer={correctStr} />
 
             {showExpl&&expl&&(
               <div className="fadeUp" style={{background:"#fff",border:"2.5px solid #C4B5FD",borderRadius:14,padding:"13px 14px",display:"flex",flexDirection:"column",gap:10}}>
@@ -1141,24 +1215,8 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
     const p=bank.filter(w=>w.english!==q.english).map(w=>w.english);return shuf([q.english,...shuf(p).slice(0,3)]);
   };
 
-  // ★ 途中保存付き「戻る」ハンドラ
-  const handleBackToMode = useCallback(() => {
-    if(sub==="quiz" && score.t > 0){
-      const pct=Math.round(score.c/score.t*100);
-      saveWP({...wp,[String(sl)]:{pct,sess:(wp[String(sl)]?.sess||0)+1}});
-      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:score.c,total:score.t});
-    }
-    setSub("mode");
-  },[sub,score,sl,sm,wp,saveWP,addHist]);
-
-  const handleBackToMenu = useCallback(() => {
-    if(sub==="quiz" && score.t > 0){
-      const pct=Math.round(score.c/score.t*100);
-      saveWP({...wp,[String(sl)]:{pct,sess:(wp[String(sl)]?.sess||0)+1}});
-      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:score.c,total:score.t});
-    }
-    back();
-  },[sub,score,sl,sm,wp,saveWP,addHist,back]);
+  const handleBackToMode = useCallback(() => { setSub("mode"); },[]);
+  const handleBackToMenu = useCallback(() => { back(); },[back]);
 
   const start=useCallback((level,mode)=>{
     let pool=bank.filter(w=>w.level===level);
@@ -1191,7 +1249,11 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
     setResult(ok?"correct":"wrong");
     if(!ok){setShaking(true);setTimeout(()=>setShaking(false),600);}
     const newCombo=ok?combo+1:0;setCombo(newCombo);
-    setScore(s=>({c:s.c+(ok?1:0),t:s.t+1}));
+    setScore(s=>{
+      const ns={c:s.c+(ok?1:0),t:s.t+1};
+      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:ns.c,total:ns.t});
+      return ns;
+    });
     const grade=srsGrade(ok,timeMs);
     const rec=srsData[q.id]||srsDefault();
     saveSRS({...srsData,[q.id]:srsUpdate(rec,grade)});
@@ -1206,7 +1268,11 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
     setResult(ok?"correct":"wrong");
     if(!ok){setShaking(true);setTimeout(()=>setShaking(false),600);}
     const newCombo=ok?combo+1:0;setCombo(newCombo);
-    setScore(s=>({c:s.c+(ok?1:0),t:s.t+1}));
+    setScore(s=>{
+      const ns={c:s.c+(ok?1:0),t:s.t+1};
+      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:ns.c,total:ns.t});
+      return ns;
+    });
     const grade=srsGrade(ok,timeMs);
     const rec=srsData[q.id]||srsDefault();
     saveSRS({...srsData,[q.id]:srsUpdate(rec,grade)});
@@ -1218,7 +1284,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
     if(idx+1>=queue.length){
       const pct=score.t?Math.round(score.c/score.t*100):0;
       saveWP({...wp,[String(sl)]:{pct,sess:(wp[String(sl)]?.sess||0)+1}});
-      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:score.c,total:score.t});
       setSub("complete");
     }else setIdx(i=>i+1);
   };
@@ -1299,8 +1364,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
   const prog=queue.length?(idx/queue.length)*100:0;
   const isSpell=sm==="spell",isPhrase=sm==="phrase",isEn=sm==="en2ja";
   const qWord=isEn||isPhrase?q.english:q.japanese;
-  // ★ 出題時に英語を表示するモード（en2ja, ja2en=英語を答えとして聞く必要なし, spell=日本語を見て入力）
-  // en2ja と phrase は英語を見せるので音声を出す、ja2en は日本語を見せるのでスキップ、spell は日本語なのでスキップ
   const showSpeakOnQuestion = isEn || isPhrase;
 
   return(
@@ -1309,7 +1372,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
         <div style={{maxWidth:500,margin:"0 auto"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
             <div style={{display:"flex",alignItems:"center",gap:4}}>
-              {/* ★ 途中保存付き「戻る」ボタン */}
               <button onClick={handleBackToMode} style={{background:"rgba(255,255,255,.2)",border:"none",color:"#fff",fontWeight:900,fontSize:10,padding:"4px 8px",borderRadius:99,cursor:"pointer",fontFamily:F}}>← モード選択</button>
               <button onClick={handleBackToMenu} style={{background:"rgba(255,255,255,.12)",border:"1px solid rgba(255,255,255,.3)",color:"rgba(255,255,255,.8)",fontWeight:900,fontSize:10,padding:"4px 8px",borderRadius:99,cursor:"pointer",fontFamily:F}}>🏠</button>
               <span style={{background:"rgba(255,255,255,.22)",color:"#fff",fontWeight:900,fontSize:9,padding:"2px 7px",borderRadius:99}}>Lv{sl}</span>
@@ -1325,7 +1387,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
       <div style={{maxWidth:500,margin:"0 auto",padding:"12px 13px 0"}}>
         {combo>=3&&phase==="question"&&<ComboDisplay combo={combo}/>}
 
-        {/* ★ 出題カード：英語を表示しているときはスピーカーボタンを表示 */}
         <div key={q.id} className={shaking?"shake":"pop"} style={{background:"#fff",border:"3px solid #DC2626",borderRadius:18,padding:"18px",marginBottom:13}}>
           <div style={{display:"flex",justifyContent:"center",marginBottom:10}}>
             <span style={{background:`linear-gradient(135deg,${mi.color},${mi.color}bb)`,color:"#fff",fontSize:9,fontWeight:900,padding:"3px 10px",borderRadius:99}}>{mi.emoji} {mi.label}</span>
@@ -1333,7 +1394,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
           <p style={{color:"#6B7280",fontSize:10,fontWeight:700,margin:"0 0 6px",textAlign:"center"}}>
             {isSpell?"この日本語の英単語を入力してください":isEn?"この英単語の日本語の意味を選んでください":isPhrase?"このフレーズの意味を選んでください":"この日本語に対応する英単語を選んでください"}
           </p>
-          {/* ★ 英語表示モードのとき：単語 + スピーカーアイコンを横並びで表示 */}
           <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:10}}>
             <p style={{color:"#1F2937",fontWeight:900,fontSize:isPhrase?19:26,margin:0,fontFamily:"'Nunito',sans-serif",lineHeight:1.3,textAlign:"center"}}>{qWord}</p>
             {showSpeakOnQuestion && phase==="question" && (
@@ -1343,7 +1403,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
           {isPhrase&&q.phrase&&<p style={{color:"#9CA3AF",fontSize:10,fontWeight:700,margin:"6px 0 0",textAlign:"center"}}>💬 フレーズ：{q.phrase}</p>}
           {!isEn&&!isPhrase&&<p style={{color:"#9CA3AF",fontSize:10,fontWeight:700,margin:"4px 0 0",textAlign:"center"}}>品詞：{q.type}</p>}
           {isSpell&&<p style={{color:"#9CA3AF",fontSize:10,fontWeight:700,margin:"6px 0 0",textAlign:"center"}}>ヒント：最初の文字「{q.english[0]}」　{q.english.length}文字</p>}
-          {/* ★ spell/ja2en モード：日本語を見ているが、参考に音声を聴けるボタン（小さめ・補助） */}
           {!showSpeakOnQuestion && phase==="question" && (
             <div style={{marginTop:10,display:"flex",justifyContent:"center"}}>
               <button onClick={()=>speak(q.english,0.82)}
@@ -1354,7 +1413,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
           )}
         </div>
 
-        {/* Choices (4-option modes, question phase) */}
         {!isSpell&&phase==="question"&&(
           <div style={{display:"flex",flexDirection:"column",gap:9}}>
             {choices.map((c,i)=>(
@@ -1367,7 +1425,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
           </div>
         )}
 
-        {/* Spell input */}
         {isSpell&&phase==="question"&&(
           <div className="fadeUp" style={{display:"flex",flexDirection:"column",gap:10}}>
             <div style={{background:"#fff",border:"2.5px solid #D1D5DB",borderRadius:15,padding:"13px"}}>
@@ -1380,7 +1437,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
           </div>
         )}
 
-        {/* ★ Result：英語 + 大きなスピーカーボタン */}
         {phase==="result"&&(
           <div className="fadeUp" style={{display:"flex",flexDirection:"column",gap:10}}>
             <div style={{background:result==="correct"?"#D1FAE5":"#FEE2E2",border:`3px solid ${result==="correct"?"#059669":"#DC2626"}`,borderRadius:18,padding:"16px"}}>
@@ -1391,8 +1447,6 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
                 </p>
                 {result==="wrong"&&<p style={{color:"#991B1B",fontSize:12,fontWeight:700,margin:"4px 0 0"}}>正解は「{sm==="en2ja"||sm==="phrase"?q.japanese:q.english}」でした</p>}
               </div>
-
-              {/* ★ 英単語 + インラインスピーカー + 大きな音声ボタン */}
               <div style={{background:"rgba(255,255,255,.7)",borderRadius:12,padding:"13px 15px"}}>
                 <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:10}}>
                   <div style={{flex:1}}>
