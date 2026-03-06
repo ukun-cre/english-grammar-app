@@ -489,6 +489,11 @@ function App({fillBank,sortBank,wordBank}){
     });
   },[]);
 
+  const handleResetHist=useCallback(()=>{
+    setHist([]);sLS(SK.history,[]);
+    alert("✅ 学習履歴をリセットしました。XP・レベル・間違いリストは保持されています。");
+  },[]);
+
   return(
     <>
       <style>{G}</style>
@@ -505,7 +510,7 @@ function App({fillBank,sortBank,wordBank}){
       {sc==="fill"    &&<FillQuiz bank={fillBank} mist={fmist} setMist={saveMist} addHist={addHist} addXP={addXP} back={()=>setSc("main")}/>}
       {sc==="sort"    &&<SortQuiz bank={sortBank} addHist={addHist} addXP={addXP} back={()=>setSc("main")}/>}
       {sc==="word"    &&<WordQuiz bank={wordBank} wp={wprog} saveWP={saveWP} srsData={srsData} saveSRS={saveSRS} addHist={addHist} addXP={addXP} back={()=>setSc("main")}/>}
-      {sc==="history" &&<HistScreen hist={hist} fillBank={fillBank} fmist={fmist} xp={xp} streak={streakData} onExport={exportData} onImport={handleImport} back={()=>setSc("main")}/>}
+      {sc==="history" &&<HistScreen hist={hist} fillBank={fillBank} fmist={fmist} xp={xp} streak={streakData} onExport={exportData} onImport={handleImport} onResetHist={handleResetHist} back={()=>setSc("main")}/>}
       {sc==="main"    &&<MainMenu onSel={setSc} hist={hist} fmist={fmist} xp={xp} streak={streakData}/>}
     </>
   );
@@ -576,7 +581,7 @@ function MainMenu({onSel,hist,fmist,xp,streak}){
 }
 
 /* ═══════════════ HISTORY SCREEN ═══════════════ */
-function HistScreen({hist,fillBank,fmist,xp,streak,onExport,onImport,back}){
+function HistScreen({hist,fillBank,fmist,xp,streak,onExport,onImport,onResetHist,back}){
   const [tab,setTab]=useState("summary");
   const fileRef=useRef();
   const MC={fill:"#6366F1",sort:"#059669",word:"#DC2626"};
@@ -700,6 +705,14 @@ function HistScreen({hist,fillBank,fmist,xp,streak,onExport,onImport,back}){
             <button onClick={onExport} style={{width:"100%",background:"linear-gradient(90deg,#059669,#10B981)",color:"#fff",fontWeight:900,fontSize:13,padding:"13px 0",borderRadius:12,border:"none",cursor:"pointer",fontFamily:F,marginBottom:9,boxShadow:"0 4px 14px rgba(5,150,105,.35)"}}>⬇️ データをバックアップ（JSONダウンロード）</button>
             <input ref={fileRef} type="file" accept=".json" style={{display:"none"}} onChange={e=>{if(e.target.files[0])onImport(e.target.files[0]);}}/>
             <button onClick={()=>fileRef.current.click()} style={{width:"100%",background:"linear-gradient(90deg,#2563EB,#6366F1)",color:"#fff",fontWeight:900,fontSize:13,padding:"13px 0",borderRadius:12,border:"none",cursor:"pointer",fontFamily:F,boxShadow:"0 4px 14px rgba(37,99,235,.35)"}}>⬆️ データを復元（JSONインポート）</button>
+          </div>
+          <div style={{background:"rgba(255,87,87,.12)",border:"1px solid rgba(255,87,87,.25)",borderRadius:14,padding:"13px",marginBottom:10}}>
+            <p style={{color:"rgba(255,150,150,.9)",fontWeight:900,fontSize:11,margin:"0 0 6px"}}>🗑️ 学習履歴のリセット</p>
+            <p style={{color:"rgba(255,255,255,.45)",fontSize:10,fontWeight:700,lineHeight:1.7,margin:"0 0 10px"}}>問題数カウントがおかしい場合はリセットしてください。<br/>間違いリスト・XP・レベルは保持されます。</p>
+            <button onClick={()=>{if(window.confirm("学習履歴（問題数カウント）をリセットしますか？\nXP・レベル・間違いリストは保持されます。")){onResetHist();}}}
+              style={{width:"100%",background:"linear-gradient(90deg,#DC2626,#EF4444)",color:"#fff",fontWeight:900,fontSize:12,padding:"11px 0",borderRadius:10,border:"none",cursor:"pointer",fontFamily:F}}>
+              🗑️ 学習履歴をリセット（カウント修正）
+            </button>
           </div>
           <div style={{background:"rgba(255,255,255,.07)",borderRadius:14,padding:"13px"}}>
             <p style={{color:"rgba(255,255,255,.45)",fontWeight:900,fontSize:10,margin:"0 0 9px"}}>⚠️ データについて</p>
@@ -836,11 +849,20 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
   if(!q)return null;
   const gm=GM[q.genre]||{},lm=LM[q.level]||{},prog=queue.length?(idx/queue.length)*100:0;
   const correctText=q.options.find(o=>o.correct)?.text||"";
-  // ★ Fix: 正解全文を構築。___、( )、（ ）いずれの形式にも対応
-  const fullSentence=q.english
-    .replace(/___+/g,correctText)
-    .replace(/\([^)]*\)/g,correctText)
-    .replace(/（[^）]*）/g,correctText);
+  // ★ Fix: 正解全文を構築。あらゆる穴埋め形式に対応
+  // 全角・半角アンダースコア、括弧形式、スペースのある___すべてに対応
+  function buildFullSentence(template, answer) {
+    if(!template||!answer) return answer||"";
+    const result = template
+      .replace(/[＿_]{2,}/g, answer)      // 半角・全角アンダースコア2個以上
+      .replace(/\(\s*\)/g, answer)         // 空の ( )
+      .replace(/（\s*）/g, answer)         // 空の （ ）
+      .replace(/\([^)]*\)/g, answer)       // ( 何か )
+      .replace(/（[^）]*）/g, answer);     // （ 何か ）
+    // 置換が起きなかった場合（テンプレートに穴がない）：answerをそのまま返す
+    return result === template ? answer : result;
+  }
+  const fullSentence = buildFullSentence(q.english, correctText);
 
   const doSel=opt=>{setSel(opt);setPhase("confirm");};
   const doConf=()=>{
@@ -851,7 +873,7 @@ function FillQuiz({bank,mist,setMist,addHist,addXP,back}){
     if(ok){addXP(XP_PER_CORRECT+(newCombo>=3?XP_BONUS_STREAK:0),null);}
     if(!ok){setShaking(true);setTimeout(()=>setShaking(false),600);setMist({...mist,[q.id]:Date.now()});}
     else if(mist[q.id]){const l={...mist};delete l[q.id];setMist(l);}
-    addHist({mode:"fill",label:sg||"全問",correct:ns.c,total:ns.t});
+    addHist({mode:"fill",label:sg||"全問",correct:ok?1:0,total:1});
     setPhase("result");
   };
   const doNext=()=>{
@@ -1004,7 +1026,7 @@ function SortQuiz({bank,addHist,addXP,back}){
     if(ok)addXP(XP_PER_CORRECT+(newCombo>=3?XP_BONUS_STREAK:0),null);
     setScore(s=>{
       const ns={c:s.c+(ok?1:0),t:s.t+1};
-      addHist({mode:"sort",label:su||"全問",correct:ns.c,total:ns.t});
+      addHist({mode:"sort",label:su||"全問",correct:ok?1:0,total:1});
       return ns;
     });
     setPhase("result");
@@ -1251,7 +1273,7 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
     const newCombo=ok?combo+1:0;setCombo(newCombo);
     setScore(s=>{
       const ns={c:s.c+(ok?1:0),t:s.t+1};
-      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:ns.c,total:ns.t});
+      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:ok?1:0,total:1});
       return ns;
     });
     const grade=srsGrade(ok,timeMs);
@@ -1270,7 +1292,7 @@ function WordQuiz({bank,wp,saveWP,srsData,saveSRS,addHist,addXP,back}){
     const newCombo=ok?combo+1:0;setCombo(newCombo);
     setScore(s=>{
       const ns={c:s.c+(ok?1:0),t:s.t+1};
-      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:ns.c,total:ns.t});
+      addHist({mode:"word",label:`Lv${sl} ${WM.find(m=>m.key===sm)?.label||""}`,correct:ok?1:0,total:1});
       return ns;
     });
     const grade=srsGrade(ok,timeMs);
